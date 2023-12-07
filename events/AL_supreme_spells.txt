@@ -32,9 +32,10 @@ AL_supreme_spells.1001 = {
 		random_list = {
 			20 = {
 				modifier = {
-					NOT = { has_character_flag = immortality }
-					is_target_in_variable_list  = { name = supreme_spells_list target =  flag:perfect_body } 
-					
+					OR = {
+						NOT = { has_character_flag = immortality }
+						is_target_in_variable_list  = { name = supreme_spells_list target =  flag:perfect_body } 
+					}
 					add = -20
 				}
 				add_to_variable_list = { name = supreme_spells_list target = flag:perfect_body }
@@ -42,8 +43,10 @@ AL_supreme_spells.1001 = {
 			}
 			20 = {
 				modifier = {
-					NOT = { has_character_flag = immortality }
-					is_target_in_variable_list  = { name = supreme_spells_list target =  flag:magical_immortality }
+					OR = {
+						NOT = { has_character_flag = immortality }
+						is_target_in_variable_list  = { name = supreme_spells_list target =  flag:magical_immortality }
+					}
 					
 					add = -20
 				}

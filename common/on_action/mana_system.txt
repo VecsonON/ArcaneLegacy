@@ -131,7 +131,7 @@ witch_hunter_pulse = {
 								modifier = {
 									has_trait_xp = {
 										trait = exposed_mage
-										value < 10
+										value <= 10
 									}
 									add = -50
 								}
@@ -163,7 +163,7 @@ witch_hunter_pulse = {
 								modifier = {
 									has_trait_xp = {
 										trait = exposed_mage
-										value < 60
+										value <= 60
 									}
 									add = -25
 								}

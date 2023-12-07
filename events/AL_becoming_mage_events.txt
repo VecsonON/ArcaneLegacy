@@ -315,8 +315,8 @@ AL_becoming_mage.0022 = { # HUGE BREAKTHOURG
 	}
 }
 AL_becoming_mage.0023 = { # Experiment
-	title = AL_becoming_mage.0021.title
-	desc = AL_becoming_mage.0021.desc
+	title = AL_becoming_mage.0023.title
+	desc = AL_becoming_mage.0023.desc
 	theme = secret
 	left_portrait = root
 	trigger = {

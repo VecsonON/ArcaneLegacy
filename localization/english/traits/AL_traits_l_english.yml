@@ -65,7 +65,7 @@
  trait_biological_perfection_desc:0 "this character achived or is on road to achiving perfect body unable to die of old age. Everything without any negatives!"
  trait_track_biological_perfection:0 "Biological Perfection"
  trait_track_biological_perfection_desc:0 "Biological Perfection"
- TRAIT_FLAG_DESC_mana_unkeep_50: "[Mana|E] Regeneration: [mana_regen_i]#N -50#!"
+ TRAIT_FLAG_DESC_mana_unkeep_50: "[Mana|E] Regeneration: [mana_regen_i]#N -15#!"
  TRAIT_FLAG_magic_immortality_warning:" If [Mana|E] will #R ever reach 0 this character will die#!"
 # reeeeeeeeeeeeeet - My cat 22/11/2023 
 

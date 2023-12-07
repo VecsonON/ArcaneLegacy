@@ -55,7 +55,7 @@ mana_degen = {
 	if = { limit = { has_character_modifier = AL_perfect_body_casting } add = 15 }
 	if = { limit = { has_character_modifier = AL_magical_immortality_casting } add = 25 }
 
-	if = { limit = { has_trait = magic_immortality } add = 50 }
+	if = { limit = { has_trait = magic_immortality } add = 15 }
 
 }
 mana_max = {

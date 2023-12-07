@@ -1,0 +1,280 @@
+﻿minor_optimize_body_spell_modifier = {
+	icon = health_positive
+	health = 0.25
+	prowess = 2
+	stacking = yes
+}
+optimize_body_spell_modifier = {
+	icon = health_positive
+	health = 0.5
+	prowess = 4
+	stacking = yes
+}
+major_optimize_body_spell_modifier = {
+	icon = health_positive
+	health = 1
+	prowess = 8
+	stacking = yes
+}
+# VER 2
+mass_haste_spell_modifier = {
+	icon = martial_positive
+	movement_speed = 0.25
+	stacking = yes
+}
+beneficial_weather_spell_modifier = {
+	icon = martial_positive
+	naval_movement_speed_mult = 0.25
+	stacking = yes
+}
+detrimental_weather_spell_modifier = {
+	icon = martial_negative
+	naval_movement_speed_mult = -0.25
+	stacking = yes
+}
+mass_slowness_spell_modifier = {
+	icon = martial_negative
+	movement_speed = -0.25
+	stacking = yes
+}
+slowness_spell_modifier = {
+	icon = prowess_negative
+	prowess_no_portrait = -3
+}
+haste_spell_modifier = {
+	icon = prowess_positive
+	prowess_no_portrait = 3
+}
+# VER 3
+novice_fire_combat_spell_modifier = {
+	icon = prowess_positive
+	prowess_no_portrait = 5
+	dread_baseline_add = 5
+	enemy_hostile_scheme_success_chance_add = -5
+}
+apprentice_fire_combat_spell_modifier = {
+	icon = prowess_positive
+	prowess_no_portrait = 8
+	dread_baseline_add = 8
+	enemy_hostile_scheme_success_chance_add = -8
+}
+adept_fire_combat_spell_modifier = {
+	icon = prowess_positive
+	prowess_no_portrait = 11
+	dread_baseline_add = 11
+	enemy_hostile_scheme_success_chance_add = -11
+}
+expert_fire_combat_spell_modifier = {
+	icon = prowess_positive
+	prowess_no_portrait = 14
+	dread_baseline_add = 14
+	enemy_hostile_scheme_success_chance_add = -14
+}
+master_fire_combat_spell_modifier = {
+	icon = prowess_positive
+	prowess_no_portrait = 20
+	dread_baseline_add = 20
+	enemy_hostile_scheme_success_chance_add = -17
+}
+# VER 4
+novice_telekinesis_combat_spell_modifier = {
+	icon = prowess_positive
+	prowess_no_portrait = 2
+	dread_baseline_add = 2
+	enemy_hostile_scheme_success_chance_add = -2
+}
+apprentice_telekinesis_combat_spell_modifier = {
+	icon = prowess_positive
+	prowess_no_portrait = 5
+	dread_baseline_add = 5
+	enemy_hostile_scheme_success_chance_add = -5
+}
+adept_telekinesis_combat_spell_modifier = {
+	icon = prowess_positive
+	prowess_no_portrait = 8
+	dread_baseline_add = 8
+	enemy_hostile_scheme_success_chance_add = -8
+}
+expert_telekinesis_combat_spell_modifier = {
+	icon = prowess_positive
+	prowess_no_portrait = 11
+	dread_baseline_add = 11
+	enemy_hostile_scheme_success_chance_add = -11
+}
+master_telekinesis_combat_spell_modifier = {
+	icon = prowess_positive
+	prowess_no_portrait = 16
+	dread_baseline_add = 16
+	enemy_hostile_scheme_success_chance_add = -16
+}
+
+improved_land = {
+	icon = magic_positive 
+	development_growth = 0.2
+	development_growth_factor = 0.1
+	levy_size = 0.1
+}
+worsened_land = {
+	icon = magic_positive 
+	development_growth = -0.2
+	development_growth_factor = -0.1
+	levy_size = -0.1
+}
+
+improved_land_fertility_minor_modifier = {
+	icon = magic_positive 
+	development_growth = 0.1
+	development_growth_factor = 0.1
+}
+improved_land_fertility_modifier = {
+	icon = magic_positive 
+	development_growth = 0.2
+	development_growth_factor = 0.2
+}
+improved_land_fertility_major_modifier = {
+	icon = magic_positive 
+	development_growth = 0.3
+	development_growth_factor = 0.3
+}
+worsened_land_fertility_minor_modifier = {
+	icon = magic_negative
+	development_growth = -0.1
+	development_growth_factor = -0.1
+}
+worsened_land_fertility_modifier = {
+	icon = magic_negative 
+	development_growth = -0.2
+	development_growth_factor = -0.2
+}
+worsened_land_fertility_major_modifier = {
+	icon = magic_negative 
+	development_growth = -0.3
+	development_growth_factor = -0.3
+}
+
+
+improved_land_geography_minor_modifier = {
+	icon = magic_positive 
+	development_growth = 0.1
+	development_growth_factor = 0.1
+}
+improved_land_geography_modifier = {
+	icon = magic_positive 
+	development_growth = 0.2
+	development_growth_factor = 0.2
+}
+improved_land_geography_major_modifier = {
+	icon = magic_positive 
+	development_growth = 0.3
+	development_growth_factor = 0.3
+}
+worsened_land_geography_minor_modifier = {
+	icon = magic_negative 
+	development_growth = -0.1
+	development_growth_factor = -0.1
+}
+worsened_land_geography_modifier = {
+	icon = magic_negative 
+	development_growth = -0.2
+	development_growth_factor = -0.2
+}
+worsened_land_geography_major_modifier = {
+	icon = magic_negative 
+	development_growth = -0.3
+	development_growth_factor = -0.3
+}
+summon_undead_minor_modifier = {
+	icon = county_modifier_opinion_negative
+	general_opinion = -25
+}
+summon_undead_modifier = {
+	icon = county_modifier_opinion_negative
+	general_opinion = -50
+}
+summon_undead_major_modifier = {
+	icon = county_modifier_opinion_negative
+	general_opinion = -75
+}
+
+puppeted_modifier = {
+	icon = health_negative
+	martial = -10
+	learning = -20
+	diplomacy = -10
+	intrigue = -10
+	stewardship = -10
+	health = -0.2
+}
+
+magical_vampirism_victim = {
+	icon = health_negative
+	health = 0.1
+	life_expectancy = -4
+	stacking = yes
+}
+magical_vampirism_modifier = {
+	icon = health_positive
+	health = -0.1
+	life_expectancy = 2
+	stacking = yes
+	stress_gain_mult = 0.01
+	stress_loss_mult = -0.01
+}
+
+AL_perfect_body_casting = {
+	icon = magic_negative
+	stress_gain_mult = 0.2
+	stress_loss_mult = -0.2
+}
+AL_magical_immortality_casting = {
+	icon = magic_negative
+	stress_gain_mult = 0.2
+	stress_loss_mult = -0.2
+}
+
+AL_magical_increase_fertility_minor = {
+	icon = health_positive
+	fertility = 0.25
+}
+AL_magical_increase_fertility = {
+	icon = health_positive
+	fertility = 0.5
+}
+AL_magical_increase_fertility_major = {
+	icon = health_positive
+	fertility = 1
+}
+AL_magical_decrease_fertility_minor = {
+	icon = health_positive
+	fertility = -0.25
+}
+AL_magical_decrease_fertility = {
+	icon = health_positive
+	fertility = -0.5
+}
+AL_magical_decrease_fertility_major = {
+	icon = health_positive
+	fertility = -1
+}
+
+AL_flood = {
+	icon = county_modifier_development_negative
+	development_growth = -0.2
+	development_growth_factor = -0.25
+	monthly_county_control_change_add = -0.2
+	levy_size = -0.2
+}
+AL_drought = {
+	icon = county_modifier_development_negative
+	development_growth = -0.3
+	development_growth_factor = -0.35
+	monthly_county_control_change_add = -0.3
+	levy_size = -0.3
+}
+AL_earthquake = {
+	icon = county_modifier_development_negative
+	development_growth = -0.5
+	development_growth_factor = -0.5
+	monthly_county_control_change_add = -0.5
+	levy_size = -0.5
+}

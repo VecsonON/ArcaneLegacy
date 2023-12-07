@@ -15,7 +15,7 @@
 		education_learning_3 = {}
 		education_learning_4 = {}
 	}
-	prowess = { 0 10 }
+	prowess = { 0 5 }
 }
 low_level_witchhunter = {
 	age = { 18 60 }
@@ -29,7 +29,7 @@ low_level_witchhunter = {
 		humble = {}
 	}
 	trait = witch_hunter
-	prowess = { 0 10 }
+	prowess = { 0 5 }
 	after_creation = {
 		add_trait = witch_hunter
 		add_trait_xp = {
@@ -66,7 +66,7 @@ medium_level_witchhunter = {
 		humble = {}
 	}
 	trait = witch_hunter
-	prowess = { 5 15 }
+	prowess = { 5 10 }
 	after_creation = {
 		add_trait = witch_hunter
 		add_trait_xp = {
@@ -103,7 +103,7 @@ high_level_witchhunter = {
 		humble = {}
 	}
 	trait = witch_hunter
-	prowess = { 10 20 }
+	prowess = { 10 15 }
 	after_creation = {
 		add_trait = witch_hunter
 		add_trait_xp = {

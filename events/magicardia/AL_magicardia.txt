@@ -45,7 +45,7 @@ AL_magicardia.0002 = { # Mage Found!
 			}
 		}
 		name = AL_magicardia.0002.a
-		mana_change = { VALUE = { value = -1 } }
+		mana_change = { VALUE = -1  }
 		hidden_effect =  {
 			add_character_flag = magicardia_known
 			scope:mage = {
