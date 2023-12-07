@@ -9,8 +9,8 @@
 + Redo becoming mage event line
 + Reduce Experiment Cost [Make to Game Rule] {Faster but with less xp and cost}
 + Redo Mana Training [Make Game Rules]
- Fix Jakob
- Fix Game loop
++ Fix Jakob
++- Fix Game loop
 + Redo Perk Tree
 + Supreme Spells
 + Bug fixes
@@ -18,7 +18,7 @@
  Becoming God like?
 
 
- Create Witch Hunting
++- Create Witch Hunting
  Create Main Inquisition hub 'Kincardi'
  Create 'Destroy Magicardia' event line
  Create 'Destroy Kincardi' event line
