@@ -1,0 +1,180 @@
+﻿container = {
+	name = "sus_gui"
+	parentanchor = bottom|left
+	position = { 0 -70 }
+	alwaystransparent = no
+	layer = windows_layer
+	visible = "[And(GetPlayer.IsValid, Not(GetVariableSystem.Exists('hide_bottom_left_HUD')))]"
+	widget = {
+		datacontext = "[GetScriptedGui('have_sus_meter')]"
+		visible = "[ScriptedGui.IsValid( GuiScope.SetRoot(GetPlayer.MakeScope).End )]"
+		name = "magicka_widget"
+		size = { 113 39 }
+		#parentanchor = bottom|left
+		#position = { 20 -50 }
+
+		#tooltip = magicka_value
+		using = tooltip_ne
+		tooltipwidget = {
+			sus_breakdown_widget = {
+				datacontext = "[GetPlayer]"
+			}
+		}
+
+		hbox = {
+			size = { 66 14 }
+			maximumsize = { 66 14 }
+			#parentanchor = top|left
+			position = { 35 13 }
+			#position = { 14 12 }
+
+			background = {
+				texture = "gfx/interface/colors/white.dds"
+				color = { 0.1 0.1 0.1 0.8 }
+			}
+
+			
+			#gets the progress bar part
+			widget = {
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
+				layoutstretchfactor_horizontal = "[GetProgressBarValueMaxScaled( FixedPointToFloat(GetPlayer.MakeScope.Var('suspicion').GetValue), FixedPointToFloat(GetPlayer.MakeScope.ScriptValue('suspicion_max')), '(int32)60' )]"
+
+				progressbar = {
+					#visible = "[GreaterThanOrEqualTo_int32(GetPlayer.GetStressLevel, '(int32)3')]"
+					size = { 100% 100% }
+					progresstexture = "gfx/interface/colors/blue.dds"
+					noprogresstexture = "gfx/interface/colors/light_blue.dds"
+					spriteType = Corneredtiled
+					spriteborder = { 6 6 }
+
+					using = Animation_ShowHide_Standard
+				}
+			}
+			widget = {
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
+				layoutstretchfactor_horizontal = "[GetProgressBarValueMaxOtherScaled( FixedPointToFloat(GetPlayer.MakeScope.Var('suspicion').GetValue), FixedPointToFloat(GetPlayer.MakeScope.ScriptValue('suspicion_max')), '(int32)60' )]"
+			}
+		}
+
+		icon = {
+			size = { 100% 100% }
+			texture = "gfx/interface/patron_window/ardor_bg.dds"
+
+			icon = {
+				parentanchor = vcenter
+				#position = { 13 -1 }
+				position = { 15 0 }
+				size = { 15 20 }
+
+				texture = "gfx/magic/suspicion.dds"
+			}
+		}
+	}
+}
+Types Patrons
+{
+	type sus_breakdown_widget = widget {
+		alwaystransparent = no
+
+		using = DefaultTooltipBackground
+
+		vbox = {
+			name = "tooltip_container"
+			set_parent_size_to_minimum = yes
+			filter_mouse = all
+			margin = { 14 8 }
+			#margin_bottom = 12
+
+			vbox = {
+				name = "tooltip_container"
+				set_parent_size_to_minimum = yes
+				filter_mouse = all
+				margin = { 14 8 }
+				#margin_bottom = 12
+	
+				vbox = {
+					layoutpolicy_horizontal = expanding
+					margin_bottom = 14
+					spacing = 5
+	
+					block "header" {}
+	
+					text_multi = {
+						layoutpolicy_horizontal = expanding
+						text = "SUS_CURRENT"
+						default_format = "#high;bold"
+						using = Font_Size_Medium
+						fonttintcolor = "[TooltipInfo.GetTintColor]"
+	
+						background = {
+							using = Background_Area
+							margin = { 10 0 }
+							margin_bottom = 5
+						}
+					}
+					
+	
+					hbox = {
+						name = "total_label_gain"
+						layoutpolicy_horizontal = expanding
+	
+						using = tooltip_es
+						tooltip_enabled = "[NotEqualTo_CFixedPoint(Character.MakeScope.ScriptValue('suspicion_inc'), '(CFixedPoint)0')]"
+	
+						text_single = {
+							layoutpolicy_horizontal = expanding
+							text = "SUS_GAIN"
+						}
+	
+						text_single = {
+							text = "[Character.MakeScope.ScriptValue('suspicion_inc')|-=2]"
+							default_format = "#high"
+						}
+					}
+	
+					hbox = {
+						name = "total_label_loss"
+						layoutpolicy_horizontal = expanding
+						margin_bottom = 5
+	
+						using = tooltip_es
+						tooltip_enabled = "[NotEqualTo_CFixedPoint(Character.MakeScope.ScriptValue('suspicion_dec'), '(CFixedPoint)0')]"
+	
+						text_single = {
+							layoutpolicy_horizontal = expanding
+							text = "SUS_LOSS"
+						}
+	
+						text_single = {
+							text = "[Character.MakeScope.ScriptValue('suspicion_dec')|+=2]"
+							default_format = "#high"
+						}
+					}
+	
+					divider_light = {
+						layoutpolicy_horizontal = expanding
+					}
+	
+					hbox = {
+						name = "total_label"
+						layoutpolicy_horizontal = expanding
+						margin_top = -5
+	
+						text_single = {
+							layoutpolicy_horizontal = expanding
+							text = "SUS_CHANGE"
+						}
+	
+						text_single = {
+							text = "[Character.MakeScope.ScriptValue('suspicion_net')|-=2]"
+							default_format = "#high"
+						}
+					}
+				}
+			}
+		}
+	}
+	
+}

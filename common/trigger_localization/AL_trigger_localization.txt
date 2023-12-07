@@ -1,0 +1,10 @@
+﻿has_enough_mana_trigger = {
+	global = GLOBAL_HAS_ENOUGH_MANA
+	first = FIRST_HAS_ENOUGH_MANA
+	third = THIRD_HAS_ENOUGH_MANA
+}
+is_province_spell = {
+	global = GLOBAL_IS_PROVINCE_SPELL
+	first = FIRST_IS_PROVINCE_SPELL
+	third = THIRD_IS_PROVINCE_SPELL
+}

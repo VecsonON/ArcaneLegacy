@@ -1,0 +1,144 @@
+﻿namespace = AL_welcome_message
+AL_welcome_message.0001 = {
+	title = AL_welcome_message.0001.title
+	desc = AL_welcome_message.0001.desc
+	theme =  dungeon
+	option = { # More Info Gameplay
+		name = AL_welcome_message.0001.a
+		trigger_event = AL_welcome_message.0002
+	}
+	option = { # More Info Lore
+		name = AL_welcome_message.0001.b
+		trigger = {
+			always = no
+		}
+		show_as_unavailable = {
+			always = yes
+		}
+	} 
+	option = {# Go to game
+		name = AL_welcome_message.0001.c
+	}
+}
+AL_welcome_message.0002 = {
+	title = AL_welcome_message.0002.title
+	desc = AL_welcome_message.0002.desc
+	theme =  dungeon
+	option = { # Mage Mechanics
+		name = AL_welcome_message.0002.a
+		trigger_event = AL_welcome_message.0021
+	}
+	option = { # Witch-Hunter Mechanics
+		name = AL_welcome_message.0002.b
+		trigger_event = AL_welcome_message.0031
+	} 
+	option = { # Magicardia/Kincardia Mechanics
+		name = AL_welcome_message.0002.c
+		trigger_event = AL_welcome_message.0011
+	} 
+	option = { # Go to first event
+		name = AL_welcome_message.0002.d
+		trigger_event = AL_welcome_message.0001
+	}
+}
+########################### MAGE ###########################
+AL_welcome_message.0021 = {
+	title = AL_welcome_message.0021.title
+	desc = AL_welcome_message.0021.desc
+	theme =  dungeon
+	option = { # Concealment
+		name = AL_welcome_message.0021.a
+		trigger_event = AL_welcome_message.0022
+	}
+	option = { # Mana, Spells etc.
+		name = AL_welcome_message.0021.b
+		trigger_event = AL_welcome_message.0023
+	} 
+	option = { # Go to second event
+		name = AL_welcome_message.0021.c
+		trigger_event = AL_welcome_message.0002
+	}
+}
+AL_welcome_message.0022 = { # Concealment
+	title = AL_welcome_message.0022.title
+	desc = AL_welcome_message.0022.desc
+	theme =  dungeon
+	option = { # Go to mage event
+		name = AL_welcome_message.0022.a
+		trigger_event = AL_welcome_message.0021
+	}
+}
+
+AL_welcome_message.0023 = { # Mana, Spells etc.
+	title = AL_welcome_message.0023.title
+	desc = AL_welcome_message.0023.desc
+	theme =  dungeon
+	option = { # Go to mage event
+		name = AL_welcome_message.0023.a
+		trigger_event = AL_welcome_message.0021
+	}
+}
+
+########################### HUNTER ###########################
+
+AL_welcome_message.0031 = {
+	title = AL_welcome_message.0031.title
+	desc = AL_welcome_message.0031.desc
+	theme =  dungeon
+	option = { # Hunting for mages
+		name = AL_welcome_message.0031.a
+		#trigger_event = AL_welcome_message.0032
+		trigger = {
+			always = no
+		}
+		show_as_unavailable = {
+			always = yes
+		}
+	}
+	option = { # Powers
+		name = AL_welcome_message.0031.b
+		#trigger_event = AL_welcome_message.0033
+		trigger = {
+			always = no
+		}
+		show_as_unavailable = {
+			always = yes
+		}
+	} 
+	option = { # Go to second event
+		name = AL_welcome_message.0031.c
+		trigger_event = AL_welcome_message.0002
+	}
+}
+# AL_welcome_message.0032 = { # Hunting for mages
+# 	title = AL_welcome_message.0032.title
+# 	desc = AL_welcome_message.0032.desc
+# 	theme =  dungeon
+# 	option = { # Go to hunter event
+# 		name = AL_welcome_message.0032.c
+# 		trigger_event = AL_welcome_message.0031
+# 	}
+# }
+
+# AL_welcome_message.0033 = { # Powers
+# 	title = AL_welcome_message.0033.title
+# 	desc = AL_welcome_message.0033.desc
+# 	theme =  dungeon
+# 	option = { # Go to hunter event
+# 		name = AL_welcome_message.0033.c
+# 		trigger_event = AL_welcome_message.0031
+# 	}
+# }
+
+
+########################### MAGI/KINCARDIA ###########################
+
+AL_welcome_message.0011 = {
+	title = AL_welcome_message.0011.title
+	desc = AL_welcome_message.0011.desc
+	theme =  dungeon
+	option = { # Go to second event
+		name = AL_welcome_message.0011.a
+		trigger_event = AL_welcome_message.0002
+	}
+}

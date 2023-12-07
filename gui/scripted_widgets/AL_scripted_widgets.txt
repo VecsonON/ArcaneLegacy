@@ -1,0 +1,5 @@
+﻿gui/magic_window_view.gui = magic_window
+gui/magic_spell_create_window_view.gui = spell_create_window
+gui/mana_gui.gui = mana_gui
+gui/sus_gui.gui = sus_gui
+gui/magicardia.gui = magicardiagui

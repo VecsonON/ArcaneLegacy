@@ -1,0 +1,90 @@
+﻿l_english:
+ training_mana: "Focus in something else"
+
+ unknown_location: "Unknown Location"
+ unknown_location_desc: "No one knows location of this character, One is known...This character isn't where they are suposed to be"
+ no_focus: "Focus in something else"
+ no_focus_desc: "This character's focus isn't in ruling realm."
+
+ used_mind: "Used all mind power"
+ used_mind_desc: "This character used all of their's mind power in short time causing mind drain"
+
+ first_mage: "First Mage"
+ first_mage_desc: "[GetGlobalVariable('first_mage_char').Char.GetFullName] is know as first mage, everyone fears him, and even inquisition isn't supid enough to atack him and his city with him inside, Only person strong enough to fight him is Supreme Inquisitior [GetGlobalVariable('supreme_inquisitor_char').Char.GetFullName]"
+
+ supreme_inquisitor: "Supreme Inquisitior"
+ supreme_inquisitor_desc: "[GetGlobalVariable('supreme_inquisitor_char').Char.GetFullName] is known as Supreme Inquisitior and founder of Inquisition, no one knows why he did live to his age but out of respect and fear no one ask him about it. He is main reason why mages didn't destroy kincardia, Only person strong enought to fight him is First Mage [GetGlobalVariable('first_mage_char').Char.GetFullName]"
+
+ minor_optimize_body_spell_modifier: "Minor Optimize Body"
+ optimize_body_spell_modifier: "Optimize Body"
+ major_optimize_body_spell_modifier: "Major Optimize Body"
+
+ mass_haste_spell_modifier: "Mass Haste"
+ haste_spell_modifier: "Haste"
+
+ mass_slowness_spell_modifier: "Mass Slowness"
+ slowness_spell_modifier: "Slowness"
+
+ beneficial_weather_spell_modifier: "Beneficial Weather"
+ detrimental_weather_spell_modifier: "Detrimental Weather"
+
+ novice_fire_combat_spell_modifier: "Fire Combat: Novice"
+ novice_fire_combat_spell_modifier_desc:0 "When Fighting with this character, Fire appears friendly both towards them and against their enemy.\n[Mana|E] Regeneration: [mana_regen_i]#N -1#! \nMonthly [Suspicion|E]: #N +0.25#! "
+ apprentice_fire_combat_spell_modifier: "Fire Combat: Apprentice"
+ apprentice_fire_combat_spell_modifier_desc:0 "When Fighting with this character, Fire appears friendly both towards them and against their enemy.\n[Mana|E] Regeneration: [mana_regen_i]#N -1.5#! \nMonthly [Suspicion|E]: #N +0.5#! "
+ adept_fire_combat_spell_modifier: "Fire Combat: Adept"
+ adept_fire_combat_spell_modifier_desc:0 "When Fighting with this character, Fire appears friendly both towards them and against their enemy.\n[Mana|E] Regeneration: [mana_regen_i]#N -2#! \nMonthly [Suspicion|E]: #N +1#! "
+ expert_fire_combat_spell_modifier: "Fire Combat: Expert"
+ expert_fire_combat_spell_modifier_desc:0 "When Fighting with this character, Fire appears friendly both towards them and against their enemy.\n[Mana|E] Regeneration: [mana_regen_i]#N -2.5#! \nMonthly [Suspicion|E]: #N +1.5#! "
+ master_fire_combat_spell_modifier: "Fire Combat: Master"
+ master_fire_combat_spell_modifier_desc:0 "When Fighting with this character, Fire appears friendly both towards them and against their enemy.\n[Mana|E] Regeneration: [mana_regen_i]#N -3#! \nMonthly [Suspicion|E]: #N +2#! "
+
+ novice_telekinesis_combat_spell_modifier: "Telekinesis Combat: Novice"
+ novice_telekinesis_combat_spell_modifier_desc:0 "When Fighting with this character, A mysterious force seems to appear and fight against their enemy.\n[Mana|E] Regeneration: [mana_regen_i]#N -0.5#! \nMonthly [Suspicion|E]: #N +0.25#! "
+ apprentice_telekinesis_combat_spell_modifier: "Telekinesis Combat: Apprentice"
+ apprentice_telekinesis_combat_spell_modifier_desc:0 "When Fighting with this character, A mysterious force seems to appear and fight against their enemy.\n[Mana|E] Regeneration: [mana_regen_i]#N -1#! \nMonthly [Suspicion|E]: #N +0.5#! "
+ adept_telekinesis_combat_spell_modifier: "Telekinesis Combat: Adept"
+ adept_telekinesis_combat_spell_modifier_desc:0 "When Fighting with this character, A mysterious force seems to appear and fight against their enemy.\n[Mana|E] Regeneration: [mana_regen_i]#N -1.5#! \nMonthly [Suspicion|E]: #N +1#! "
+ expert_telekinesis_combat_spell_modifier: "Telekinesis Combat: Expert"
+ expert_telekinesis_combat_spell_modifier_desc:0 "When Fighting with this character, A mysterious force seems to appear and fight against their enemy.\n[Mana|E] Regeneration: [mana_regen_i]#N -2#! \nMonthly [Suspicion|E]: #N +1.5#! "
+ master_telekinesis_combat_spell_modifier: "Telekinesis Combat: Master"
+ master_telekinesis_combat_spell_modifier_desc:0 "When Fighting with this character, A mysterious force seems to appear and fight against their enemy.\n[Mana|E] Regeneration: [mana_regen_i]#N -2.5#! \nMonthly [Suspicion|E]: #N +2#!"
+
+ improved_land_fertility_minor_modifier: "Improved Land Fertility: Minor"
+ improved_land_fertility_modifier: "Improved Land Fertility"
+ improved_land_fertility_major_modifier: "Improved Land Fertility: Major"
+ worsened_land_fertility_minor_modifier: "Worsened Land Fertility: Minor"
+ worsened_land_fertility_modifier: "Worsened Land Fertility"
+ worsened_land_fertility_major_modifier: "Worsened Land Fertility: Major"
+
+ improved_land_geography_minor_modifier: "Improved Land Geography: Minor"
+ improved_land_geography_modifier: "Improved Land Geography"
+ improved_land_geography_major_modifier: "Improved Land Geography: Major"
+ worsened_land_geography_minor_modifier: "Worsened Land Geography: Minor"
+ worsened_land_geography_modifier: "Worsened Land Geography"
+ worsened_land_geography_major_modifier: "Worsened Land Geography: Major"
+
+ summon_undead_minor_modifier: "Raised Undead Minor"
+ summon_undead_modifier: "Raised Undead"
+ summon_undead_major_modifier: "Raised Undead Major"
+
+ puppet_hook: "Puppet"
+ master_opinion: "Master"
+ puppeted_modifier: "Puppet"
+
+ magical_vampirism_victim: "Magical Vampirism: Victim"
+ magical_vampirism_victim_desc: "Someone sucked out the life of this character, that also mean that thiers life force is very concentrate causing better life"
+ magical_vampirism_modifier: "Unnatural health"
+ magical_vampirism_modifier_desc: "By some way this character have unnatural vigor, although this mean also that this character life force in chaotic and will cause problem with time"
+ creator_opinion: "Creator"
+
+ magical_vampire_hunger: "Magical Vampire Hunger"
+ magical_vampire_hunger_desc: "This character has hunger for human lifes, if this character don't kill another person, they will #R DIE #!"
+
+ AL_inspired: "Great inspiration"
+
+ AL_perfect_body_casting: "Casting Supreme Spell: Perfect Body"
+ AL_perfect_body_casting_desc:0 "This character is casting supreme spell.\n#NIf at any moment when character has this modifier mana reaches 0 casting will be canceled!#!\n[Mana|E] Regeneration: [mana_regen_i]#N -15#!"
+
+ AL_magical_immortality_casting: "Casting Supreme Spell: Magical Immortality"
+ AL_magical_immortality_casting_desc:0 "This character is casting supreme spell.\n#NIf at any moment when character has this modifier mana reaches 0 casting will be canceled!#!\n[Mana|E] Regeneration: [mana_regen_i]#N -25#!"

@@ -1,0 +1,14 @@
+﻿have_enough_mana = {
+	custom_description = {
+		text = "has_enough_mana_trigger"
+		value = $cost$
+		var:mana >= $cost$
+	}
+}
+is_province_spell = {
+	has_variable = province_spell
+}
+
+is_exposed = {
+	has_trait = exposed_mage
+}

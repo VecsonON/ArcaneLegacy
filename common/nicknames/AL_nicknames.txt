@@ -1,0 +1,6 @@
+﻿first_mage_nick = {
+
+}
+supreme_inquisitor_nick = {
+	
+}

@@ -1,0 +1,48 @@
+﻿l_english:
+
+ AL_begin_mana_traing_decision: "Train Mana"
+ AL_begin_mana_traing_decision_desc: "Train to increse mana pool or mana regeneraction"
+ AL_begin_mana_traing_decision_tooltip: "Train"
+ AL_begin_mana_traing_decision_confirm: "Train"
+
+ AL_becoming_mage_decision: "Journey to become a mage"
+ AL_becoming_mage_decision_tooltip: "Journey to become a mage"
+ AL_becoming_mage_decision_confirm: "Journey to become a mage"
+ AL_becoming_mage_decision_desc: ""
+
+ AL_going_to_magicardia_decision: "Go to Magicardia"
+ AL_going_to_magicardia_decision_desc: "Go to Magicardia"
+ AL_going_to_magicardia_decision_confirm: "Go"
+ AL_going_to_magicardia_decision_tooltip: "Go to Magicardia"
+
+ AL_search_for_magicardia_decision: "Search for Magicardia"
+ AL_search_for_magicardia_decision_desc: "Search for Magicardia"
+ AL_search_for_magicardia_decision_confirm: "Search"
+ AL_search_for_magicardia_decision_tooltip: "Search for Magicardia"
+
+ MANA_TRAINING_LABEL: "What do you what to train"
+ desc_mana_max_name: "Maximum Mana"
+ mana_max_tooltip: "Train to increase maximum mana"
+ desc_mana_max_desc: "Train to increase maximum mana"
+ desc_mana_regen_name: "Regeneration Mana"
+ mana_regen_tooltip: "Train to increase regeneration of mana"
+ desc_mana_regen_desc: "Train to increase regeneration of mana"
+ CHOSE_MANA_TRAINING: "Choose Mana Training"
+
+
+ AL_begin_witch_hunter_training_decision: "Witch Hunter Training"
+ AL_begin_witch_hunter_training_decision_desc: "Train"
+ AL_begin_witch_hunter_training_decision_tooltip: "Train"
+ AL_begin_witch_hunter_training_decision_confirm: "Train"
+
+ MANA_TRAINING_LABEL: "What do you what to train"
+ witch_hunter_training_body_desc: "$trait_track_arc_body_technique$"
+ witch_hunter_training_body_name: "$trait_track_arc_body_technique$"
+ witch_hunter_training_body_tooltip: "$trait_track_arc_body_technique$"
+ witch_hunter_training_fight_desc: "$trait_track_arc_fight_technique$"
+ witch_hunter_training_fight_name: "$trait_track_arc_fight_technique$"
+ witch_hunter_training_fight_tooltip: "$trait_track_arc_fight_technique$"
+ witch_hunter_training_perception_desc: "$trait_track_arc_perception_technique$"
+ witch_hunter_training_perception_name: "$trait_track_arc_perception_technique$"
+ witch_hunter_training_perception_tooltip: "$trait_track_arc_perception_technique$"
+ CHOOSE_WITCH_HUNTER_TRAINING: "Choose Arc Training"

@@ -1,0 +1,23 @@
+﻿l_english:
+ center_desc: "Magicardia, City of mages and horror of inquisition. Place where mages of all around europe\ngather to sell, buy, learn and talk with other mages.Magicardia is protectect from rest of world by \nseries of powerful spells castet by it's creator [GetGlobalVariable('first_mage_char').Char.GetFullName]"
+ right_desc: "The right wing is home to many merchant magicians who sell patterns for spells for a price\nThe most famous merchants are:\nArval - Master of manipulation, matter and energy\nOrde - Master of manipulation, matter and life\nMystas - Master of mind and life\nPeren - Master of Creation, matter and life.\nYou can find the best spells at Peren's, but they are usually expensive "
+ arval_desc: "You are in shop, Here you will buy spells #R {WORK IN PROGRES DESCRIPTION}"
+ orde_desc: "You are in shop, Here you will buy spells #R {WORK IN PROGRES DESCRIPTION}"
+ mystas_desc: "You are in shop, Here you will buy spells #R {WORK IN PROGRES DESCRIPTION}"
+ peren_desc: "You are in shop, Here you will buy spells #R {WORK IN PROGRES DESCRIPTION}"
+ school_desc: "Here is Collage of magicardia, The Biggest School for mages to learn.\n\nHere you can for gold get concepts lifestyle, every visit has 1 year coldown."
+ AL_magicardia.0001.title: "Searching for Magicardia"
+ AL_magicardia.0001.desc: "I know that I won't find magicardia. So I have an idea to search for mage and ask him about locaction"
+ AL_magicardia.0001.a: "Let's start searching for mage!"
+ AL_magicardia.0001.b: "Nevermind"
+
+ AL_magicardia.0002.title: "Searching for Magicardia: Mage"
+ AL_magicardia.0002.desc: "In front of me is standing an mage.\nMage: \"So... You are searching for magicardia? It not like i'am mage or something but.. if you will show me example of magic maybe i will know something...\""
+ AL_magicardia.0002.a: "look here! (Spend 1 mana)"
+ AL_magicardia.0002.b: "Nevermind"
+ alredy_have_spell: "Already Have This Spell"
+
+ learn_magicardia.super.failure.desc: "Poor studies" 
+ learn_magicardia.failure.desc: "Normal studies"
+ learn_magicardia.success.desc: "Great studies"
+ learn_magicardia.super.success.desc: "Supreme studies"

@@ -1,0 +1,161 @@
+﻿
+mana_change = {
+	custom_description = {
+        text = mana_change
+        value = $VALUE$
+		change_variable = {
+			name = mana
+			add = $VALUE$
+		}
+		if = {
+			limit = { var:mana > mana_max }
+			set_variable = {
+				name = mana
+				value = mana_max
+			}
+		}
+		if = {
+			limit = { var:mana <= 0 }
+			if = { limit = { has_character_modifier = novice_fire_combat_spell_modifier } remove_character_modifier = novice_fire_combat_spell_modifier }
+			if = { limit = { has_character_modifier = apprentice_fire_combat_spell_modifier } remove_character_modifier = apprentice_fire_combat_spell_modifier }
+			if = { limit = { has_character_modifier = adept_fire_combat_spell_modifier } remove_character_modifier = adept_fire_combat_spell_modifier }
+			if = { limit = { has_character_modifier = expert_fire_combat_spell_modifier } remove_character_modifier = expert_fire_combat_spell_modifier }
+			if = { limit = { has_character_modifier = master_fire_combat_spell_modifier } remove_character_modifier = master_fire_combat_spell_modifier }
+
+			if = { limit = { has_character_modifier = AL_perfect_body_casting }  trigger_event = AL_supreme_spells.0102 }
+			if = { limit = { has_character_modifier = AL_magical_immortality_casting }  trigger_event = AL_supreme_spells.0202 }
+			
+			if = { limit = { has_trait = magic_immortality } death = { death_reason = death_mysterious } }
+		}
+		if = { 
+			limit = { var:mana <= 0 }
+			set_variable = {
+				name = mana
+				value = 0
+			}
+		}
+	}
+}
+mana_cost_sub = {
+	custom_description = {
+        text = mana_cost_sub
+        value = $VALUE$
+		change_variable = {
+			name = mana
+			add = $VALUE$
+		}
+		if = {
+			limit = { var:mana > mana_max }
+			set_variable = {
+				name = mana
+				value = mana_max
+			}
+		}
+		if = {
+			limit = { var:mana <= 0 }
+			if = { limit = { has_character_modifier = novice_fire_combat_spell_modifier } remove_character_modifier = novice_fire_combat_spell_modifier }
+			if = { limit = { has_character_modifier = apprentice_fire_combat_spell_modifier } remove_character_modifier = apprentice_fire_combat_spell_modifier }
+			if = { limit = { has_character_modifier = adept_fire_combat_spell_modifier } remove_character_modifier = adept_fire_combat_spell_modifier }
+			if = { limit = { has_character_modifier = expert_fire_combat_spell_modifier } remove_character_modifier = expert_fire_combat_spell_modifier }
+			if = { limit = { has_character_modifier = master_fire_combat_spell_modifier } remove_character_modifier = master_fire_combat_spell_modifier }
+
+			if = { limit = { has_character_modifier = AL_perfect_body_casting }  trigger_event = AL_supreme_spells.0102 }
+			if = { limit = { has_character_modifier = AL_magical_immortality_casting }  trigger_event = AL_supreme_spells.0202 }
+			
+			if = { limit = { has_trait = magic_immortality } death = { death_reason = death_mysterious } }
+		}
+		if = { 
+			limit = { var:mana <= 0 }
+			set_variable = {
+				name = mana
+				value = 0
+			}
+		}
+	}
+}
+
+sus_change = {
+	change_variable = {
+		name = suspicion
+		add = $VALUE$
+	}
+	if = {
+		limit = { var:suspicion >= 100 }
+		trigger_event = AL_exposed_mage.0001
+	}
+	if = { 
+		limit = { var:suspicion <= 0 }
+		set_variable = {
+			name = suspicion
+			value = 0
+		}
+ 	}
+}
+become_mage = {
+	add_character_flag = mage
+	set_variable = {
+		name = mana
+		value = 0
+	}
+	set_variable = {
+		name = mana_regen
+		value = 1
+	}
+	set_variable = {
+		name = mana_degen
+		value = 0
+	}
+	set_variable = {
+		name = mana_max
+		value = 60
+	}
+	set_variable = {
+		name = suspicion
+		value = 0
+	}
+	set_variable = {
+		name = suspicion_inc
+		value = 0
+	}
+	set_variable = {
+		name = suspicion_dec
+		value = 5
+	}
+	trigger_event = { on_action = set_up_remaining_mana_gen_for_year }
+}
+
+increase_suspicion = {
+	if = {
+		limit = { NOT = { is_exposed = yes } }
+		custom_description = {
+			text = increase_suspicion
+			value = $VALUE$
+			change_variable = {
+				name = suspicion
+				add = $VALUE$
+			}
+		}
+		if = { limit = { var:suspicion >= 100 } trigger_event = AL_exposed_mage.0001 }
+	}
+}
+
+add_mana_regen = {
+	custom_description = {
+        text = add_mana_regen
+        value = $VALUE$
+		change_variable = {
+			name = mana_regen
+			add = $VALUE$
+		}
+	}
+}
+add_mana_max = {
+	custom_description = {
+        text = add_mana_max
+        value = $VALUE$
+		change_variable = {
+			name = mana_max
+			add = $VALUE$
+		}
+	}
+}

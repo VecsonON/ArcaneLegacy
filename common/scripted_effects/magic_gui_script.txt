@@ -1,0 +1,40 @@
+﻿effect_open_magic_window = {
+	set_variable = {
+		name = window_magic_view
+		value = 1
+	}
+}
+effect_close_magic_window = {
+	remove_variable = window_magic_view
+	remove_variable = spell_target
+}
+
+effect_open_spell_create_window = {
+	set_variable = {
+		name = window_spell_create_view
+		value = 1
+	}
+}
+effect_close_spell_create_window = {
+	remove_variable = window_spell_create_view
+	remove_character_flag = type_creation
+	remove_character_flag = type_destruction
+	remove_character_flag = type_manipulation
+	remove_character_flag = type_energy
+	remove_character_flag = type_material
+	remove_character_flag = type_mind
+	remove_character_flag = type_undead
+	remove_character_flag = type_t_life
+	remove_character_flag = type_t_none
+}
+become_magical_vampire = {
+	add_trait = magical_vampire
+	add_character_modifier = { 
+		modifier = magical_vampire_hunger
+		years = 1
+	}
+	trigger_event = {
+		id = AL_basic_events.0003
+		years = 1
+	}
+}

@@ -1,0 +1,27 @@
+texticon = {
+	icon = icon_mana_increase
+	iconsize = {
+		texture = "gfx/magic/mana_increase.dds"	
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+texticon = {
+	icon = icon_mana_max
+	iconsize = {
+		texture = "gfx/magic/mana_max.dds"	
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+texticon = {
+	icon = icon_mana_decrease
+	iconsize = {
+		texture = "gfx/magic/mana_decrease.dds"	
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}

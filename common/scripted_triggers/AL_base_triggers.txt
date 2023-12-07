@@ -1,0 +1,3 @@
+﻿is_already_traing = {
+	has_character_modifier = training_mana
+}

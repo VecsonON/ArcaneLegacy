@@ -1,0 +1,42 @@
+﻿coldown_look_for_spell_loc = {
+	type = character 
+	text = { 
+		trigger = {  
+			has_trait = intellect_good_1
+		}
+		localization_key = coldown_look_for_spell_loc_1
+	}
+	text = { 
+		trigger = {  
+			has_trait = intellect_good_2
+		}
+		localization_key = coldown_look_for_spell_loc_2
+	}
+	text = { 
+		trigger = {  
+			has_trait = intellect_good_3
+		}
+		localization_key = coldown_look_for_spell_loc_3
+	}
+	text = { 
+		trigger = {  
+			has_trait = intellect_bad_1
+		}
+		localization_key = coldown_look_for_spell_loc_4
+	}
+	text = { 
+		trigger = {  
+			has_trait = intellect_bad_2
+		}
+		localization_key = coldown_look_for_spell_loc_5
+	}
+	text = { 
+		trigger = {  
+			has_trait = intellect_bad_3
+		}
+		localization_key = coldown_look_for_spell_loc_6
+	}
+	text = { 
+		localization_key = coldown_look_for_spell_loc_0 
+	}
+}

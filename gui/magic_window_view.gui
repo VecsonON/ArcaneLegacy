@@ -1,0 +1,429 @@
+﻿window  = {
+	name = "magic_window"
+	size = {750 820}
+	layoutpolicy_horizontal = expanding
+	layoutpolicy_vertical = expanding
+	parentanchor = center
+	layer = windows_layer
+	using = Window_Background
+	using = Window_Size_CharacterList
+	using = Window_Decoration
+	visible = "[GetScriptedGui('is_magic_window_open').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+	state = {
+		name = _show		
+	}
+	state = {
+		name = _hide
+		on_start = "[GetVariableSystem.Clear('current_spell_selected')]"
+	}
+	vbox = {
+		using = Window_Margins
+		spacing = 5
+		header_pattern  = {
+			layoutpolicy_horizontal = expanding
+
+			blockoverride "header_text" {
+				raw_text = "magic_window_text"
+			}
+
+			blockoverride "button_close"
+			{
+				onclick = "[GetScriptedGui('close_magic_window').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+			}
+
+		}
+		text_single = {
+			text = "spell_casting_help"
+			maximumsize = { 400 200 }
+		}
+		# TAB #
+		hbox = {
+			layoutpolicy_horizontal = expanding 
+			button_tab_light  = {
+				enabled = "[Not(GetVariableSystem.HasValue('current_category', 'manipulation_'))]"
+				layoutpolicy_horizontal = expanding 
+				raw_text = "Manipulation"
+				onclick = "[GetVariableSystem.Set('current_category','manipulation_')]"
+			}
+			button_tab_light  = {
+				enabled = "[Not(GetVariableSystem.HasValue('current_category', 'creation_'))]"
+				layoutpolicy_horizontal = expanding 
+				raw_text = "Creation"
+				onclick = "[GetVariableSystem.Set('current_category','creation_')]"
+			}
+			button_tab_light  = {
+				enabled = "[Not(GetVariableSystem.HasValue('current_category', 'destruction_'))]"
+				layoutpolicy_horizontal = expanding 
+				raw_text = "Destruction"
+				onclick = "[GetVariableSystem.Set('current_category','destruction_')]"
+
+			}
+			button_tab_light  = {
+				enabled = "[Not(GetVariableSystem.HasValue('current_category', 'supreme_'))]"
+				layoutpolicy_horizontal = expanding 
+				raw_text = "#S Supreme Spells#!"
+				onclick = "[GetVariableSystem.Set('current_category','supreme_')]"
+			}
+		}
+		hbox = {
+			margin = { 0 -2}
+			visible = "[Not(GetVariableSystem.HasValue('current_category','supreme_'))]"
+			layoutpolicy_horizontal = expanding 
+			button_tab_light  = {
+				enabled = "[Not(GetVariableSystem.HasValue('current_category_second', 'mind_'))]"
+				layoutpolicy_horizontal = expanding 
+				raw_text = "Mind"
+				onclick = "[GetVariableSystem.Set('current_category_second','mind_')]"
+			}
+			button_tab_light  = {
+				enabled = "[Not(GetVariableSystem.HasValue('current_category_second', 'material_'))]"
+				layoutpolicy_horizontal = expanding  
+				raw_text = "Material"
+				onclick = "[GetVariableSystem.Set('current_category_second','material_')]"
+			}
+			# button_tab = {
+			# 	layoutpolicy_horizontal = expanding 
+			# 	raw_text = "Life"
+			# 	onclick = "[GetVariableSystem.Set('current_category_second','life_')]"
+			# }
+			button_tab_light  = {
+				enabled = "[Not(GetVariableSystem.HasValue('current_category_second', 'undead_'))]"
+				layoutpolicy_horizontal = expanding  
+				raw_text = "Undead"
+				onclick = "[GetVariableSystem.Set('current_category_second','undead_')]"
+			}
+			button_tab_light  = {
+				enabled = "[Not(GetVariableSystem.HasValue('current_category_second', 'energy_'))]"
+				layoutpolicy_horizontal = expanding  
+				raw_text = "Energy"
+				onclick = "[GetVariableSystem.Set('current_category_second','energy_')]"
+			}
+		}
+		hbox = {
+			visible = "[Not(GetVariableSystem.HasValue('current_category','supreme_'))]"
+
+			margin = { 0 1}
+			layoutpolicy_horizontal = expanding 
+			button_tab_light  = {
+				enabled = "[Not(GetVariableSystem.HasValue('current_category_third', 'life'))]"
+				layoutpolicy_horizontal = expanding 
+				raw_text = "Life"
+				onclick = "[GetVariableSystem.Set('current_category_third','life')]"
+			}
+			button_tab_light  = {
+				enabled = "[Not(GetVariableSystem.HasValue('current_category_third', 'none'))]"
+				layoutpolicy_horizontal = expanding  
+				raw_text = "None"
+				onclick = "[GetVariableSystem.Set('current_category_third','none')]"
+			}
+		}
+		spacer = {
+			size = { 0 10 }
+		}
+		# LIST #
+		hbox = {
+			visible = "[Not(GetVariableSystem.HasValue('current_category','supreme_'))]"
+
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = expanding
+			scrollbox = {
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
+
+				scrollbar_horizontal = {
+					using = Scrollbar_Horizontal
+				}
+				blockoverride "scrollbox_content"
+				{
+					dynamicgridbox = {
+						datamodel = "[GetPlayer.MakeScope.GetList(Concatenate(Concatenate(GetVariableSystem.Get('current_category'),GetVariableSystem.Get('current_category_second')),Concatenate(GetVariableSystem.Get('current_category_third'),'_spells_list')))]"
+						layoutpolicy_horizontal = expanding
+						allow_outside = yes
+						layoutpolicy_vertical = expanding
+						maxhorizontalslots = 1
+						maxverticalslots = 100
+						ignoreinvisible = yes
+						item = {
+							widget = {									
+								visible = "[GetScriptedGui(Concatenate(Scope.GetFlagName,'_execute')).IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope('target', GetPlayer.MakeScope.GetVariable('spell_target').GetCharacter.MakeScope).End)]"
+								size = { 680 50 }
+
+								button_standard_clean = {
+									size = { 95% 92% }
+									onclick = "[GetVariableSystem.Set('current_spell_selected',Scope.GetFlagName)]"
+									enabled = "[GetScriptedGui(Concatenate(Scope.GetFlagName,'_execute')).IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope('target', GetPlayer.MakeScope.GetVariable('spell_target').GetCharacter.MakeScope).End)]"
+									tooltip = "[GetScriptedGui(Concatenate(Scope.GetFlagName,'_execute')).IsValidTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).End)]"
+									hbox = {
+										margin = { 10 0 }
+										spacer = { size = { 15 0 } }
+
+										text_single = {
+											text = "[Localize(Concatenate(Scope.GetFlagName,'_name'))]"
+											minimumsize = { 190 -1 }
+										}
+
+										expand = {}
+										
+										icon = {
+											texture = "gfx/magic/MagicIcon.dds"
+											size = { 20 30 }
+										}
+
+										spacer = { size = { 5 0 } }
+
+										text_single = {
+											raw_text = "[GetPlayer.MakeScope.ScriptValue(Concatenate(Scope.GetFlagName,'_cost'))]"
+											#raw_text = "10"
+											minimumsize = { 40 -1 }
+										}
+										
+
+										spacer = { size = { 15 0 } }
+									}
+								}
+							}
+						}
+						
+						
+						
+					}
+				}
+			}
+			
+		}
+		hbox = {
+			visible = "[GetVariableSystem.HasValue('current_category','supreme_')]"
+
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = expanding
+			scrollbox = {
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
+
+				scrollbar_horizontal = {
+					using = Scrollbar_Horizontal
+				}
+				blockoverride "scrollbox_content"
+				{
+					dynamicgridbox = {
+						datamodel = "[GetPlayer.MakeScope.GetList('supreme_spells_list')]"
+						layoutpolicy_horizontal = expanding
+						allow_outside = yes
+						layoutpolicy_vertical = expanding
+						maxhorizontalslots = 1
+						maxverticalslots = 100
+						ignoreinvisible = yes
+						item = {
+							widget = {									
+								visible = "[GetScriptedGui(Concatenate(Scope.GetFlagName,'_execute')).IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope('target', GetPlayer.MakeScope.GetVariable('spell_target').GetCharacter.MakeScope).End)]"
+								size = { 680 50 }
+
+								button_standard_clean = {
+									size = { 95% 92% }
+									onclick = "[GetVariableSystem.Set('current_spell_selected',Scope.GetFlagName)]"
+									enabled = "[GetScriptedGui(Concatenate(Scope.GetFlagName,'_execute')).IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope('target', GetPlayer.MakeScope.GetVariable('spell_target').GetCharacter.MakeScope).End)]"
+									tooltip = "[GetScriptedGui(Concatenate(Scope.GetFlagName,'_execute')).IsValidTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).End)]"
+									hbox = {
+										margin = { 10 0 }
+										spacer = { size = { 15 0 } }
+
+										text_single = {
+											text = "[Localize(Concatenate(Scope.GetFlagName,'_name'))]"
+											minimumsize = { 190 -1 }
+										}
+
+										expand = {}
+										
+										icon = {
+											texture = "gfx/magic/MagicIcon.dds"
+											size = { 20 30 }
+										}
+
+										spacer = { size = { 5 0 } }
+
+										text_single = {
+											raw_text = "[GetPlayer.MakeScope.ScriptValue(Concatenate(Scope.GetFlagName,'_cost'))]"
+											#raw_text = "10"
+											minimumsize = { 40 -1 }
+										}
+										
+
+										spacer = { size = { 15 0 } }
+									}
+								}
+							}
+						}
+						
+						
+						
+					}
+				}
+			}
+		}
+
+		hbox = {
+			spacing = 4
+			vbox = {
+				text_single = {
+					text = "[Localize('caster_loc')]"
+				}				
+				portrait_shoulders = {
+					datacontext = "[GetPlayer]"
+					name = "caster_portrait"
+					blockoverride "opinion_box" {}
+					blockoverride "status_icons" {}
+				}
+			}
+			vbox = {
+				visible = "[GetScriptedGui('is_not_province_spell').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				spacing = 5
+				text_single = {
+					text = "[Localize('effects_loc')]"
+				}
+				scrollbox = {
+					#using = Background_Area_With_Header
+					
+					size = { 350 170 }
+					blockoverride "scrollbox_content"
+					{	
+						text_multi = {
+							datacontext = "[GetVariableSystem]"
+							name = "accept_effects_info"
+							layoutpolicy_horizontal = expanding
+							autoresize = yes
+							max_width = 330
+							margin = { 5 0 }
+							visible = "[GetVariableSystem.Exists('current_spell_selected')]"
+
+							text = "[GetScriptedGui(Concatenate(GetVariableSystem.Get('current_spell_selected'),'_execute')).BuildTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope('target', GetPlayer.MakeScope.GetVariable('spell_target').GetCharacter.MakeScope).AddScope('effect_display_mode', MakeScopeFlag('yes')).End)]"
+						}
+
+						block "extra_content" {}
+					}
+
+				}
+			}
+			vbox = {
+				visible = "[GetScriptedGui('is_province_spell').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				spacing = 5
+				text_single = {
+					text = "[Localize('effects_loc')]"
+				}
+				scrollbox = {
+					#using = Background_Area_With_Header
+					size = { 350 170 }
+					blockoverride "scrollbox_content"
+					{	
+						text_multi = {
+							datacontext = "[GetVariableSystem]"
+							name = "accept_effects_info"
+							layoutpolicy_horizontal = expanding
+							autoresize = yes
+							max_width = 330
+							margin = { 5 0 }
+							#visible = "[GetVariableSystem.Exists('current_spell_selected')]"
+							text = "[GetScriptedGui(Concatenate(GetVariableSystem.Get('current_spell_selected'),'_execute')).ExecuteTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope('target', GetPlayer.MakeScope.GetVariable('spell_target').Title.MakeScope).AddScope('effect_display_mode', MakeScopeFlag('yes')).End)]"
+						}
+
+						block "extra_content" {}
+					}
+				}
+			}
+			vbox = {
+				text_single = {
+					text = "[Localize('target_loc')]"
+				}
+				portrait_shoulders = {
+					datacontext = "[GetPlayer.MakeScope.GetVariable('spell_target').GetCharacter]"
+					name = "target_portrait"
+					visible = "[GetScriptedGui('is_not_province_spell').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+					#blockoverride "opinion_box" {}
+					#blockoverride "status_icons" {}
+					blockoverride "portrait_transformation"
+					{
+						portrait_scale = { -1 1 }
+						portrait_offset = { 1 0 }
+					}
+				}
+				
+				coa_title_medium_crown = {
+					visible = "[GetScriptedGui('is_province_spell').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+					name = "target_coa"
+					datacontext = "[GetPlayer.MakeScope.GetVariable('spell_target').Title]"
+					portrait_shoulders = {
+						datacontext = "[GetPlayer.MakeScope.GetVariable('spell_target').Title.GetHolder]"
+						name = "target_portrait2"
+						position = { 45 0}
+						blockoverride "portrait_transformation"
+						{
+							portrait_scale = { -1 1 }
+							portrait_offset = { 1 0 }
+						}
+						#blockoverride "opinion_box" {}
+						#blockoverride "status_icons" {}
+					}
+				}
+			}
+		}
+		button_standard = {
+			visible = "[GetScriptedGui('is_not_province_spell').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			datacontext = "[GetVariableSystem]"
+			#enabled = "[GetVariableSystem.Exists('current_spell_selected')]"
+			enabled = "[GetScriptedGui(Concatenate(GetVariableSystem.Get('current_spell_selected'),'_execute')).IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope('target', GetPlayer.MakeScope.GetVariable('spell_target').GetCharacter.MakeScope).End)]"
+			tooltip = "[GetScriptedGui(Concatenate(GetVariableSystem.Get('current_spell_selected'),'_execute')).IsValidTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('target',GetPlayer.MakeScope.Var('spell_target').Char.MakeScope).End)]"
+			onclick = "[GetScriptedGui(Concatenate(GetVariableSystem.Get('current_spell_selected'),'_execute')).Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope('target', GetPlayer.MakeScope.GetVariable('spell_target').GetCharacter.MakeScope).End)]"
+			text = "[Localize('execute_loc')]"
+		}
+		button_standard = {
+			visible = "[GetScriptedGui('is_province_spell').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			datacontext = "[GetVariableSystem]"
+			#enabled = "[GetVariableSystem.Exists('current_spell_selected')]"
+			enabled = "[GetScriptedGui(Concatenate(GetVariableSystem.Get('current_spell_selected'),'_execute')).IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope('target', GetPlayer.MakeScope.GetVariable('spell_target').Title.MakeScope).End)]"
+			tooltip = "[GetScriptedGui(Concatenate(GetVariableSystem.Get('current_spell_selected'),'_execute')).IsValidTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('target',GetPlayer.MakeScope.GetVariable('spell_target').Title.MakeScope).End)]"
+			onclick = "[GetScriptedGui(Concatenate(GetVariableSystem.Get('current_spell_selected'),'_execute')).Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope('target', GetPlayer.MakeScope.GetVariable('spell_target').Title.MakeScope).End)]"
+			text = "[Localize('execute_loc')]"
+		}
+	}
+}
+types Buttons
+{
+	type button_tab_light = button_normal
+    {
+        size = { 100 38 }
+        gfxtype = togglepushbuttongfx
+        effectname = "NoHighlight"
+
+		upframe = 1
+        uphoverframe = 2
+        uppressedframe = 3
+        downframe = 4
+        downhoverframe = 4
+        downpressedframe = 4
+
+        texture = "gfx/interface/buttons/button_tab.dds"
+        spriteType = Corneredtiled
+        spriteborder = { 10 10 }
+        framesize = { 198 53 }
+
+        buttonText = {
+            text_single = {
+                size = { 100% 100% }
+                autoresize = no
+                margin = { 10 0 }
+                align = center|nobaseline
+                default_format = "#low"
+                alwaystransparent = yes
+            }
+        }
+		block "disabled"
+        {
+			upframe = 1
+			uphoverframe = 2
+			uppressedframe = 3
+			downframe = 4
+			downhoverframe = 4
+			downpressedframe = 4
+			disableframe = 4
+		}
+    }
+}

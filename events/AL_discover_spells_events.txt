@@ -1,0 +1,23 @@
+﻿namespace = AL_discover_spells
+# AL_discover_spells.0001 = {
+# 	title = AL_discover_spells.0001.title
+# 	desc = AL_discover_spells.0001.desc
+# 	theme =  secret
+# 	option = {
+# 		name = AL_discover_spells.0001.a
+# 	}
+# }
+# AL_discover_spells.0005 = {
+# 	title = AL_discover_spells.0005.title
+# 	desc = AL_discover_spells.0005.desc
+# 	theme =  secret
+	
+# 	left_portrait = {
+# 		character = root
+# 		animation = paranoia
+# 	}
+# 	option = {
+# 		name = AL_discover_spells.0005.a
+# 		remove_character_flag = spell_none
+# 	}
+# }

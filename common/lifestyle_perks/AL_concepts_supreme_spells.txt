@@ -1,0 +1,111 @@
+﻿supreme_spell_start_perk = {
+	lifestyle = concepts_lifestyle
+	tree = concepts
+	position = { 8 4 }
+	icon = node_learning
+	can_be_picked = {
+		has_character_modifier = AL_inspired
+	}
+	effect = {
+		custom_tooltip = { 
+			text = add_used_mind_effect_loc
+			if = {      limit = { has_trait = intellect_good_1 } add_character_modifier = { modifier = used_mind months = 20 } }
+			else_if = { limit = { has_trait = intellect_good_2 } add_character_modifier = { modifier = used_mind months = 16 } }
+			else_if = { limit = { has_trait = intellect_good_3 } add_character_modifier = { modifier = used_mind months = 12 } }
+			else_if = { limit = { has_trait = intellect_bad_1 } add_character_modifier = { modifier = used_mind months = 28 } }
+			else_if = { limit = { has_trait = intellect_bad_2 } add_character_modifier = { modifier = used_mind months = 32 } }
+			else_if = { limit = { has_trait = intellect_bad_3 } add_character_modifier = { modifier = used_mind months = 36} }
+			else = {  add_character_modifier = { modifier = used_mind months = 24 } }
+		}
+		custom_description_no_bullet = { 
+			text = supreme_spell_start_perk_effect
+		}
+		trigger_event = AL_supreme_spells.0001
+	}
+	can_be_auto_selected = { always = no }
+}
+supreme_spell_1_perk = {
+	lifestyle = concepts_lifestyle
+	tree = concepts
+	position = { 9.5 3.5 }
+	icon = node_learning
+	parent = supreme_spell_start_perk
+	can_be_picked = {
+		gold >= 250
+		NOT = { has_character_modifier = used_mind }
+	}
+	effect = {
+		remove_short_term_gold = 250
+		custom_tooltip = { 
+			text = add_used_mind_effect_loc
+			if = {      limit = { has_trait = intellect_good_1 } add_character_modifier = { modifier = used_mind months = 20 } }
+			else_if = { limit = { has_trait = intellect_good_2 } add_character_modifier = { modifier = used_mind months = 16 } }
+			else_if = { limit = { has_trait = intellect_good_3 } add_character_modifier = { modifier = used_mind months = 12 } }
+			else_if = { limit = { has_trait = intellect_bad_1 } add_character_modifier = { modifier = used_mind months = 28 } }
+			else_if = { limit = { has_trait = intellect_bad_2 } add_character_modifier = { modifier = used_mind months = 32 } }
+			else_if = { limit = { has_trait = intellect_bad_3 } add_character_modifier = { modifier = used_mind months = 36} }
+			else = {  add_character_modifier = { modifier = used_mind months = 24 } }
+		}
+		custom_description_no_bullet = { 
+			text = supreme_spell_1_perk_effect
+		}
+	}
+	can_be_auto_selected = { always = no }
+}
+supreme_spell_2_perk = {
+	lifestyle = concepts_lifestyle
+	tree = concepts
+	position = { 8 5 }
+	icon = node_learning
+	parent = supreme_spell_1_perk
+	can_be_picked = {
+		gold >= 250
+		NOT = { has_character_modifier = used_mind }
+	}
+	effect = {
+		remove_short_term_gold = 250
+		custom_tooltip = { 
+			text = add_used_mind_effect_loc
+			if = {      limit = { has_trait = intellect_good_1 } add_character_modifier = { modifier = used_mind months = 20 } }
+			else_if = { limit = { has_trait = intellect_good_2 } add_character_modifier = { modifier = used_mind months = 16 } }
+			else_if = { limit = { has_trait = intellect_good_3 } add_character_modifier = { modifier = used_mind months = 12 } }
+			else_if = { limit = { has_trait = intellect_bad_1 } add_character_modifier = { modifier = used_mind months = 28 } }
+			else_if = { limit = { has_trait = intellect_bad_2 } add_character_modifier = { modifier = used_mind months = 32 } }
+			else_if = { limit = { has_trait = intellect_bad_3 } add_character_modifier = { modifier = used_mind months = 36} }
+			else = {  add_character_modifier = { modifier = used_mind months = 24 } }
+		}
+		custom_description_no_bullet = { 
+			text = supreme_spell_2_perk_effect
+		}
+	}
+	can_be_auto_selected = { always = no }
+}
+supreme_spell_end_perk = {
+	lifestyle = concepts_lifestyle
+	tree = concepts
+	position = { 9.5 4.5 }
+	icon = spell
+	parent = supreme_spell_2_perk
+	can_be_picked = {
+		gold >= 500
+		NOT = { has_character_modifier = used_mind }
+	}
+	effect = {
+		remove_short_term_gold = 500
+		custom_tooltip = { 
+			text = add_used_mind_effect_loc
+			if = {      limit = { has_trait = intellect_good_1 } add_character_modifier = { modifier = used_mind months = 20 } }
+			else_if = { limit = { has_trait = intellect_good_2 } add_character_modifier = { modifier = used_mind months = 16 } }
+			else_if = { limit = { has_trait = intellect_good_3 } add_character_modifier = { modifier = used_mind months = 12 } }
+			else_if = { limit = { has_trait = intellect_bad_1 } add_character_modifier = { modifier = used_mind months = 28 } }
+			else_if = { limit = { has_trait = intellect_bad_2 } add_character_modifier = { modifier = used_mind months = 32 } }
+			else_if = { limit = { has_trait = intellect_bad_3 } add_character_modifier = { modifier = used_mind months = 36} }
+			else = {  add_character_modifier = { modifier = used_mind months = 24 } }
+		}
+		custom_description_no_bullet = { 
+			text = supreme_spell_end_perk_effect
+		}
+		trigger_event = AL_supreme_spells.1001
+	}
+	can_be_auto_selected = { always = no }
+}

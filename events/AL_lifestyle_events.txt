@@ -1,0 +1,249 @@
+﻿namespace = AL_lifestyle_events
+# COMMON
+AL_lifestyle_events.0001 = { # Experiment with rats
+	title = AL_lifestyle_events.0001.title
+	type = character_event
+	desc = AL_lifestyle_events.0001.desc
+	theme = realm
+	left_portrait = root
+	option = { # SEARCH ME FOR SOME RATS!
+		name = AL_lifestyle_events.0001.a
+		add_prestige = -100
+		add_concepts_lifestyle_xp = 100
+		add_mana_regen = { VALUE = 0.1 }
+		add_mana_regen = { VALUE = 5 }
+		increase_suspicion = { VALUE = 5 }
+	
+	}
+	option = { # BUY ME SOME RATS!
+		name = AL_lifestyle_events.0001.b
+		remove_short_term_gold = 10
+		add_concepts_lifestyle_xp = 100
+		add_mana_regen = { VALUE = 0.1 }
+		add_mana_regen = { VALUE = 5 }
+		increase_suspicion = { VALUE = 5 }
+	}
+	option = { # NEVER MIND
+		name = AL_lifestyle_events.0001.c
+	}
+}
+AL_lifestyle_events.0002 = { # Stupid Idea with great promise
+	title = AL_lifestyle_events.0002.title
+	type = character_event
+	desc = AL_lifestyle_events.0002.desc
+	theme = realm
+	left_portrait = root
+	option = { # LET'S DO IT!
+		name = AL_lifestyle_events.0002.a
+		duel = {
+			skill = learning
+			value = 40
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+				}
+				add_concepts_lifestyle_xp = 250
+				add_mana_regen = { VALUE = 0.2 }
+				add_mana_regen = { VALUE = 10 }
+			}
+			50 = { # I AM SOO STUPID
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -1
+				}
+				add_stress = 25
+			}
+		}
+		remove_short_term_gold = 50
+		add_prestige = -100
+		increase_suspicion = { VALUE = 10 }
+	}
+	option = { # NEVER MIND
+		name = AL_lifestyle_events.0002.b
+	}
+}
+AL_lifestyle_events.0003 = { # Challenge!
+	title = AL_lifestyle_events.0003.title
+	type = character_event
+	desc = AL_lifestyle_events.0003.desc
+	theme = realm
+	left_portrait = root
+	option = { # LET'S DO IT!
+		name = AL_lifestyle_events.0003.a
+		duel = {
+			skill = learning
+			value = 40
+			25 = { # I BEAT IT!
+				compare_modifier = {
+					value = scope:duel_value
+				}
+				add_concepts_lifestyle_xp = 250
+				add_mana_regen = { VALUE = 0.2 }
+				add_mana_regen = { VALUE = 10 }
+			}
+			25 = { # MEDERATE SUCCES
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 0.5
+				}
+				add_concepts_lifestyle_xp = 100
+				add_mana_regen = { VALUE = 0.1 }
+				add_mana_regen = { VALUE = 5 }
+			}
+			30 = { # FAILURE!
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -1
+				}
+				add_stress = 25
+			}
+		}
+		increase_suspicion = { VALUE = 20 }
+	}
+	option = { # NEVER MIND
+		name = AL_lifestyle_events.0003.b
+	}
+}
+AL_lifestyle_events.0004 = { # Test new spell!
+	title = AL_lifestyle_events.0004.title
+	type = character_event
+	desc = AL_lifestyle_events.0004.desc
+	theme = realm
+	left_portrait = root
+	option = { # LET'S DO IT!
+		name = AL_lifestyle_events.0004.a
+		random_list = {
+			25 = { # I BEAT IT!
+				show_chance = no
+				add_concepts_lifestyle_xp = 250
+				add_mana_regen = { VALUE = 0.2 }
+				add_mana_regen = { VALUE = 10 }
+			}
+			30 = { # FAILURE!
+				show_chance = no
+				add_stress = 25
+			}
+		}
+		increase_suspicion = { VALUE = 25 }
+	}
+	option = { # NEVER MIND
+		name = AL_lifestyle_events.0004.b
+	}
+}
+# UNCOMMON
+AL_lifestyle_events.0011 = { # Flash of inspiration
+	title = AL_lifestyle_events.0011.title
+	type = character_event
+	desc = AL_lifestyle_events.0011.desc
+	theme = realm
+	left_portrait = root
+	option = {
+		name = AL_lifestyle_events.0011.a
+		remove_short_term_gold = 50
+		add_concepts_lifestyle_xp = 500
+		add_mana_regen = { VALUE = 0.4 }
+		add_mana_regen = { VALUE = 40 }
+	}
+	option = {
+		name = AL_lifestyle_events.0011.a
+		remove_short_term_gold = 25
+		add_concepts_lifestyle_xp = 250
+		add_mana_regen = { VALUE = 0.2 }
+		add_mana_regen = { VALUE = 20 }
+	}
+	option = {
+		name = AL_lifestyle_events.0011.a
+		add_concepts_lifestyle_xp = 100
+		add_mana_regen = { VALUE = 0.1 }
+		add_mana_regen = { VALUE = 10 }
+	}
+}
+AL_lifestyle_events.0012 = { # unethical experiment
+	title = AL_lifestyle_events.0012.title
+	type = character_event
+	desc = AL_lifestyle_events.0012.desc
+	theme = realm
+	immediate = {
+		create_character = {
+			template = generic_peasant_character
+			location = root.capital_province
+			gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+			faith = root.faith
+			culture = root.culture
+			save_scope_as = peasant
+		}
+	}
+	right_portrait = {
+		character = scope:peasant
+		animation = prisondungeon
+	}
+	left_portrait = root
+	
+	option = { # DO IT
+		name = AL_lifestyle_events.0012.a
+		trait = compassionate
+		trait = callous
+		trait = sadistic
+		trait = ambitious
+		add_concepts_lifestyle_perk_points = 1
+		scope:peasant = {
+			death = {
+				death_reason = death_torture
+				killer = root
+			}
+		} 
+		stress_impact = {
+			base = major_stress_impact_gain
+			sadistic = major_stress_impact_loss
+			callous = major_stress_impact_loss
+			ambitious = major_stress_impact_loss
+			compassionate = massive_stress_impact_gain
+		}
+	}
+	option = { # Do IT, but with some restraint
+		name = AL_lifestyle_events.0012.a
+		add_concepts_lifestyle_xp = 500
+		scope:peasant = {
+			death = {
+				death_reason = death_torture
+				killer = root
+			}
+		} 
+		stress_impact = {
+			base = medium_stress_impact_gain
+			sadistic = medium_stress_impact_loss
+			callous = medium_stress_impact_loss
+			ambitious = medium_stress_impact_loss
+			compassionate = massive_stress_impact_gain
+		}
+	}
+	option = { # No
+		name = AL_lifestyle_events.0012.a
+		hidden_effect = {
+			scope:peasant = {
+				death = {
+					death_reason = death_disappearance
+				}
+			} 
+		}
+	}
+}
+#RARE
+AL_lifestyle_events.0021 = { # Great Idea!
+	title = AL_lifestyle_events.0021.title
+	type = character_event
+	desc = AL_lifestyle_events.0021.desc
+	theme = realm
+	left_portrait = root
+	
+	option = { # DO IT
+		name = AL_lifestyle_events.0021.a
+		remove_short_term_gold = 100
+		add_concepts_lifestyle_perk_points = 1
+		add_character_modifier = AL_inspired
+	}
+	option = { # No
+		name = AL_lifestyle_events.0021.b
+		add_character_modifier = AL_inspired
+	}
+}

@@ -1,0 +1,53 @@
+﻿l_english:
+ game_concept_Mage: "Mage"
+ game_concept_Mage_desc: "Mage"
+
+ game_concept_Suspicion: "Suspicion"
+ game_concept_Suspicion_desc: "Suspicion"
+
+ game_concept_ArcTechnique: "Arc Techniques"
+ game_concept_ArcTechnique_desc: "Arc Techniques"
+
+ game_concept_Mana: "Mana"
+ game_concept_Mana_desc: "Mana"
+ game_concept_mana_regen_i:0 "@icon_mana_increase!"
+ game_concept_mana_regen_i_desc:0 "@icon_mana_increase!"
+ game_concept_mana_i:0 "@icon_mana_max!"
+ game_concept_mana_i_desc:0 "@icon_mana_max!"
+ game_concept_mana_mana_decrease_i:0 "@icon_mana_decrease!"
+ game_concept_mana_mana_decrease_i_desc:0 "@icon_mana_decrease!"
+
+ game_concept_Regen_Mana: "Mana Regeneration"
+ game_concept_Regen_Mana_desc: "Mana Regeneration"
+
+ game_concept_undead_type: "Undead"
+ game_concept_undead_type_desc: "Undead"
+
+ game_concept_animal_type: "Animal"
+ game_concept_animal_type_desc: "Animal"
+
+ game_concept_Supreme_Spells: "Supreme Spells"
+ game_concept_Supreme_Spells_desc: "Supreme Spells are #S special type#! of spells witch have:\n-#I Casting time, each supreme spell have casting time counted in months or even years in witch you must constantly suply mana, if mana reaches 0 supreme spell is canceled.#!\n-#I Many supreme spells have other requirements that just mana#!\nSupreme spell also often dosen't follow normal concepts style of spells"
+
+ game_concept_concepts_lifestyle: "Concepts Lifestyle"
+ game_concept_concepts_lifestyle_desc: "Concepts Lifestyle"
+
+ game_concept_MConcept: "Concept"
+ game_concept_MConcept_desc: "Concept"
+ game_concept_Manipulation: "Manipulation"
+ game_concept_Manipulation_desc: "Manipulation" 
+ game_concept_Material: "Material"
+ game_concept_Material_desc: "Material"
+ game_concept_Life: "Life"
+ game_concept_Life_desc: "Life"
+ game_concept_Mind: "Mind"
+ game_concept_Mind_desc: "Mind"
+ game_concept_Undead: "Undead"
+ game_concept_Undead_desc: "Undead"
+ game_concept_Energy: "Energy"
+ game_concept_Energy_desc: "Energy"
+
+ game_concept_Spell: "Spell"
+ game_concept_Spell_desc: "Spell"
+ game_concept_Ability: "Ability"
+ game_concept_Ability_desc: "Ability"

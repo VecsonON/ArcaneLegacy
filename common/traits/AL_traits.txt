@@ -1,0 +1,474 @@
+﻿witch_hunter = {
+	opposite_opinion = -80
+	ruler_designer_cost = 240
+	no_prowess_loss_from_age = yes
+	shown_in_ruler_designer = yes
+	compatibility = {
+		witch = -50
+		lifestyle_mystic= 20
+	}
+	opposites = {
+		exposed_mage
+	}
+	tracks = {
+		hunter_legacy = {
+			10 = {
+				dread_baseline_add = 10
+				monthly_prestige = 0.5
+			}
+			35 = {
+				dread_baseline_add = 10
+				monthly_prestige = 1
+			}
+			60 = {
+				dread_baseline_add = 10
+				monthly_prestige = 1.5
+			}
+			85 = {
+				dread_baseline_add = 10
+				monthly_prestige = 2
+			}
+			100 = {
+				dread_baseline_add = 10
+				monthly_prestige = 2.5
+			}
+		}
+		arc_body_technique = {
+			25 = {
+				dread_baseline_add = 10
+				prowess = 5
+				health = 0.25
+				life_expectancy = 5
+			}
+			50 = {
+				dread_baseline_add = 10
+				prowess = 5
+				health = 0.5
+				life_expectancy = 5
+			}
+			75 = {
+				dread_baseline_add = 10
+				prowess = 5
+				health = 0.75 
+				life_expectancy = 5
+			}
+			100 = {
+				dread_baseline_add = 10
+				prowess = 5
+				health = 1
+				life_expectancy = 5
+			}
+		}
+		arc_fight_technique = {
+			25 = {
+				dread_baseline_add = 10
+				prowess_no_portrait = 10
+				enemy_hostile_scheme_success_chance_add = -2
+			}
+			50 = {
+				dread_baseline_add = 10
+				prowess_no_portrait = 10
+				enemy_hostile_scheme_success_chance_add = -3
+			}
+			75 = {
+				dread_baseline_add = 10
+				prowess_no_portrait = 10
+				enemy_hostile_scheme_success_chance_add = -4
+			}
+			100 = {
+				dread_baseline_add = 10
+				prowess_no_portrait = 10
+				enemy_hostile_scheme_success_chance_add = -5
+			}
+		}
+		arc_perception_technique = {
+			25 = {
+				dread_baseline_add = 5
+				enemy_hostile_scheme_success_chance_add = -5
+			}
+			50 = {
+				dread_baseline_add = 5
+				enemy_hostile_scheme_success_chance_add = -10
+			}
+			75 = {
+				dread_baseline_add = 5
+				enemy_hostile_scheme_success_chance_add = -15
+			}
+			100 = {
+				dread_baseline_add = 5
+				enemy_hostile_scheme_success_chance_add = -20
+			}
+		}
+	}
+}
+exposed_mage = {
+	opposite_opinion = -80
+	
+	ruler_designer_cost = -25
+	shown_in_ruler_designer = yes
+	compatibility = {
+		witch = 50
+	}
+	opposites = {
+		witch_hunter
+	}
+	triggered_opinion = {
+		parameter = witchcraft_illegal
+		opinion_modifier = witchcraft_crime
+		ignore_opinion_value_if_same_trait = yes
+	}
+	triggered_opinion = {
+		parameter = witchcraft_shunned
+		opinion_modifier = witchcraft_intolerant
+		ignore_opinion_value_if_same_trait = yes
+	}
+	tracks = {
+		exposed_mage_legacy = {
+			10 = {
+				dread_baseline_add = 10
+				monthly_prestige = 0.5
+				#flag = decrease_low_level_witch_hunt
+			}
+			35 = {
+				dread_baseline_add = 10
+				monthly_prestige = 1
+				#flag = low_level_witch_hunt_not_posible
+			}
+			60 = {
+				no_prowess_loss_from_age = yes
+				dread_baseline_add = 10
+				monthly_prestige = 1.5
+				#flag = decrease_medium_level_witch_hunt
+			}
+			85 = {
+				no_prowess_loss_from_age = yes
+				dread_baseline_add = 10
+				monthly_prestige = 2
+				#flag = medium_level_witch_hunt_not_posible
+			}
+			100 = {
+				no_prowess_loss_from_age = yes
+				dread_baseline_add = 10
+				monthly_prestige = 2.5
+				#flag = decrease_high_level_witch_hunt
+			}
+		}
+	}
+}
+# Small Affinity
+mana_affinity_good_1 = {
+	group = mana_affinity
+	level = 1
+
+	genetic = yes
+
+	good = yes
+
+	birth = 0.25
+	random_creation = 0.25
+
+	flag = increased_mana_max_by_50
+	flag = increased_mana_regen_by_2
+
+	triggered_opinion = {
+		parameter = witchcraft_illegal
+		opinion_modifier = witchcraft_intolerant
+		ignore_opinion_value_if_same_trait = yes
+	}
+	triggered_opinion = {
+		parameter = witchcraft_shunned
+		opinion_modifier = witchcraft_intolerant
+		ignore_opinion_value_if_same_trait = yes
+	}
+
+	ruler_designer_cost = 100
+}
+#Medium Affinity
+mana_affinity_good_2 = {
+	group = mana_affinity
+	level = 2
+
+	genetic = yes
+
+	good = yes
+
+	birth = 0.1
+	random_creation = 0.1
+
+	flag = increased_mana_max_by_100
+	flag = increased_mana_regen_by_4
+
+	triggered_opinion = {
+		parameter = witchcraft_illegal
+		opinion_modifier = witchcraft_intolerant
+		ignore_opinion_value_if_same_trait = yes
+	}
+	triggered_opinion = {
+		parameter = witchcraft_shunned
+		opinion_modifier = witchcraft_intolerant
+		ignore_opinion_value_if_same_trait = yes
+	}
+
+	ruler_designer_cost = 200
+}
+# High Affinity
+mana_affinity_good_3 = {
+	group = mana_affinity
+	level = 3
+
+	genetic = yes
+
+	good = yes
+
+	birth = 0.05
+	random_creation = 0.05
+
+	flag = increased_mana_max_by_200
+	flag = increased_mana_regen_by_8
+
+	triggered_opinion = {
+		parameter = witchcraft_illegal
+		opinion_modifier = witchcraft_intolerant
+		ignore_opinion_value_if_same_trait = yes
+	}
+	triggered_opinion = {
+		parameter = witchcraft_shunned
+		opinion_modifier = witchcraft_intolerant
+		ignore_opinion_value_if_same_trait = yes
+	}
+
+	ruler_designer_cost = 300
+}
+# Suprime Affinity
+mana_affinity_good_4 = {
+	group = mana_affinity
+	level = 4
+
+	genetic = yes
+
+	good = yes
+
+	birth = 0.01
+	random_creation = 0.01
+
+	flag = increased_mana_max_by_400
+	flag = increased_mana_regen_by_16
+
+	triggered_opinion = {
+		parameter = witchcraft_illegal
+		opinion_modifier = witchcraft_crime
+		ignore_opinion_value_if_same_trait = yes
+	}
+	triggered_opinion = {
+		parameter = witchcraft_shunned
+		opinion_modifier = witchcraft_intolerant
+		ignore_opinion_value_if_same_trait = yes
+	}
+
+	ruler_designer_cost = 400
+}
+# Godly Affinity
+mana_affinity_good_5 = {
+	group = mana_affinity
+	level = 5
+
+	genetic = yes
+
+	good = yes
+
+	birth = 0.005
+	random_creation = 0.005
+
+	flag = increased_mana_max_by_800
+	flag = increased_mana_regen_by_32
+
+	triggered_opinion = {
+		parameter = witchcraft_illegal
+		opinion_modifier = witchcraft_crime
+		ignore_opinion_value_if_same_trait = yes
+	}
+	triggered_opinion = {
+		parameter = witchcraft_shunned
+		opinion_modifier = witchcraft_intolerant
+		ignore_opinion_value_if_same_trait = yes
+	}
+
+	ruler_designer_cost = 500
+}
+magic_immortality = {
+	immortal = yes
+	health = 5
+	ruler_designer_cost = 1000
+	no_prowess_loss_from_age = yes
+	flag = mana_unkeep_50
+	flag = magic_immortality_warning
+	triggered_opinion = {
+		parameter = witchcraft_illegal
+		opinion_modifier = witchcraft_crime
+		ignore_opinion_value_if_same_trait = yes
+	}
+	triggered_opinion = {
+		parameter = witchcraft_shunned
+		opinion_modifier = witchcraft_intolerant
+		ignore_opinion_value_if_same_trait = yes
+	}
+}
+
+homunculus_demi_human = {
+	life_expectancy = -50
+	stewardship = -10
+	martial = -10
+	diplomacy = -10
+	intrigue = -10
+	learning = -20
+	triggered_opinion = {
+		parameter = witchcraft_illegal
+		opinion_modifier = witchcraft_crime
+		ignore_opinion_value_if_same_trait = yes
+	}
+	triggered_opinion = {
+		parameter = witchcraft_shunned
+		opinion_modifier = witchcraft_intolerant
+		ignore_opinion_value_if_same_trait = yes
+	}
+	inheritance_blocker = all
+	can_have_children = no
+
+	ruler_designer_cost = -500
+}
+homunculus_near_human = {
+	life_expectancy = -25
+	stewardship = -5
+	martial = -5
+	diplomacy = -5
+	intrigue = -5
+	learning = -10
+	triggered_opinion = {
+		parameter = witchcraft_illegal
+		opinion_modifier = witchcraft_crime
+		ignore_opinion_value_if_same_trait = yes
+	}
+	triggered_opinion = {
+		parameter = witchcraft_shunned
+		opinion_modifier = witchcraft_intolerant
+		ignore_opinion_value_if_same_trait = yes
+	}
+	inheritance_blocker = all
+	can_have_children = no
+
+	ruler_designer_cost = -250
+}
+homunculus_human = {
+	learning = -2
+	fertility = -0.5
+	genetic = yes
+
+	ruler_designer_cost = -100
+
+}
+
+magical_vampire = {
+	immortal = yes
+	health = -5
+	triggered_opinion = {
+		parameter = witchcraft_illegal
+		opinion_modifier = witchcraft_crime
+		ignore_opinion_value_if_same_trait = yes
+	}
+	triggered_opinion = {
+		parameter = witchcraft_shunned
+		opinion_modifier = witchcraft_crime
+		ignore_opinion_value_if_same_trait = yes
+	}
+	attraction_opinion = -50
+	general_opinion = -50
+	stress_loss_mult = -0.5
+	stress_gain_mult = 0.8
+	dread_baseline_add = 50
+	flag = mv_require_blood
+	
+	ruler_designer_cost = -500
+}
+
+biological_perfection = {
+	health = 1
+	prowess = 2
+	life_expectancy = 10
+	ruler_designer_cost = 1000
+
+	martial = 5
+	learning = 5
+	stewardship = 5
+	intrigue = 5
+	diplomacy = 5
+
+	triggered_opinion = {
+		parameter = witchcraft_illegal
+		opinion_modifier = witchcraft_crime
+		ignore_opinion_value_if_same_trait = yes
+	}
+	triggered_opinion = {
+		parameter = witchcraft_shunned
+		opinion_modifier = witchcraft_intolerant
+		ignore_opinion_value_if_same_trait = yes
+	}
+	track = {
+		25 = {
+			life_expectancy = 25
+			prowess = 4
+			health = 1
+			fertility = 0.2
+			years_of_fertility = 25 # Thanks to SirChaos77
+			martial = 3
+			learning = 3
+			stewardship = 3
+			intrigue = 3
+			diplomacy = 3
+		}
+		50 = {
+			life_expectancy = 25
+			prowess = 6
+			health = 2
+			fertility = 0.2
+			years_of_fertility = 25
+	
+			martial = 3
+			learning = 3
+			stewardship = 3
+			intrigue = 3
+			diplomacy = 3
+		}
+		75 = {
+			life_expectancy = 50
+			prowess = 8
+			health = 3
+			fertility = 0.2
+			years_of_fertility = 50
+	
+			martial = 3
+			learning = 3
+			stewardship = 3
+			intrigue = 3
+			diplomacy = 3
+		}
+		100 = {
+			health = 5
+			life_expectancy = 1000
+			prowess = 15
+			fertility = 0.4
+			years_of_fertility = 1000
+	
+			martial = 3
+			learning = 3
+			stewardship = 3
+			intrigue = 3
+			diplomacy = 3
+			#immortal = yes ERROR; I hope 1000+ life expectancy will be enough!
+		}
+	}
+}
+
+# LATER
+# mage  = {
+
+# }

@@ -1,0 +1,202 @@
+﻿namespace = AL_mana_traing
+AL_mana_traing.0001 = {
+	title = AL_mana_traing.0001.title
+	desc = AL_mana_traing.0001.desc
+	theme = secret
+	
+	left_portrait = root
+	option = {
+		name = AL_mana_traing.0001.a
+		remove_short_term_gold = 25
+		add_mana_regen = { VALUE = minor_mana_training_regen }
+	}
+	option = {
+		name = AL_mana_traing.0001.b
+		add_stress = 25
+		add_mana_regen = { VALUE = minor_mana_training_regen }
+	}
+	option = {
+		name = AL_mana_traing.0001.c
+	}
+}
+AL_mana_traing.0002 = {
+	title = AL_mana_traing.0002.title
+	desc = AL_mana_traing.0002.desc
+	theme = secret
+	
+	left_portrait = root
+	option = {
+		name = AL_mana_traing.0001.a
+		remove_short_term_gold = 25
+		add_mana_regen = { VALUE = minor_mana_training_regen }
+	}
+	option = {
+		name = AL_mana_traing.0001.b
+		add_stress = 25
+		add_mana_regen = { VALUE = minor_mana_training_regen }
+	}
+	option = {
+		name = AL_mana_traing.0001.c
+	}
+}
+AL_mana_traing.0003 = {
+	title = AL_mana_traing.0003.title
+	desc = AL_mana_traing.0003.desc
+	theme = secret
+	
+	left_portrait = root
+	option = {
+		name = AL_mana_traing.0003.a
+		remove_short_term_gold = 25
+		add_mana_regen = { VALUE = medium_mana_training_regen }
+	}
+	option = {
+		name = AL_mana_traing.0003.b
+		add_stress = 25
+		add_mana_regen = { VALUE = medium_mana_training_regen }
+	}
+	option = {
+		name = AL_mana_traing.0003.c
+	}
+}
+AL_mana_traing.0004 = {
+	title = AL_mana_traing.0004.title
+	desc = AL_mana_traing.0004.desc
+	theme = secret
+	
+	left_portrait = root
+	option = {
+		name = AL_mana_traing.0004.a
+		remove_short_term_gold = 25
+		add_mana_regen = { VALUE = medium_mana_training_regen }
+	}
+	option = {
+		name = AL_mana_traing.0004.b
+		add_stress = 25
+		add_mana_regen = { VALUE = medium_mana_training_regen }
+	}
+	option = {
+		name = AL_mana_traing.0004.c
+	}
+}
+AL_mana_traing.0005 = {
+	title = AL_mana_traing.0005.title
+	desc = AL_mana_traing.0005.desc
+	theme = secret
+	
+	left_portrait = root
+	option = {
+		name = AL_mana_traing.0005.a
+		remove_short_term_gold = 25
+		add_mana_regen = { VALUE = high_mana_training_regen }
+	}
+	option = {
+		name = AL_mana_traing.0005.b
+		add_stress = 25
+		add_mana_regen = { VALUE = high_mana_training_regen }
+	}
+	option = {
+		name = AL_mana_traing.0005.c
+	}
+}
+# MAX ## MAX ## MAX ## MAX ## MAX ## MAX ## MAX ## MAX ## MAX ## MAX ## MAX ## MAX ## MAX ## MAX ## MAX ## MAX #
+AL_mana_traing.0011 = {
+	title = AL_mana_traing.0011.title
+	desc = AL_mana_traing.0011.desc
+	theme = secret
+	
+	left_portrait = root
+	option = {
+		name = AL_mana_traing.0011.a
+		remove_short_term_gold = 25
+		add_mana_max = { VALUE = minor_mana_training_max }
+	}
+	option = {
+		name = AL_mana_traing.0011.b
+		add_stress = 25
+		add_mana_max = { VALUE = minor_mana_training_max }
+	}
+	option = {
+		name = AL_mana_traing.0011.c
+	}
+}
+AL_mana_traing.0012 = {
+	title = AL_mana_traing.0012.title
+	desc = AL_mana_traing.0012.desc
+	theme = secret
+	
+	left_portrait = root
+	option = {
+		name = AL_mana_traing.0012.a
+		remove_short_term_gold = 25
+		add_mana_max = { VALUE = minor_mana_training_max }
+	}
+	option = {
+		name = AL_mana_traing.0012.b
+		add_stress = 25
+		add_mana_max = { VALUE = minor_mana_training_max }
+	}
+	option = {
+		name = AL_mana_traing.0012.c
+	}
+}
+AL_mana_traing.0013 = {
+	title = AL_mana_traing.0013.title
+	desc = AL_mana_traing.0013.desc
+	theme = secret
+	
+	left_portrait = root
+	option = {
+		name = AL_mana_traing.0013.a
+		remove_short_term_gold = 25
+		add_mana_max = { VALUE = medium_mana_training_max }
+	}
+	option = {
+		name = AL_mana_traing.0013.b
+		add_stress = 25
+		add_mana_max = { VALUE = medium_mana_training_max }
+	}
+	option = {
+		name = AL_mana_traing.0013.c
+	}
+}
+AL_mana_traing.0014 = {
+	title = AL_mana_traing.0014.title
+	desc = AL_mana_traing.0014.desc
+	theme = secret
+	
+	left_portrait = root
+	option = {
+		name = AL_mana_traing.0014.a
+		remove_short_term_gold = 25
+		add_mana_max = { VALUE = medium_mana_training_max}
+	}
+	option = {
+		name = AL_mana_traing.0014.b
+		add_stress = 25
+		add_mana_max = { VALUE = medium_mana_training_max}
+	}
+	option = {
+		name = AL_mana_traing.0014.c
+	}
+}
+AL_mana_traing.0015 = {
+	title = AL_mana_traing.0015.title
+	desc = AL_mana_traing.0015.desc
+	theme = secret
+	
+	left_portrait = root
+	option = {
+		name = AL_mana_traing.0015.a
+		remove_short_term_gold = 25
+		add_mana_max = { VALUE = high_mana_training_max}
+	}
+	option = {
+		name = AL_mana_traing.0015.b
+		add_stress = 25
+		add_mana_max = { VALUE = high_mana_training_max}
+	}
+	option = {
+		name = AL_mana_traing.0015.c
+	}
+}

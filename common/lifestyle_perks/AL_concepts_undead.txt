@@ -1,0 +1,53 @@
+﻿undead_1_perk = {
+	lifestyle = concepts_lifestyle
+	tree = concepts
+	position = { 7.5 2.5 }
+	icon = node_learning
+	parent = life_perfection_perk
+	
+	effect = { custom_description_no_bullet = { text = undead_1_perk_effect } }
+	character_modifier = {
+		monthly_lifestyle_xp_gain_mult = 0.02
+	}
+	can_be_auto_selected = { always = no }
+}
+
+undead_2_perk = {
+	lifestyle = concepts_lifestyle
+	tree = concepts
+	position = { 8.5 2 }
+	icon = node_learning
+	parent = undead_1_perk
+	
+	effect = { custom_description_no_bullet = { text = undead_2_perk_effect } }
+	character_modifier = {
+		monthly_lifestyle_xp_gain_mult = 0.02
+	}
+	can_be_auto_selected = { always = no }
+}
+undead_3_perk = {
+	lifestyle = concepts_lifestyle
+	tree = concepts
+	position = { 9.5 2.5 }
+	icon = node_learning
+	parent = undead_2_perk
+	
+	effect = { custom_description_no_bullet = { text = undead_3_perk_effect } }
+	character_modifier = {
+		monthly_lifestyle_xp_gain_mult = 0.02
+	}
+	can_be_auto_selected = { always = no }
+}
+undead_perfection_perk = {
+	lifestyle = concepts_lifestyle
+	tree = concepts
+	position = { 10.5 2 }
+	icon = concept
+	parent = undead_3_perk
+	
+	effect = { custom_description_no_bullet = { text = undead_perfection_perk_effect } }
+	character_modifier = {
+		monthly_lifestyle_xp_gain_mult = 0.04
+	}
+	can_be_auto_selected = { always = no }
+}

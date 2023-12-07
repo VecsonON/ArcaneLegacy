@@ -1,0 +1,135 @@
+﻿golems = {
+	type = heavy_infantry
+
+	can_recruit = { always = no }
+
+	damage = 50
+	toughness = 60
+	pursuit = 0
+	screen = 0
+	siege_value = 0.4
+	siege_tier = 1
+
+	terrain_bonus = {
+		wetlands = { damage = -5 toughness = -5 }
+	}
+
+	counters = {
+		skirmishers = 3
+		archers = 2
+	}
+
+	#stack = stone_golems_maa_stack_amount
+	stack = 20
+	icon = golems
+}
+
+undead_levies = {
+	type = undead_type
+
+	can_recruit = { always = no }
+
+	damage = 10
+	toughness = 20
+	pursuit = 0
+	screen = 0
+
+	terrain_bonus = { }
+
+	counters = {  }
+
+	#stack = lesser_undead_maa_stack_amount
+	stack = 300
+	icon = undead
+}
+undead_soldier = {
+	type = undead_type
+
+	can_recruit = { always = no }
+
+	damage = 20
+	toughness = 30
+	pursuit = 5
+	screen = 5
+
+	terrain_bonus = { }
+
+	counters = { }
+
+	#stack = lesser_undead_maa_stack_amount
+	stack = 200
+	icon = undead
+}
+undead_knight = {
+	type = undead_type
+
+	can_recruit = { always = no }
+
+	damage = 30
+	toughness = 40
+	pursuit = 10
+	screen = 10
+
+	terrain_bonus = { }
+
+	counters = { }
+
+	#stack = lesser_undead_maa_stack_amount
+	stack = 100
+	icon = undead
+}
+
+wolves = {
+	type = animal_type
+
+	can_recruit = { always = no }
+
+	damage = 15
+	toughness = 0
+	pursuit = 5
+	screen = 0
+
+	terrain_bonus = { }
+
+	counters = { }
+
+	#stack = lesser_undead_maa_stack_amount
+	stack = 250
+	icon = wolves
+}
+bears = {
+	type = animal_type
+
+	can_recruit = { always = no }
+
+	damage = 40
+	toughness = 25
+	pursuit = 20
+	screen = 20
+
+	terrain_bonus = { }
+
+	counters = { }
+
+	#stack = lesser_undead_maa_stack_amount
+	stack = 50
+	icon = bears
+}
+entire_forest = {
+	type = animal_type
+
+	can_recruit = { always = no }
+
+	damage = 25
+	toughness = 25
+	pursuit = 25
+	screen = 25
+
+	terrain_bonus = { }
+
+	counters = { }
+
+	#stack = lesser_undead_maa_stack_amount
+	stack = 1000
+	icon = animal
+}

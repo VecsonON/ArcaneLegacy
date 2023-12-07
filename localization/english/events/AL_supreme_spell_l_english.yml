@@ -1,0 +1,38 @@
+﻿l_english:
+ AL_supreme_spells.0001.title: "Supreme Spell"
+ AL_supreme_spells.0001.desc: "Choose what you are going to look for"
+
+ AL_supreme_spells.0001.a: "Immortality"
+ AL_supreme_spells.0001.b: "Improve my land to godly level"
+ AL_supreme_spells.0001.c: "Send Apocalypse on my enemies or world"
+ AL_supreme_spells.0001.d: "Nevermind"
+
+ AL_supreme_spells.1002.title: "Supreme Spell: Succes"
+ AL_supreme_spells.1002.desc: "You get new supreme spell! Go to casting spell and look for your new spell!"
+
+ AL_supreme_spells.1002.a: "Great!"
+
+ AL_supreme_spells.1003.title: "Supreme Spell: Fail"
+ AL_supreme_spells.1003.desc: "You failed! try again in sometime!"
+
+ AL_supreme_spells.1003.a: "Great..."
+
+ AL_supreme_spells.0101.title: "Supreme Spell: Succes"
+ AL_supreme_spells.0101.desc: "Supreme spell 'Perfect Body': Casting completed"
+
+ AL_supreme_spells.0101.a: "Great!"
+
+ AL_supreme_spells.0102.title: "Supreme Spell: Fail"
+ AL_supreme_spells.0102.desc: "Supreme spell 'Perfect Body': Casting canceled"
+
+ AL_supreme_spells.0102.a: "Great..."
+
+ AL_supreme_spells.0201.title: "Supreme Spell: Succes"
+ AL_supreme_spells.0201.desc: "Supreme spell 'Magical Immortality': Casting completed"
+
+ AL_supreme_spells.0201.a: "Great!"
+
+ AL_supreme_spells.0202.title: "Supreme Spell: Fail"
+ AL_supreme_spells.0202.desc: "Supreme spell 'Magical Immortality': Casting canceled"
+
+ AL_supreme_spells.0202.a: "Great..."

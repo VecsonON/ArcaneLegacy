@@ -1,0 +1,181 @@
+﻿minor_mana_training_regen = {
+	if = {
+		limit = { has_game_rule = training_mana_values_minor }
+		add = 0.125
+	}
+	else_if = {
+		limit = { has_game_rule = training_mana_values_normal }
+		add = 0.25
+	}
+	else_if = {
+		limit = { has_game_rule = training_mana_values_high }
+		add = 0.5
+	}
+	else = {
+		add = 1
+	}
+}
+medium_mana_training_regen = {
+	if = {
+		limit = { has_game_rule = training_mana_values_minor }
+		add = 0.25
+	}
+	else_if = {
+		limit = { has_game_rule = training_mana_values_normal }
+		add = 0.5
+	}
+	else_if = {
+		limit = { has_game_rule = training_mana_values_high }
+		add = 1
+	}
+	else = {
+		add = 2
+	}
+}
+high_mana_training_regen = {
+	if = {
+		limit = { has_game_rule = training_mana_values_minor }
+		add = 0.375
+	}
+	else_if = {
+		limit = { has_game_rule = training_mana_values_normal }
+		add = 0.75
+	}
+	else_if = {
+		limit = { has_game_rule = training_mana_values_high }
+		add = 1.5
+	}
+	else = {
+		add = 3
+	}
+}
+minor_mana_training_max = {
+	if = {
+		limit = { has_game_rule = training_mana_values_minor }
+		add = 1.25
+	}
+	else_if = {
+		limit = { has_game_rule = training_mana_values_normal }
+		add = 2.5
+	}
+	else_if = {
+		limit = { has_game_rule = training_mana_values_high }
+		add = 5
+	}
+	else = {
+		add = 10
+	}
+}
+medium_mana_training_max = {
+	if = {
+		limit = { has_game_rule = training_mana_values_minor }
+		add = 2.5
+	}
+	else_if = {
+		limit = { has_game_rule = training_mana_values_normal }
+		add = 5
+	}
+	else_if = {
+		limit = { has_game_rule = training_mana_values_high }
+		add = 10
+	}
+	else = {
+		add = 20
+	}
+}
+high_mana_training_max = {
+	if = {
+		limit = { has_game_rule = training_mana_values_minor }
+		add = 3.75
+	}
+	else_if = {
+		limit = { has_game_rule = training_mana_values_normal }
+		add = 7.5
+	}
+	else_if = {
+		limit = { has_game_rule = training_mana_values_high }
+		add = 15
+	}
+	else = {
+		add = 30
+	}
+}
+
+experimenting_cost = {
+	if = {
+		limit = { has_game_rule = experimenting_cost_reward_low_low }
+		add = 10
+	}
+	else_if = {
+		limit = { has_game_rule = experimenting_cost_reward_low_high }
+		add = 10
+	}
+	else_if = {
+		limit = { has_game_rule = experimenting_cost_reward_high_low }
+		add = 30
+	}
+	else = {
+		add = 30
+	}
+}
+
+experimenting_reward = {
+	if = {
+		limit = { has_game_rule = experimenting_cost_reward_low_low }
+		add = 200
+	}
+	else_if = {
+		limit = { has_game_rule = experimenting_cost_reward_low_high }
+		add = 400
+	}
+	else_if = {
+		limit = { has_game_rule = experimenting_cost_reward_high_low }
+		add = 200
+	}
+	else = {
+		add = 400
+	}
+}
+
+experimenting_coldown = {
+	if = {
+		limit = { has_game_rule = experimenting_coldown_small }
+		add = 6
+	}
+	else_if = {
+		limit = { has_game_rule = experimenting_coldown_normal }
+		add = 12
+	}
+	else_if = {
+		limit = { has_game_rule = experimenting_coldown_high }
+		add = 24
+	}
+	else = {
+		add = 48
+	}
+}
+
+experimenting_coldown_i_1 = {
+	value = experimenting_coldown
+	add = -2
+}
+experimenting_coldown_i_2 = {
+	value = experimenting_coldown
+	add = -4
+}
+experimenting_coldown_i_3 = {
+	value = experimenting_coldown
+	add = -6
+}
+experimenting_coldown_b_i_1 = {
+	value = experimenting_coldown
+	add = 2
+}
+experimenting_coldown_b_i_2 = {
+	value = experimenting_coldown
+	add = 4
+}
+experimenting_coldown_b_i_3 = {
+	value = experimenting_coldown
+	add = 6
+}

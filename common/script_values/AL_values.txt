@@ -1,0 +1,204 @@
+﻿mana = {
+	if = {
+		limit = {
+			has_variable = mana
+		}
+		value = var:mana
+	}
+}
+mana_net = {
+	if = {
+		limit = {
+			has_variable = mana
+		}
+		value = {
+			add = mana_regen
+			subtract = mana_degen
+		}
+	}
+}
+mana_regen = {
+	if = {
+		limit = {
+			has_variable = mana_regen
+		}
+		value = var:mana_regen
+	}
+	if = { limit = { has_trait = mana_affinity_good_1 } add = 2 }
+	if = { limit = { has_trait = mana_affinity_good_2 } add = 4 }
+	if = { limit = { has_trait = mana_affinity_good_3 } add = 8 }
+	if = { limit = { has_trait = mana_affinity_good_4 } add = 16 }
+	if = { limit = { has_trait = mana_affinity_good_5 } add = 32 }
+
+	if = { limit = { has_character_modifier = first_mage } add = 100 }
+
+}
+mana_degen = {
+	if = {
+		limit = {
+			has_variable = mana_degen
+		}
+		value = var:mana_degen
+	}
+	if = { limit = { has_character_modifier = novice_fire_combat_spell_modifier } add = 1 }
+	if = { limit = { has_character_modifier = apprentice_fire_combat_spell_modifier } add = 1.5 }
+	if = { limit = { has_character_modifier = adept_fire_combat_spell_modifier } add = 2 }
+	if = { limit = { has_character_modifier = expert_fire_combat_spell_modifier } add = 2.5 }
+	if = { limit = { has_character_modifier = master_fire_combat_spell_modifier } add = 3 }
+
+	if = { limit = { has_character_modifier = novice_telekinesis_combat_spell_modifier } add = 0.5 }
+	if = { limit = { has_character_modifier = apprentice_telekinesis_combat_spell_modifier } add = 1 }
+	if = { limit = { has_character_modifier = adept_telekinesis_combat_spell_modifier } add = 1.5 }
+	if = { limit = { has_character_modifier = expert_telekinesis_combat_spell_modifier } add = 2 }
+	if = { limit = { has_character_modifier = master_telekinesis_combat_spell_modifier } add = 2.5 }
+
+	if = { limit = { has_character_modifier = AL_perfect_body_casting } add = 15 }
+	if = { limit = { has_character_modifier = AL_magical_immortality_casting } add = 25 }
+
+	if = { limit = { has_trait = magic_immortality } add = 50 }
+
+}
+mana_max = {
+	if = {
+		limit = {
+			has_variable = mana_max
+		}
+		value = var:mana_max
+	}
+	if = { limit = { has_trait = mana_affinity_good_1 } add = 50 }
+	if = { limit = { has_trait = mana_affinity_good_2 } add = 100 }
+	if = { limit = { has_trait = mana_affinity_good_3 } add = 200 }
+	if = { limit = { has_trait = mana_affinity_good_4 } add = 400 }
+	if = { limit = { has_trait = mana_affinity_good_5 } add = 800 }
+}
+
+suspicion = {
+	if = {
+		limit = {
+			has_variable = suspicion
+		}
+		value = var:suspicion
+	}
+}
+suspicion_max = 100
+suspicion_net = {
+	if = {
+		limit = {
+			has_variable = suspicion
+		}
+		value = {
+			add = suspicion_inc
+			subtract = suspicion_dec
+		}
+	}
+}
+suspicion_inc = {
+	value = 0
+	if = { limit = { has_character_modifier = novice_fire_combat_spell_modifier } add = 0.25 }
+	if = { limit = { has_character_modifier = apprentice_fire_combat_spell_modifier } add = 0.5 }
+	if = { limit = { has_character_modifier = adept_fire_combat_spell_modifier } add = 1 }
+	if = { limit = { has_character_modifier = expert_fire_combat_spell_modifier } add = 1.5 }
+	if = { limit = { has_character_modifier = master_fire_combat_spell_modifier } add = 2 }
+
+	if = { limit = { has_character_modifier = novice_telekinesis_combat_spell_modifier } add = 0.25 }
+	if = { limit = { has_character_modifier = apprentice_telekinesis_combat_spell_modifier } add = 0.5 }
+	if = { limit = { has_character_modifier = adept_telekinesis_combat_spell_modifier } add = 1 }
+	if = { limit = { has_character_modifier = expert_telekinesis_combat_spell_modifier } add = 1.5 }
+	if = { limit = { has_character_modifier = master_telekinesis_combat_spell_modifier } add = 2 }
+}
+suspicion_dec = {
+	value = 1
+}
+
+
+create_gold_cost = 30
+create_gold_better_cost = 50
+minor_optimize_body_cost = 45 # 0.5.1 CHANGE COST / REWORK
+optimize_body_cost = 75 # 0.5.1 CHANGE COST / REWORK
+major_optimize_body_cost = 90 # 0.5.1 CHANGE COST / REWORK
+
+
+mass_haste_cost = 35 # 0.5.1 CHANGE COST / REWORK
+haste_cost = 25 # 0.5.1 CHANGE COST / REWORK
+
+mass_slowness_cost = 35 # 0.5.1 CHANGE COST / REWORK
+slowness_cost = 25 # 0.5.1 CHANGE COST / REWORK
+
+detrimental_weather_cost = 45
+beneficial_weather_cost = 45
+
+novice_fire_combat_cost = 0
+apprentice_fire_combat_cost = 0
+adept_fire_combat_cost = 0
+expert_fire_combat_cost = 0
+master_fire_combat_cost = 0
+
+novice_telekinesis_combat_cost = 0
+apprentice_telekinesis_combat_cost = 0
+adept_telekinesis_combat_cost = 0
+expert_telekinesis_combat_cost = 0
+master_telekinesis_combat_cost = 0
+
+improve_land_cost = 90
+worsened_land_cost = 90
+
+fix_change_genetic_body_cost = 60
+l1_change_genetic_body_cost = 100
+l2_change_genetic_body_cost = 150
+l3_change_genetic_body_cost = 200
+
+fix_change_genetic_mind_cost = 60
+l1_change_genetic_mind_cost = 100
+l2_change_genetic_mind_cost = 150
+l3_change_genetic_mind_cost = 200
+
+clear_land_fertility_cost = 60
+improve_land_fertility_minor_cost = 80
+improve_land_fertility_cost = 140
+improve_land_fertility_major_cost = 210
+worsened_land_fertility_minor_cost = 80
+worsened_land_fertility_cost = 140
+worsened_land_fertility_major_cost = 210
+
+clear_land_geography_cost = 60
+improve_land_geography_minor_cost = 80
+improve_land_geography_cost = 140
+improve_land_geography_major_cost = 210
+worsened_land_geography_minor_cost = 80
+worsened_land_geography_cost = 140
+worsened_land_geography_major_cost = 210
+
+summon_undead_minor_cost = 50
+summon_undead_cost = 100
+summon_undead_major_cost = 150
+
+summon_wolves_cost = 50
+summon_bears_cost = 100
+summon_entire_forest_cost = 150
+
+calm_spell_cost = 15
+anger_spell_cost = 15
+befriend_spell_cost = 50
+suggestion_cost = 100
+puppet_cost = 200
+crete_homunculus_minor_cost = 100
+crete_homunculus_cost = 150
+crete_homunculus_major_cost = 200
+magical_vampirism_cost = 75
+kill_spell_cost = 150
+wound_spell_cost = 50
+
+perfect_body_cost = 250
+magical_immortality_cost = 150
+
+increase_fertility_minor_cost = 30
+increase_fertility_cost = 60
+increase_fertility_major_cost = 90
+
+decrease_fertility_minor_cost = 30
+decrease_fertility_cost = 60
+decrease_fertility_major_cost = 90
+
+flood_spell_cost = 125
+drought_spell_cost = 150
+earthquake_spell_cost = 200

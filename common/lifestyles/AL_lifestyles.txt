@@ -1,0 +1,25 @@
+﻿concepts_lifestyle = {
+
+	is_valid = {
+		has_character_flag = mage
+	}
+
+	is_highlighted = {
+		has_character_flag = mage
+	}	
+		
+	xp_per_level = 1250
+	base_xp_gain = 20		
+}
+witch_hunter_lifestyle = {
+	is_valid = {
+		has_trait = witch_hunter
+	}
+
+	is_highlighted = {
+		has_trait = witch_hunter
+	}	
+		
+	xp_per_level = 2500
+	base_xp_gain = 25	
+}

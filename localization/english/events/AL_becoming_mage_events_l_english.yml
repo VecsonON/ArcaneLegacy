@@ -1,0 +1,74 @@
+﻿l_english:
+ AL_becoming_mage.0001.title: "Becoming Mage"
+ AL_becoming_mage.0001.desc: "(...) 1-2 Years"
+
+ AL_becoming_mage.0001.a: "Openly"
+ AL_becoming_mage.0001.b: "Secretly"
+ AL_becoming_mage.0001.c: "Nevermind"
+
+ AL_becoming_mage.0021.title: "Becoming Mage: Roadblock"
+ AL_becoming_mage.0021.desc: "Latly in my studies I got stuck.. No mater what I do i just cannot go further..."
+
+ AL_becoming_mage.0021.a: "Shup up and study!"
+ AL_becoming_mage.0021.b: "Maybe if i hire philosopher i will go further?"
+ AL_becoming_mage.0021.c: "Do not rush. Everything will solve with time"
+ AL_becoming_mage.0021.d: "I Just need a break"
+
+ AL_becoming_mage.0022.title: "Becoming Mage: Huge breakthrough"
+ AL_becoming_mage.0022.desc: "In my studies I have a huge breakthrough, it unlocked many new ways to study."
+
+ AL_becoming_mage.0022.a: "Don't rest on your laurels and keep going"
+ AL_becoming_mage.0022.b: "Yes!"
+
+
+ AL_becoming_mage.0023.title: "Becoming Mage: Experiment"
+ AL_becoming_mage.0023.desc: "I latly have a great idea! Have a masive experiment to confirm my theories. Now I have one final question, how much is my budget on this"
+
+ AL_becoming_mage.0023.a: "Everything!"
+ AL_becoming_mage.0023.b: "100 gold should work"
+ AL_becoming_mage.0023.c: "50 gold is my limit!"
+ AL_becoming_mage.0023.d: "I don't have gold on this..."
+
+ AL_becoming_mage.0024.title: "Becoming Mage: FIRE!"
+ AL_becoming_mage.0024.desc: "NO! my notebooks! there are on fire! what should i DO?"
+
+ AL_becoming_mage.0024.a: "Rush and collect everthing that is posible to save"
+ AL_becoming_mage.0024.b: "Watch in terror"
+
+ AL_becoming_mage.0025.title: "Becoming Mage: Book"
+ AL_becoming_mage.0025.desc: "Latly my servant bring up me info about intresting book. Only thing is that that book is coslty"
+
+ AL_becoming_mage.0025.a: "Buy it and bring it to me."
+ AL_becoming_mage.0025.b: "Not intrested"
+
+
+ AL_becoming_mage.0031.title: "Becoming Mage: Premature End"
+ AL_becoming_mage.0031.desc: "I finaly did it! It's over. And more important is that I did it earlier than expected"
+
+ AL_becoming_mage.0031.a: "Great!"
+
+ AL_becoming_mage.0032.title: "Becoming Mage: End"
+ AL_becoming_mage.0032.desc: "I finaly did it! It's over"
+
+ AL_becoming_mage.0032.a: "Finaly!"
+
+ AL_exposed_mage.0001.title: "Exposed!"
+ AL_exposed_mage.0001.desc: "I am Exposed as a mage!"
+ AL_exposed_mage.0001.a: "Oh-no. Anyway"
+
+
+ AL_becoming_mage.0011.title: "Becoming Mage: Warrning"
+ AL_becoming_mage.0011.desc: "Standing in front of me is witch-hunter, demanding that I stop my terrible actions before it's too late."
+
+ AL_becoming_mage.0011.a: "Ahh! My god what I have done! Forgive me god! #weak (Stop becoming mage event line)"
+ AL_becoming_mage.0011.b: "No.#weak (Start fight with witch-hunter)"
+
+ AL_becoming_mage.0111.title: "Becoming Mage: Battle Resoults"
+ AL_becoming_mage.0111.desc: "I won!"
+
+ AL_becoming_mage.0111.a: "Haha!"
+
+ AL_becoming_mage.0012.title: "Becoming Mage: Inquisition"
+ AL_becoming_mage.0012.desc: "Standing in front of me is witch-hunter, I don't have even time to react before he atack me"
+
+ AL_becoming_mage.0012.a: "Defend! #weak (Start fight with witch-hunter)"

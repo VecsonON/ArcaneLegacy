@@ -1,0 +1,64 @@
+﻿material_1_perk = {
+	lifestyle = concepts_lifestyle
+	tree = concepts
+	position = { 1 0 }
+	icon = node_learning
+	
+	effect = { custom_description_no_bullet = { text = material_1_perk_effect } }
+	character_modifier = {
+		monthly_lifestyle_xp_gain_mult = 0.02
+	}
+	can_be_auto_selected = { always = no }
+}
+material_2_perk = {
+	lifestyle = concepts_lifestyle
+	tree = concepts
+	position = { 0 1 }
+	icon = node_learning
+	parent = material_1_perk
+	
+	effect = { custom_description_no_bullet = { text = material_2_perk_effect } }
+	character_modifier = {
+		monthly_lifestyle_xp_gain_mult = 0.02
+	}
+	can_be_auto_selected = { always = no }
+}
+material_3_perk = {
+	lifestyle = concepts_lifestyle
+	tree = concepts
+	position = { 1 2 }
+	icon = node_learning
+	parent = material_2_perk
+	
+	effect = { custom_description_no_bullet = { text = material_3_perk_effect } }
+	character_modifier = {
+		monthly_lifestyle_xp_gain_mult = 0.02
+	}
+	can_be_auto_selected = { always = no }
+}
+material_4_perk = {
+	lifestyle = concepts_lifestyle
+	tree = concepts
+	position = { 2 3 }
+	icon = node_learning
+	parent = material_3_perk
+
+	effect = { custom_description_no_bullet = { text = material_4_perk_effect } }
+	character_modifier = {
+		monthly_lifestyle_xp_gain_mult = 0.02
+	}
+	can_be_auto_selected = { always = no }
+}
+material_perfection_perk = {
+	lifestyle = concepts_lifestyle
+	tree = concepts
+	position = { 2 1 }
+	icon = concept
+	parent = material_4_perk
+	
+	effect = { custom_description_no_bullet = { text = material_perfection_perk_effect } }
+	character_modifier = {
+		monthly_lifestyle_xp_gain_mult = 0.04
+	}
+	can_be_auto_selected = { always = no }
+}

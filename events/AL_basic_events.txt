@@ -1,0 +1,199 @@
+﻿namespace = AL_basic_events
+AL_basic_events.0001 = {
+	title = AL_basic_events.0001.title
+	type = character_event
+	desc = AL_basic_events.0001.desc
+	theme = realm
+	left_portrait = root
+	right_portrait = scope:homunculus
+
+	widgets = {
+		widget = {
+			gui = "event_window_widget_name_child"
+			container = "dynamic_birth_name"
+			controller = name_character
+			setup_scope = { scope:homunculus = { save_scope_as = name_character_target } }
+		}
+	}
+	option = {
+		name = AL_basic_events.0001.a
+		save_scope_as = mplayer
+	}
+}
+AL_basic_events.0002 = {
+	title = AL_basic_events.0002.title
+	type = character_event
+	desc = AL_basic_events.0002.desc
+	theme = realm
+	left_portrait = root
+	
+	option = {
+		name = AL_basic_events.0002.a
+		become_magical_vampire = yes
+	}
+}
+AL_basic_events.0003 = {
+	hidden = yes
+	immediate = {
+		if = {
+			limit = { NOT = { has_character_modifier = magical_vampire_hunger } }
+			death = {
+				death_reason = death_mysterious
+			}
+		}
+		else = {
+			trigger_event = {
+				id = AL_basic_events.0003
+				years = 1
+			}
+		}
+	}
+}
+
+AL_basic_events.0004 = { # Founded Mage
+	title = AL_basic_events.0004.title
+	type = character_event
+	desc = AL_basic_events.0004.desc
+	theme = realm
+	left_portrait = root
+	immediate = {
+		create_character = {
+			template = low_level_mage
+			location = root.capital_province
+			gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+			faith = root.faith
+			culture = root.culture
+			save_scope_as = mage
+		}
+	}
+	right_portrait = {
+		character = ROOT
+		animation = stress
+	}
+	option = { # BURN HERETIC!
+		name = AL_basic_events.0004.a
+		scope:mage = {
+			death = {
+				death_reason = death_burned
+			}
+		}
+		add_prestige = 250
+		if = {
+			limit = {
+				trait_is_shunned_or_criminal_in_faith_trigger = { FAITH = faith TRAIT = witch GENDER_CHARACTER = root }
+			}
+			add_piety = 500
+		}
+		if = { limit = { has_trait = compassionate } add_stress = 40 }
+		if = { limit = { has_trait = cynical } add_stress = 20 }
+		if = { limit = { has_trait = zealous } add_stress = -20 }
+	}
+	option = { # Imprision mage
+		name = AL_basic_events.0004.b
+		imprison = {
+			target = scope:mage
+		}
+		add_prestige = 100
+		if = { limit = { has_trait = compassionate } add_stress = 10 }
+	}
+	option = { # Let go, Will anger inqisison
+		name = AL_basic_events.0004.c
+		trait = compassionate
+		hidden_effect = {
+			scope:mage = {
+				death = {
+					death_reason = death_disappearance
+				}
+			}
+		}
+		if = {
+			limit = {
+				trait_is_shunned_or_criminal_in_faith_trigger = { FAITH = faith TRAIT = witch GENDER_CHARACTER = root }
+			}
+			add_piety = -100
+		}
+		if = { limit = { has_trait = compassionate } add_stress = -20 }
+		if = { limit = { has_trait = zealous } add_stress = 20 }
+	}
+	option = { # Invite to court, Will anger inqisison
+		name = AL_basic_events.0004.d
+		scope:mage = {
+			add_courtier = root
+		}
+		if = {
+			limit = {
+				trait_is_shunned_or_criminal_in_faith_trigger = { FAITH = faith TRAIT = witch GENDER_CHARACTER = root }
+			}
+			add_piety = -250
+		}
+		if = { limit = { has_trait = compassionate } add_stress = -40 }
+		if = { limit = { has_trait = zealous } add_stress = 40 }
+	}
+}
+AL_basic_events.0005 = { # MAGE REQUEST
+	title = AL_basic_events.0005.title
+	type = character_event
+	desc = AL_basic_events.0005.desc
+	theme = realm
+	left_portrait = root
+	immediate = {
+		create_character = {
+			template = low_level_mage
+			location = root.capital_province
+			gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+			faith = root.faith
+			culture = root.culture
+			save_scope_as = mage
+		}
+	}
+	right_portrait = {
+		character = scope:mage
+		animation = beg
+	}
+	option = { # ACCEPT
+		name = AL_basic_events.0005.a
+		add_courtier = scope:mage
+		
+		if = {
+			limit = {
+				trait_is_shunned_or_criminal_in_faith_trigger = { FAITH = faith TRAIT = witch GENDER_CHARACTER = root }
+			}
+			add_piety = -250
+		}
+		if = { limit = { has_trait = zealous } add_stress = 40 }
+	}
+	option = { # DENY
+		name = AL_basic_events.0005.b
+		hidden_effect = {
+			scope:mage = {
+				death = {
+					death_reason = death_disappearance
+				}
+			}
+		}
+		if = {
+			limit = {
+				trait_is_shunned_or_criminal_in_faith_trigger = { FAITH = faith TRAIT = witch GENDER_CHARACTER = root }
+			}
+			add_piety = -100
+		}
+	}
+	option = { # BURN
+		name = AL_basic_events.0005.c
+		scope:mage = {
+			death = {
+				death_reason = death_burned
+			}
+		}
+		add_prestige = 250
+		if = {
+			limit = {
+				trait_is_shunned_or_criminal_in_faith_trigger = { FAITH = faith TRAIT = witch GENDER_CHARACTER = root }
+			}
+			add_piety = 500
+		}
+		if = { limit = { has_trait = compassionate } add_stress = 40 }
+		if = { limit = { has_trait = cynical } add_stress = 20 }
+		if = { limit = { has_trait = zealous } add_stress = -20 }
+	}
+}

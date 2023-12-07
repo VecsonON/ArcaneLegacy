@@ -1,0 +1,283 @@
+﻿window = {
+	name = "magicardiagui"
+	size = {1120 820}
+	layoutpolicy_horizontal = expanding
+	layoutpolicy_vertical = expanding
+	parentanchor = center
+	layer = windows_layer
+	using = Window_Background
+	using = Window_Size_CharacterList
+	using = Window_Decoration
+	visible = "[GetScriptedGui('is_magicardia_open').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+	state = {
+		name = _show		
+		on_start = "[GetScriptedGui('go_to_center').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+		on_start = "[GetScriptedGui('setup_magicardia_shops').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+	}
+	state = {
+		name = _hide
+		on_start = "[GetVariableSystem.Clear('current_spell_selected')]"
+	}
+	vbox = {
+		using = Window_Margins
+		spacing = 5
+		header_pattern  = {
+			layoutpolicy_horizontal = expanding
+
+			blockoverride "header_text" {
+				raw_text = "Magicardia"
+			}
+
+			blockoverride "button_close"
+			{
+				onclick = "[GetScriptedGui('close_magicardia_window').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+			}
+
+		}
+		hbox = {
+			name = "text"
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = expanding
+			margin = { 20 20}
+			widget = {
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
+				background = {
+					visible = "[GetScriptedGui('is_in_right_magicardia').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+					name = "triangle_background"
+					alpha = 0.7
+					fittype = start
+					texture = "gfx/interface/illustrations/activity_backgrounds/bp1_garden_mena_day.dds"
+
+					modify_texture = {
+						texture = "gfx/interface/component_masks/mask_fade_vertical.dds"
+						blend_mode = alphamultiply
+						mirror = vertical
+					}
+				}		
+				background = {
+					visible = "[GetScriptedGui('is_in_center_magicardia').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+					name = "triangle_background"
+					alpha = 0.7
+					fittype = start
+					texture = "gfx/interface/illustrations/event_scenes/bp2_courtyard.dds"
+
+					modify_texture = {
+						texture = "gfx/interface/component_masks/mask_fade_vertical.dds"
+						blend_mode = alphamultiply
+						mirror = vertical
+					}
+				}		
+				background = {
+					visible = "[GetScriptedGui('is_in_shop').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+					name = "triangle_background"
+					alpha = 0.7
+					fittype = start
+					texture = "gfx/interface/illustrations/event_scenes_frontend/councilchamber.dds"
+
+					modify_texture = {
+						texture = "gfx/interface/component_masks/mask_fade_vertical.dds"
+						blend_mode = alphamultiply
+						mirror = vertical
+					}
+				}	
+				background = {
+					visible = "[GetScriptedGui('is_in_school_magicardia').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+					name = "triangle_background"
+					alpha = 0.7
+					fittype = start
+					texture = "gfx/interface/illustrations/interior/mosque.dds"
+
+					modify_texture = {
+						texture = "gfx/interface/component_masks/mask_fade_vertical.dds"
+						blend_mode = alphamultiply
+						mirror = vertical
+					}
+				}	
+				text_multi = {
+					margin = { 0 400}
+					text = "[Localize(Concatenate(GetPlayer.MakeScope.GetVariable('loc_magicardia').GetFlagName,'_desc'))]"
+					layoutpolicy_horizontal = expanding
+					autoresize = yes
+					fontsize = 17
+				}
+				hbox = {
+					spacer = { size = {0 1350}}
+					spacing = 5
+					layoutpolicy_vertical = expanding	
+					# GO TO:
+					button_umbra_location = {
+						layoutpolicy_horizontal = growing 
+						enabled = "no"
+						tooltip = "#R Work In Progress"
+						visible = "[GetScriptedGui('is_in_center_magicardia').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+						raw_text = "Go to Left-Wing"
+						onclick = "[GetScriptedGui('go_to_left').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+					}
+					button_umbra_location = {
+						layoutpolicy_horizontal = growing 
+						visible = "[GetScriptedGui('right_avaible').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+						raw_text = "Go to Right-Wing"
+						onclick = "[GetScriptedGui('go_to_right').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+					}
+					button_umbra_location = {
+						layoutpolicy_horizontal = growing 
+						visible = "[GetScriptedGui('center_avaible').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+						raw_text = "Go to Center"
+						onclick = "[GetScriptedGui('go_to_center').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+					}
+				}
+			}
+			widget = {
+				layoutpolicy_horizontal = growing
+				layoutpolicy_vertical = expanding
+				size = { 300 50 }		
+				# ACTIONS
+				vbox = {
+					vbox = {
+					
+						spacing = 5
+						button_umbra_action = {
+							layoutpolicy_horizontal = growing 
+							visible = "[GetScriptedGui('is_in_center_magicardia').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							raw_text = "Go to School"
+							onclick = "[GetScriptedGui('go_to_school').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+						}
+						button_umbra_action = {
+							visible = "[GetScriptedGui('is_in_center_magicardia').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							enabled = "no"
+							tooltip = "#R Work In Progress"
+							layoutpolicy_horizontal = growing 
+							raw_text = "Go to Asembly"
+							onclick = "[GetScriptedGui('go_to_asembly').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+						}	
+						
+						button_umbra_action = {
+							layoutpolicy_horizontal = growing 
+							visible = "[GetScriptedGui('is_in_right_magicardia').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							raw_text = "Go to Arval's Spell Shop"
+							onclick = "[GetScriptedGui('go_to_arval').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+						}
+						button_umbra_action = {
+							visible = "[GetScriptedGui('is_in_right_magicardia').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							layoutpolicy_horizontal = growing 
+							raw_text = "Go to Orde Spells Recipes"
+							onclick = "[GetScriptedGui('go_to_orde').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+						}		
+						button_umbra_action = {
+							visible = "[GetScriptedGui('is_in_right_magicardia').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							layoutpolicy_horizontal = growing 
+							raw_text = "Go to Mystas Spells"
+							onclick = "[GetScriptedGui('go_to_mystas').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+						}		
+						button_umbra_action = {
+							visible = "[GetScriptedGui('is_in_right_magicardia').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							layoutpolicy_horizontal = growing 
+							raw_text = "Go to Peren Magical Shop"
+							onclick = "[GetScriptedGui('go_to_peren').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+						}	
+						button_umbra_action = {
+							visible = "[GetScriptedGui('is_in_school_magicardia').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							enabled = "[GetScriptedGui('learn_magicardia').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							tooltip = "[GetScriptedGui('learn_magicardia').BuildTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							layoutpolicy_horizontal = growing 
+							raw_text = "Learn"
+							onclick = "[GetScriptedGui('learn_magicardia').Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+						}	
+					}
+					
+					# ARVAL - MANIPULATION | MATERIAL | ENERGY |  NONE
+					# ORDE - MANIPULATION | MATERIAL | LIFE |
+					# MYSTAS - MANIPULATION | MIND | LIFE | NONE 
+					# PEREN - MANIPULATION | CREATION | MATERIAL | LIFE | NONE [COSTLY!!!]
+					#
+					scrollbox = {
+						visible = "[GetScriptedGui('is_in_shop').IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+						layoutpolicy_horizontal = expanding
+						layoutpolicy_vertical = expanding
+				
+						scrollbar_horizontal = {
+							using = Scrollbar_Horizontal
+						}										
+							
+	
+						blockoverride "scrollbox_content"
+						{										
+							margin = { 25 25 }	
+							dynamicgridbox = {
+								datamodel = "[GetPlayer.MakeScope.GetList(Concatenate(GetPlayer.MakeScope.GetVariable('loc_magicardia').GetFlagName,'_item_shop'))]"
+								layoutpolicy_horizontal = expanding
+								allow_outside = yes
+								layoutpolicy_vertical = expanding
+								maxhorizontalslots = 1
+								maxverticalslots = 100
+								ignoreinvisible = yes
+	
+								item = {
+									
+									widget = {		
+										size = { 260 40 }
+				
+										button_umbra_action = {
+											size = { 260 35 }
+	
+											enabled = "[GetScriptedGui(Concatenate('buy_',Scope.GetFlagName)).IsValid(GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+											#tooltip = "[GetScriptedGui(Concatenate('buy_',Scope.GetFlagName)).IsValidTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+											tooltip = "[GetScriptedGui(Concatenate('buy_',Scope.GetFlagName)).BuildTooltip(GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+											raw_text = "Buy [Localize(Concatenate(Scope.GetFlagName,'_name'))]"
+											onclick = "[GetScriptedGui(Concatenate('buy_',Scope.GetFlagName)).Execute(GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+										}
+									}
+								}
+								
+								
+								
+							}
+						}
+					}
+				}
+				
+				
+			}
+		}
+	}
+}
+
+# PRINCES OF DARKNESS STUFF; WILL DO MY LATER
+types Buttons
+{
+    type button_umbra_location = button_event_letter
+    {
+        default_format = "#light_background;high;glow_color:{0.1,0.1,0.1,1.0}"
+		clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_advance"
+							
+		
+    }
+
+    type button_umbra_grace = button_event_letter
+    {
+		size = { 120 34 }
+		default_format = "#high;glow_color:{0.1,0.1,0.1,1.0}"
+		using = Font_Type_Flavor
+									
+
+    }
+
+    type button_umbra_action = button_event_letter
+    {
+		default_format = "#high;glow_color:{0.1,0.1,0.1,1.0}"
+		clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_confirm"
+		buttonText = {
+            text_single = {
+                size = { 100% 100% }
+                autoresize = no
+                margin = { 0 0 }
+                align = center|nobaseline
+                default_format = "#high"
+                using = Font_Size_Medium
+            	alwaystransparent = yes
+            }
+        }
+		
+    }
+}

@@ -1,0 +1,21 @@
+﻿l_english:
+ AL_basic_events.0001.title: "Homunculus Naming"
+ AL_basic_events.0001.desc: "Homunculus Naming"
+ AL_basic_events.0001.a: "Name"
+
+ AL_basic_events.0002.title: "Magical Vampire: #R BECOME #!"
+ AL_basic_events.0002.desc: "I just become magical vampire..."
+ AL_basic_events.0002.a: "Uh..."
+
+ AL_basic_events.0004.title: "Public Execuction of Mage"
+ AL_basic_events.0004.desc: "This morning the peasants found and caught the mage, demanding his execution. The Inquisition also knows and demands his execution. Currently, the mage is in my prison and waiting for my decision"
+ AL_basic_events.0004.a: "Burn Heretic!" 
+ AL_basic_events.0004.b: "I have diffrent punishment in mind"
+ AL_basic_events.0004.c: "Let him go!"
+ AL_basic_events.0004.d: "I want him at my court!"
+
+ AL_basic_events.0005.title: "Free Mage"
+ AL_basic_events.0005.desc: "Before me stands a magician begging for accommodation in exchange for his service."
+ AL_basic_events.0005.a: "I accept your offer" 
+ AL_basic_events.0005.b: "Unfortunately but I cannot help you"
+ AL_basic_events.0005.c: "Guards, catch him and prepare the stake!"

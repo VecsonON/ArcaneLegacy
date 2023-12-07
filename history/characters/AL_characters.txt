@@ -1,0 +1,93 @@
+﻿jakob_igoris = {
+	name = "Jakob"
+	religion = "catholic"
+	culture = "czech"
+    trait = intellect_good_3
+	trait = magic_immortality
+	trait = mana_affinity_good_5
+	trait = cynical
+	trait = shy
+	trait = chaste
+	trait = education_learning_5
+	trait = exposed_mage
+	
+	learning = 100
+	prowess = 100
+	give_nickname = first_mage_nick
+	751.1.1 = {
+		birth = yes
+		effect = {
+			add_character_modifier = first_mage
+			add_character_modifier = unknown_location
+			become_mage = yes
+			set_global_variable = {
+				name = first_mage_char
+				value = this
+			}
+			set_variable = {
+				name = mana
+				value = 1000
+			}
+			set_variable = {
+				name = mana_regen
+				value = 100
+			}
+			set_variable = {
+				name = mana_max
+				value = 5000
+			}
+			set_immortal_age = 66
+			add_character_flag = has_scripted_appearance
+			add_trait_xp = {
+				trait = exposed_mage
+				track = exposed_mage_legacy
+				value = 100
+			}
+		}
+		
+	}
+}
+tobias_inquisitor = {
+	name = "Tobias"
+	religion = "catholic"
+	culture = "levantine"
+    trait = intellect_good_3
+	trait = brave
+	trait = diligent
+	trait = patient
+	trait = education_martial_5
+	trait = witch_hunter
+	prowess = 100
+	give_nickname = supreme_inquisitor_nick
+	781.1.1 = {
+		birth = yes
+		effect = {
+			add_character_modifier = supreme_inquisitor
+			set_global_variable = {
+				name = supreme_inquisitor_char
+				value = this
+			}
+			add_character_flag = has_scripted_appearance
+			add_trait_xp = {
+				trait = witch_hunter
+				track = hunter_legacy
+				value = 100
+			}
+			add_trait_xp = {
+				trait = witch_hunter
+				track = arc_body_technique
+				value = 100
+			}
+			add_trait_xp = {
+				trait = witch_hunter
+				track = arc_fight_technique
+				value = 100
+			}
+			add_trait_xp = {
+				trait = witch_hunter
+				track = arc_perception_technique
+				value = 100
+			}
+		}
+	}
+}

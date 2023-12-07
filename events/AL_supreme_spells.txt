@@ -1,0 +1,146 @@
+﻿namespace = AL_supreme_spells
+AL_supreme_spells.0001 = {
+	title = AL_supreme_spells.0001.title
+	desc = AL_supreme_spells.0001.desc
+
+	theme =  secret
+	option = {# Quest for immortality
+		name = AL_supreme_spells.0001.a
+		hidden_effect = {
+			add_character_flag = immortality
+		}
+	}
+	option = {# Quest for godly land
+		name = AL_supreme_spells.0001.b
+		hidden_effect = {
+			add_character_flag = godly_land
+		}
+	}
+	option = {# Quest for apocalypse
+		name = AL_supreme_spells.0001.c
+		hidden_effect = {
+			add_character_flag = apocalypse
+		}
+	}
+	option = { # Nevermind
+		name = AL_supreme_spells.0001.d
+	}
+}
+AL_supreme_spells.1001 = {
+	hidden = yes
+	immediate = {
+		random_list = {
+			20 = {
+				modifier = {
+					NOT = { has_character_flag = immortality }
+					is_target_in_variable_list  = { name = supreme_spells_list target =  flag:perfect_body } 
+					
+					add = -20
+				}
+				add_to_variable_list = { name = supreme_spells_list target = flag:perfect_body }
+				trigger_event = AL_supreme_spells.1002
+			}
+			20 = {
+				modifier = {
+					NOT = { has_character_flag = immortality }
+					is_target_in_variable_list  = { name = supreme_spells_list target =  flag:magical_immortality }
+					
+					add = -20
+				}
+				add_to_variable_list = { name = supreme_spells_list target = flag:magical_immortality }
+				trigger_event = AL_supreme_spells.1002
+			}
+			5 = {
+				trigger_event = AL_supreme_spells.1003
+			}
+		}
+		remove_character_flag = immortality
+		remove_character_flag = godly_land
+		remove_character_flag = apocalypse
+	}
+}
+AL_supreme_spells.1002 = { # SUCCES
+	title = AL_supreme_spells.1002.title
+	desc = AL_supreme_spells.1002.desc
+
+	theme =  secret
+	option = {
+		name = AL_supreme_spells.1002.a
+		remove_perk = supreme_spell_start_perk
+		remove_perk = supreme_spell_1_perk
+		remove_perk = supreme_spell_2_perk
+		remove_perk = supreme_spell_end_perk
+	}
+}
+AL_supreme_spells.1003 = { # FAIL
+	title = AL_supreme_spells.1003.title
+	desc = AL_supreme_spells.1003.desc
+
+	theme =  secret
+	option = {
+		name = AL_supreme_spells.1003.a
+		hidden_effect = {
+			remove_perk = supreme_spell_start_perk
+			remove_perk = supreme_spell_1_perk
+			remove_perk = supreme_spell_2_perk
+			remove_perk = supreme_spell_end_perk
+		}
+
+	}
+}
+AL_supreme_spells.0101 = { # Body perfection
+	title = AL_supreme_spells.0101.title
+	desc = AL_supreme_spells.0101.desc
+	trigger = {
+		has_character_modifier = AL_perfect_body_casting
+	}
+	theme =  secret
+	option = {
+		name = AL_supreme_spells.0101.a
+		if = {
+			limit = { has_trait = biological_perfection }
+			add_trait_xp = {
+				trait = biological_perfection
+				value = 25
+			}
+		}
+		else = {
+			add_trait = biological_perfection
+		}
+		remove_character_modifier = AL_perfect_body_casting
+	}
+}
+AL_supreme_spells.0102 = { # Body perfection; FAIL
+	title = AL_supreme_spells.0102.title
+	desc = AL_supreme_spells.0102.desc
+
+	theme =  secret
+	option = {
+		name = AL_supreme_spells.0102.a
+		remove_character_modifier = AL_perfect_body_casting
+	}
+}
+AL_supreme_spells.0201 = { # Body perfection
+	title = AL_supreme_spells.0201.title
+	desc = AL_supreme_spells.0201.desc
+	trigger = {
+		has_character_modifier = AL_magical_immortality_casting
+	}
+	theme =  secret
+	option = {
+		name = AL_supreme_spells.0201.a
+		add_trait = magic_immortality
+		
+		remove_character_modifier = AL_magical_immortality_casting
+	}
+}
+AL_supreme_spells.0202 = { # Body perfection; FAIL
+	title = AL_supreme_spells.0202.title
+	desc = AL_supreme_spells.0202.desc
+
+	theme =  secret
+	option = {
+		name = AL_supreme_spells.0202.a
+		remove_character_modifier = AL_perfect_body_casting
+	}
+}

@@ -1,0 +1,12 @@
+﻿l_english:
+ concepts_lifestyle_name:0 "Magical Concepts"
+ concepts_lifestyle_desc:0 "Focus on studing magical concepts to further create with them spells."
+ concepts_lifestyle_highlight_desc:0 "You have access to this Lifestyle because you are a mage." 
+ 
+ concepts_name:0 "Magical Concepts"
+ 
+
+ concepts_focus:0 "Concepts focus"
+ concepts_focus_modifier:0 "Concepts focus"
+ concepts_focus_effect_desc:0 "Focusing on concepts grants:"
+ concepts_focus_desc:0 "Discover and understend new concepts to further use them in spells"

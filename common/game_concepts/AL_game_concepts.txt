@@ -1,0 +1,62 @@
+﻿Mage = {
+
+}
+Mana = {
+	alias = { mana_i }
+	texture = "gfx/magic/MagicIcon.dds"
+}
+Regen_Mana = {
+	alias = { mana_regen_i }
+	texture = "gfx/magic/mana_increase.dds"
+}
+Decrease_Mana = {
+	alias = { mana_decrease_i }
+	texture = "gfx/magic/mana_decrease.dds"
+}
+MConcept = {
+	
+}
+Manipulation = {
+
+}
+Material = {
+
+}
+Life = {
+	
+}
+Mind = {
+	
+}
+Spell = {
+	
+}
+Undead = {
+	
+}
+Energy = {
+	
+}
+undead_type = {
+	parent = men_at_arms
+	texture = "gfx/interface/icons/regimenttypes/lesser_undead.dds"
+}
+animal_type = {
+	parent = men_at_arms
+	texture = "gfx/interface/icons/regimenttypes/animal.dds"
+}
+Ability = {
+	
+}
+ArcTechnique = {
+	
+}
+Suspicion = {
+	
+}
+concepts_lifestyle = {
+	
+}
+Supreme_Spells = {
+	
+}

@@ -1,0 +1,934 @@
+﻿setup_magicardia_shops = {
+	effect = {
+		clear_variable_list = arval_item_shop
+		add_to_variable_list = { name = arval_item_shop target = flag:create_gold }
+		add_to_variable_list = { name = arval_item_shop target = flag:clear_land_geography }
+		add_to_variable_list = { name = arval_item_shop target = flag:improve_land_geography_minor }
+		add_to_variable_list = { name = arval_item_shop target = flag:improve_land_geography }
+		add_to_variable_list = { name = arval_item_shop target = flag:worsened_land_geography_minor }
+		add_to_variable_list = { name = arval_item_shop target = flag:worsened_land_geography }
+		
+		add_to_variable_list = { name = orde_item_shop target = flag:flood_spell }
+		add_to_variable_list = { name = orde_item_shop target = flag:drought_spell }
+	
+		clear_variable_list = orde_item_shop
+		add_to_variable_list = { name = orde_item_shop target = flag:mass_haste }
+		add_to_variable_list = { name = orde_item_shop target = flag:haste }
+		add_to_variable_list = { name = orde_item_shop target = flag:mass_slowness }
+		add_to_variable_list = { name = orde_item_shop target = flag:slowness }
+		add_to_variable_list = { name = orde_item_shop target = flag:beneficial_weather }
+		add_to_variable_list = { name = orde_item_shop target = flag:detrimental_weather }
+		add_to_variable_list = { name = orde_item_shop target = flag:clear_land_fertility }
+		add_to_variable_list = { name = orde_item_shop target = flag:improve_land_fertility_minor }	
+		add_to_variable_list = { name = orde_item_shop target = flag:improve_land_fertility }
+		add_to_variable_list = { name = orde_item_shop target = flag:worsened_land_fertility_minor }
+		add_to_variable_list = { name = orde_item_shop target = flag:worsened_land_fertility }
+		add_to_variable_list = { name = orde_item_shop target = flag:minor_optimize_body }
+		add_to_variable_list = { name = orde_item_shop target = flag:optimize_body }
+		add_to_variable_list = { name = orde_item_shop target = flag:wound_spell }
+		add_to_variable_list = { name = orde_item_shop target = flag:summon_wolves }
+		add_to_variable_list = { name = orde_item_shop target = flag:summon_bears }
+		add_to_variable_list = { name = orde_item_shop target = flag:fix_change_genetic_body }
+		add_to_variable_list = { name = orde_item_shop target = flag:l1_change_genetic_body }
+		add_to_variable_list = { name = orde_item_shop target = flag:l2_change_genetic_body }
+		add_to_variable_list = { name = orde_item_shop target = flag:increase_fertility_minor }
+		add_to_variable_list = { name = orde_item_shop target = flag:increase_fertility }
+		add_to_variable_list = { name = orde_item_shop target = flag:decrease_fertility_minor }
+		add_to_variable_list = { name = orde_item_shop target = flag:decrease_fertility }
+
+		clear_variable_list = mystas_item_shop
+		add_to_variable_list = { name = mystas_item_shop target = flag:calm_spell }
+		add_to_variable_list = { name = mystas_item_shop target = flag:anger_spell }
+		add_to_variable_list = { name = mystas_item_shop target = flag:befriend_spell }
+		add_to_variable_list = { name = mystas_item_shop target = flag:suggestion }
+		add_to_variable_list = { name = mystas_item_shop target = flag:fix_change_genetic_mind }
+		add_to_variable_list = { name = mystas_item_shop target = flag:l1_change_genetic_mind }
+		add_to_variable_list = { name = mystas_item_shop target = flag:l2_change_genetic_mind }	
+
+		clear_variable_list = peren_item_shop
+		add_to_variable_list = { name = peren_item_shop target = flag:major_optimize_body }
+		add_to_variable_list = { name = peren_item_shop target = flag:l3_change_genetic_body }
+		add_to_variable_list = { name = peren_item_shop target = flag:l3_change_genetic_mind }
+		add_to_variable_list = { name = peren_item_shop target = flag:worsened_land_fertility_major }
+		add_to_variable_list = { name = peren_item_shop target = flag:improve_land_fertility_major }
+		add_to_variable_list = { name = peren_item_shop target = flag:worsened_land_geography_major }
+		add_to_variable_list = { name = peren_item_shop target = flag:improve_land_geography_major }
+		add_to_variable_list = { name = peren_item_shop target = flag:summon_entire_forest }	
+		add_to_variable_list = { name = peren_item_shop target = flag:magical_vampirism }	
+		add_to_variable_list = { name = peren_item_shop target = flag:create_gold_better }
+		add_to_variable_list = { name = peren_item_shop target = flag:puppet }
+		add_to_variable_list = { name = peren_item_shop target = flag:crete_homunculus_minor }	
+		add_to_variable_list = { name = peren_item_shop target = flag:crete_homunculus }
+		add_to_variable_list = { name = peren_item_shop target = flag:crete_homunculus_major }
+		add_to_variable_list = { name = peren_item_shop target = flag:increase_fertility_major }
+		add_to_variable_list = { name = peren_item_shop target = flag:decrease_fertility_major }
+		add_to_variable_list = { name = peren_item_shop target = flag:earthquake_spell }
+
+	}
+
+}
+right_avaible = {
+	scope = character
+	is_valid = {
+		OR = {
+			var:loc_magicardia = flag:center
+			var:loc_magicardia = flag:arval
+			var:loc_magicardia = flag:orde
+			var:loc_magicardia = flag:mystas
+			var:loc_magicardia = flag:peren
+
+		}
+	}
+}
+center_avaible = {
+	scope = character
+	is_valid = {
+		OR = {
+			var:loc_magicardia = flag:right
+			var:loc_magicardia = flag:left
+			var:loc_magicardia = flag:school
+		}
+	}
+}
+
+is_in_center_magicardia = {
+	scope = character
+	is_valid = {
+		var:loc_magicardia = flag:center
+	}
+}
+is_not_center_magicardia = {
+	scope = character
+	is_valid = {
+		NOT = {
+			var:loc_magicardia = flag:center
+		}
+	}
+}
+go_to_center = {
+	effect = {
+		set_variable = {
+			name = loc_magicardia
+			value = flag:center
+		}
+	}
+}
+is_in_left_magicardia = {
+	scope = character
+	is_valid = {
+		var:loc_magicardia = flag:left
+	}
+}
+go_to_left = {
+	effect = {
+		set_variable = {
+			name = loc_magicardia
+			value = flag:left
+		}
+	}
+}
+is_in_right_magicardia = {
+	scope = character
+	is_valid = {
+		var:loc_magicardia = flag:right
+	}
+}
+go_to_right = {
+	effect = {
+		set_variable = {
+			name = loc_magicardia
+			value = flag:right
+		}
+	}
+}
+is_in_asembly_magicardia = {
+	scope = character
+	is_valid = {
+		var:loc_magicardia = flag:asembly
+	}
+}
+go_to_asembly = {
+	effect = {
+		set_variable = {
+			name = loc_magicardia
+			value = flag:asembly
+		}
+	}
+}
+is_in_school_magicardia = {
+	scope = character
+	is_valid = {
+		var:loc_magicardia = flag:school
+	}
+}
+go_to_school = {
+	effect = {
+		set_variable = {
+			name = loc_magicardia
+			value = flag:school
+		}
+	}
+}
+
+is_in_arval_magicardia = {
+	scope = character
+	is_valid = {
+		var:loc_magicardia = flag:arval
+	}
+}
+go_to_arval = {
+	effect = {
+		set_variable = {
+			name = loc_magicardia
+			value = flag:arval
+		}
+	}
+}
+is_in_orde_magicardia = {
+	scope = character
+	is_valid = {
+		var:loc_magicardia = flag:orde
+	}
+}
+go_to_orde = {
+	effect = {
+		set_variable = {
+			name = loc_magicardia
+			value = flag:orde
+		}
+	}
+}
+is_in_mystas_magicardia = {
+	scope = character
+	is_valid = {
+		var:loc_magicardia = flag:mystas
+	}
+}
+go_to_mystas = {
+	effect = {
+		set_variable = {
+			name = loc_magicardia
+			value = flag:mystas
+		}
+	}
+}
+is_in_peren_magicardia = {
+	scope = character
+	is_valid = {
+		var:loc_magicardia = flag:peren
+	}
+}
+go_to_peren = {
+	effect = {
+		set_variable = {
+			name = loc_magicardia
+			value = flag:peren
+		}
+	}
+}
+is_in_shop = {
+	is_valid = {
+		OR = {
+			var:loc_magicardia = flag:arval
+			var:loc_magicardia = flag:orde
+			var:loc_magicardia = flag:mystas
+			var:loc_magicardia = flag:peren
+		}
+	}
+}
+
+learn_magicardia = {
+	effect = {
+		duel = {
+			skill = learning
+			value = mediocre_skill_rating
+			40 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -1
+				}
+				desc = learn_magicardia.super.failure.desc
+				send_interface_toast = {
+					title = learn_magicardia.super.failure.desc
+					add_concepts_lifestyle_xp = 400
+				}
+			}
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -0.5
+				}
+				desc = learn_magicardia.failure.desc
+				send_interface_toast = {
+					title = learn_magicardia.failure.desc
+					add_concepts_lifestyle_xp = 600
+				}
+			}
+			25 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 0.5
+				}
+				desc = learn_magicardia.success.desc
+				send_interface_toast = {
+					title = learn_magicardia.success.desc
+					add_concepts_lifestyle_xp = 800
+				}
+			}
+			5 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1
+				}
+				desc = learn_magicardia.super.success.desc
+				send_interface_toast = {
+					title = learn_magicardia.super.success.desc
+					add_concepts_lifestyle_xp = 1000
+				}
+			}
+		}
+		hidden_effect = {
+			random_list = {
+				90 = {}
+				10 = {
+					modifier = {
+						has_character_modifier = AL_inspired
+						add = -10 
+					}
+					send_interface_toast = {
+						title = get_inspired_toast
+						add_character_modifier = AL_inspired
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			text = "low_AL_inspired"
+		}
+		remove_short_term_gold = 150
+		add_character_modifier = { modifier = used_mind years = 1 }
+	}
+	is_valid = {
+		gold >= 150
+		NOT = { has_character_modifier = used_mind }
+	}
+}
+
+
+buy_create_gold = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_material_none_spells_list target =  flag:create_gold } } }
+		gold >= 100
+	}
+	effect = {
+		remove_short_term_gold = 100
+		add_to_variable_list = { name = manipulation_material_none_spells_list target = flag:create_gold }
+	}
+}
+buy_clear_land_geography = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_material_none_spells_list target =  flag:clear_land_geography } } }
+		gold >= 100
+	}
+	effect = {
+		remove_short_term_gold = 100
+		add_to_variable_list = { name = manipulation_material_none_spells_list target = flag:clear_land_geography }
+	}
+}
+buy_improve_land_geography_minor = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_material_none_spells_list target =  flag:improve_land_geography_minor } } }
+		gold >= 200
+	}
+	effect = {
+		remove_short_term_gold = 200
+		add_to_variable_list = { name = manipulation_material_none_spells_list target = flag:improve_land_geography_minor }
+	}
+}
+buy_improve_land_geography = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_material_none_spells_list target =  flag:improve_land_geography } } }
+		gold >= 300
+	}
+	effect = {
+		remove_short_term_gold = 300
+		add_to_variable_list = { name = manipulation_material_none_spells_list target = flag:improve_land_geography }
+	}
+}
+buy_improve_land_geography_major = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_material_none_spells_list target =  flag:improve_land_geography_major } } }
+		gold >= 400
+	}
+	effect = {
+		remove_short_term_gold = 400
+		add_to_variable_list = { name = manipulation_material_none_spells_list target = flag:improve_land_geography_major }
+	}
+}
+buy_worsened_land_geography_minor = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_material_none_spells_list target =  flag:worsened_land_geography_minor } } }
+		gold >= 200
+	}
+	effect = {
+		remove_short_term_gold = 200
+		add_to_variable_list = { name = manipulation_material_none_spells_list target = flag:worsened_land_geography_minor }
+	}
+}
+buy_worsened_land_geography = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_material_none_spells_list target =  flag:worsened_land_geography } } }
+		gold >= 300
+	}
+	effect = {
+		remove_short_term_gold = 300
+		add_to_variable_list = { name = manipulation_material_none_spells_list target = flag:worsened_land_geography }
+	}
+}
+buy_worsened_land_geography_major = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_material_none_spells_list target =  flag:worsened_land_geography_major } } }
+		gold >= 400
+	}
+	effect = {
+		remove_short_term_gold = 400
+		add_to_variable_list = { name = manipulation_material_none_spells_list target = flag:worsened_land_geography_major }
+	}
+}
+buy_mass_haste = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_energy_none_spells_list target =  flag:mass_haste } } }
+		gold >= 200
+	}
+	effect = {
+		remove_short_term_gold = 200
+		add_to_variable_list = { name = manipulation_energy_none_spells_list target = flag:mass_haste }
+	}
+}
+buy_haste = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_energy_none_spells_list target =  flag:haste } } }
+		gold >= 100
+	}
+	effect = {
+		remove_short_term_gold = 100
+		add_to_variable_list = { name = manipulation_energy_none_spells_list target = flag:haste }
+	}
+}
+buy_mass_slowness = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_energy_none_spells_list target =  flag:mass_slowness } } }
+		gold >= 200
+	}
+	effect = {
+		remove_short_term_gold = 200
+		add_to_variable_list = { name = manipulation_energy_none_spells_list target = flag:mass_slowness }
+	}
+}
+buy_slowness = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_energy_none_spells_list target =  flag:slowness } } }
+		gold >= 100
+	}
+	effect = {
+		remove_short_term_gold = 100
+		add_to_variable_list = { name = manipulation_energy_none_spells_list target = flag:slowness }
+	}
+}
+buy_beneficial_weather = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_energy_none_spells_list target =  flag:beneficial_weather } } }
+		gold >= 200
+	}
+	effect = {
+		remove_short_term_gold = 200
+		add_to_variable_list = { name = manipulation_energy_none_spells_list target = flag:beneficial_weather }
+	}
+}
+buy_detrimental_weather = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_energy_none_spells_list target =  flag:detrimental_weather } } }
+		gold >= 200
+	}
+	effect = {
+		remove_short_term_gold = 200
+		add_to_variable_list = { name = manipulation_energy_none_spells_list target = flag:detrimental_weather }
+	}
+}
+buy_clear_land_fertility = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_material_life_spells_list target =  flag:clear_land_fertility } } }
+		gold >= 100
+	}
+	effect = {
+		remove_short_term_gold = 100
+		add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:clear_land_fertility }
+	}
+}
+buy_improve_land_fertility_minor = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_material_life_spells_list target =  flag:improve_land_fertility_minor } } }
+		gold >= 200
+	}
+	effect = {
+		remove_short_term_gold = 200
+		add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:improve_land_fertility_minor }
+	}
+}
+buy_improve_land_fertility = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_material_life_spells_list target =  flag:improve_land_fertility } } }
+		gold >= 300
+	}
+	effect = {
+		remove_short_term_gold = 300
+		add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:improve_land_fertility }
+	}
+}
+buy_improve_land_fertility_major = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_material_life_spells_list target =  flag:improve_land_fertility_major } } }
+		gold >= 400
+	}
+	effect = {
+		remove_short_term_gold = 400
+		add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:improve_land_fertility_major }
+	}
+}
+buy_worsened_land_fertility_minor = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_material_life_spells_list target =  flag:worsened_land_fertility_minor } } }
+		gold >= 200
+	}
+	effect = {
+		remove_short_term_gold = 200
+		add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:worsened_land_fertility_minor }
+	}
+}
+buy_worsened_land_fertility = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_material_life_spells_list target =  flag:worsened_land_fertility } } }
+		gold >= 300
+	}
+	effect = {
+		remove_short_term_gold = 300
+		add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:worsened_land_fertility }
+	}
+}
+buy_worsened_land_fertility_major = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_material_life_spells_list target =  flag:worsened_land_fertility_major } } }
+		gold >= 400
+	}
+	effect = {
+		remove_short_term_gold = 400
+		add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:worsened_land_fertility_major }
+	}
+}
+buy_minor_optimize_body = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_material_life_spells_list target =  flag:minor_optimize_body } } }
+		gold >= 200
+	}
+	effect = {
+		remove_short_term_gold = 200
+		add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:minor_optimize_body }
+	}
+}
+buy_optimize_body = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_material_life_spells_list target =  flag:optimize_body } } }
+		gold >= 350
+	}
+	effect = {
+		remove_short_term_gold = 350
+		add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:optimize_body }
+	}
+}
+buy_major_optimize_body = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_material_life_spells_list target =  flag:major_optimize_body } } }
+		gold >= 500
+	}
+	effect = {
+		remove_short_term_gold = 500
+		add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:major_optimize_body }
+	}
+}
+buy_wound_spell = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_material_life_spells_list target =  flag:wound_spell } } }
+		gold >= 150
+	}
+	effect = {
+		remove_short_term_gold = 150
+		add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:wound_spell }
+	}
+}
+buy_kill_spell = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_material_life_spells_list target =  flag:kill_spell } } }
+		gold >= 200
+	}
+	effect = {
+		remove_short_term_gold = 200
+		add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:kill_spell }
+	}
+}
+buy_magical_vampirism = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_material_life_spells_list target =  flag:magical_vampirism } } }
+		gold >= 750
+	}
+	effect = {
+		remove_short_term_gold = 750
+		add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:magical_vampirism }
+	}
+}
+buy_summon_wolves = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_material_life_spells_list target =  flag:summon_wolves } } }
+		gold >= 200
+	}
+	effect = {
+		remove_short_term_gold = 200
+		add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:summon_wolves }
+	}
+}
+buy_summon_bears = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_material_life_spells_list target =  flag:summon_bears } } }
+		gold >= 200
+	}
+	effect = {
+		remove_short_term_gold = 200
+		add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:summon_bears }
+	}
+}
+buy_summon_entire_forest = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_material_life_spells_list target =  flag:summon_entire_forest } } }
+		gold >= 350
+	}
+	effect = {
+		remove_short_term_gold = 350
+		add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:summon_entire_forest }
+	}
+}
+buy_fix_change_genetic_body = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_material_life_spells_list target =  flag:fix_change_genetic_body } } }
+		gold >= 100
+	}
+	effect = {
+		remove_short_term_gold = 100
+		add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:fix_change_genetic_body }
+	}
+}
+buy_l1_change_genetic_body = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_material_life_spells_list target =  flag:l1_change_genetic_body } } }
+		gold >= 250
+	}
+	effect = {
+		remove_short_term_gold = 250
+		add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:l1_change_genetic_body }
+	}
+}
+buy_l2_change_genetic_body = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_material_life_spells_list target =  flag:l2_change_genetic_body } } }
+		gold >= 500
+	}
+	effect = {
+		remove_short_term_gold = 500
+		add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:l2_change_genetic_body }
+	}
+}
+buy_l3_change_genetic_body = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_material_life_spells_list target =  flag:l3_change_genetic_body } } }
+		gold >= 1000
+	}
+	effect = {
+		remove_short_term_gold = 1000
+		add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:l3_change_genetic_body }
+	}
+}
+buy_calm_spell = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_mind_none_spells_list target =  flag:calm_spell } } }
+		gold >= 100
+	}
+	effect = {
+		remove_short_term_gold = 100
+		add_to_variable_list = { name = manipulation_mind_none_spells_list target = flag:calm_spell }
+	}
+}
+buy_anger_spell = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_mind_none_spells_list target =  flag:anger_spell } } }
+		gold >= 100
+	}
+	effect = {
+		remove_short_term_gold = 100
+		add_to_variable_list = { name = manipulation_mind_none_spells_list target = flag:anger_spell }
+	}
+}
+buy_befriend_spell = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_mind_none_spells_list target =  flag:befriend_spell } } }
+		gold >= 200
+	}
+	effect = {
+		remove_short_term_gold = 200
+		add_to_variable_list = { name = manipulation_mind_none_spells_list target = flag:befriend_spell }
+	}
+}
+buy_suggestion = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_mind_none_spells_list target =  flag:suggestion } } }
+		gold >= 350
+	}
+	effect = {
+		remove_short_term_gold = 350
+		add_to_variable_list = { name = manipulation_mind_none_spells_list target = flag:suggestion }
+	}
+}
+buy_puppet = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_mind_none_spells_list target =  flag:puppet } } }
+		gold >= 500
+	}
+	effect = {
+		remove_short_term_gold = 500
+		add_to_variable_list = { name = manipulation_mind_none_spells_list target = flag:puppet }
+	}
+}
+buy_fix_change_genetic_mind = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_mind_life_spells_list target =  flag:fix_change_genetic_mind } } }
+		gold >= 250
+	}
+	effect = {
+		remove_short_term_gold = 250
+		add_to_variable_list = { name = manipulation_mind_life_spells_list target = flag:fix_change_genetic_mind }
+	}
+}
+buy_l1_change_genetic_mind = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_mind_life_spells_list target =  flag:l1_change_genetic_mind } } }
+		gold >= 500
+	}
+	effect = {
+		remove_short_term_gold = 500
+		add_to_variable_list = { name = manipulation_mind_life_spells_list target = flag:l1_change_genetic_mind }
+	}
+}
+buy_l2_change_genetic_mind = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_mind_life_spells_list target =  flag:l2_change_genetic_mind } } }
+		gold >= 1000
+	}
+	effect = {
+		remove_short_term_gold = 1000
+		add_to_variable_list = { name = manipulation_mind_life_spells_list target = flag:l2_change_genetic_mind }
+	}
+}
+buy_l3_change_genetic_mind = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_mind_life_spells_list target =  flag:l3_change_genetic_mind } } }
+		gold >= 1250
+	}
+	effect = {
+		remove_short_term_gold = 1250
+		add_to_variable_list = { name = manipulation_mind_life_spells_list target = flag:l3_change_genetic_mind }
+	}
+}
+buy_crete_homunculus_minor = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = creation_mind_life_spells_list target =  flag:crete_homunculus_minor } } }
+		gold >= 1500
+	}
+	effect = {
+		remove_short_term_gold = 1500
+		add_to_variable_list = { name = creation_mind_life_spells_list target = flag:crete_homunculus_minor }
+	}
+}
+buy_crete_homunculus = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = creation_mind_life_spells_list target =  flag:crete_homunculus } } }
+		gold >= 2500
+	}
+	effect = {
+		remove_short_term_gold = 2500
+		add_to_variable_list = { name = creation_mind_life_spells_list target = flag:crete_homunculus }
+	}
+}
+buy_crete_homunculus_major = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = creation_mind_life_spells_list target =  flag:crete_homunculus_major } } }
+		gold >= 4000
+	}
+	effect = {
+		remove_short_term_gold = 4000
+		add_to_variable_list = { name = creation_mind_life_spells_list target = flag:crete_homunculus_major }
+	}
+}
+buy_create_gold_better = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = creation_material_none_spells_list target =  flag:create_gold_better } } }
+		gold >= 250
+	}
+	effect = {
+		remove_short_term_gold = 250
+		add_to_variable_list = { name = creation_material_none_spells_list target = flag:create_gold_better }
+	}
+}
+buy_increase_fertility_minor = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_material_life_spells_list target =  flag:increase_fertility_minor } } }
+		gold >= 200
+	}
+	effect = {
+		remove_short_term_gold = 200
+		add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:increase_fertility_minor }
+	}
+}
+buy_increase_fertility = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_material_life_spells_list target =  flag:increase_fertility } } }
+		gold >= 350
+	}
+	effect = {
+		remove_short_term_gold = 350
+		add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:increase_fertility }
+	}
+}
+buy_increase_fertility_major = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_material_life_spells_list target =  flag:increase_fertility_major } } }
+		gold >= 500
+	}
+	effect = {
+		remove_short_term_gold = 500
+		add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:increase_fertility_major }
+	}
+}
+buy_decrease_fertility_minor = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_material_life_spells_list target =  flag:decrease_fertility_minor } } }
+		gold >= 200
+	}
+	effect = {
+		remove_short_term_gold = 200
+		add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:decrease_fertility_minor }
+	}
+}
+buy_decrease_fertility = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_material_life_spells_list target =  flag:decrease_fertility } } }
+		gold >= 350
+	}
+	effect = {
+		remove_short_term_gold = 350
+		add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:decrease_fertility }
+	}
+}
+buy_decrease_fertility_major = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_material_life_spells_list target =  flag:decrease_fertility_major } } }
+		gold >= 500
+	}
+	effect = {
+		remove_short_term_gold = 500
+		add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:decrease_fertility_major }
+	}
+}
+
+buy_flood_spell = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_material_none_spells_list target =  flag:flood_spell } } }
+		gold >= 400
+	}
+	effect = {
+		remove_short_term_gold = 400
+		add_to_variable_list = { name = manipulation_material_none_spells_list target = flag:flood_spell }
+	}
+}
+buy_drought_spell = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_material_none_spells_list target =  flag:drought_spell } } }
+		gold >= 600
+	}
+	effect = {
+		remove_short_term_gold = 600
+		add_to_variable_list = { name = manipulation_material_none_spells_list target = flag:drought_spell }
+	}
+}
+buy_earthquake_spell = {
+	scope = character
+	is_valid = {
+		custom_tooltip = { text = "alredy_have_spell" NOT = { is_target_in_variable_list = { name = manipulation_material_none_spells_list target =  flag:earthquake_spell } } }
+		gold >= 900
+	}
+	effect = {
+		remove_short_term_gold = 900
+		add_to_variable_list = { name = manipulation_material_none_spells_list target = flag:earthquake_spell }
+	}
+}

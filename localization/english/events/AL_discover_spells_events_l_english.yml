@@ -1,0 +1,15 @@
+﻿l_english:
+ AL_discover_spells.0001.title: "New Spells"
+ AL_discover_spells.0001.desc: "Finnaly, Now i am ready for new experiments!"
+
+ AL_discover_spells.0001.a: "Great!"
+
+
+
+ AL_discover_spells.0005.title: "Experiment: Nothing"
+ AL_discover_spells.0005.desc: "Uh... What a disapointment... Am I skilled enough to search again?"
+
+ AL_discover_spells.0005.a: "Uh..."
+
+ new_spell_loc: "You Discover new spell"
+ new_spell_loc_desc: "New spell or ability was added to your repertoire"

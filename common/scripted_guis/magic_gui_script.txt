@@ -1,0 +1,159 @@
+﻿is_magic_window_open = {
+	scope = character
+	is_valid = {
+		has_variable = window_magic_view
+	}
+}
+is_spell_create_window_open = {
+	scope = character
+	is_valid = {
+		has_variable = window_spell_create_view
+	}
+}
+is_magicardia_open = {
+	scope = character
+	is_valid = {
+		has_variable = magicardia_open
+	}
+}
+is_province_spell = {
+	scope = character
+	is_valid = {
+		has_variable = province_spell
+	}
+}
+is_not_province_spell = {
+	scope = character
+	is_valid = {
+		NOT = { has_variable = province_spell }
+	}
+}
+is_mage = {
+	scope = character
+	is_valid = {
+		has_character_flag = mage
+	}
+}
+have_sus_meter = {
+	scope = character
+	is_valid = {
+		has_character_flag = mage
+		NOT = { has_trait = exposed_mage }
+	}
+}
+close_magic_window = {
+	scope = character
+	effect = {
+		remove_variable = window_magic_view
+		remove_variable = spell_target
+		remove_variable = province_spell
+	}
+}
+close_spell_create_window = {
+	scope = character
+	effect = {
+		remove_variable = window_spell_create_view
+	}
+}
+close_magicardia_window = {
+	scope = character
+	effect = {
+		remove_variable = magicardia_open
+		current_travel_plan = {
+			resume_travel_plan = yes
+		}
+	}
+}
+magic_spell_book_province_spell = {
+	scope = character
+	effect = {
+		set_variable = {
+			name = spell_target
+			value = scope:target
+		}
+		set_variable = {
+			name = province_spell
+			value = yes
+		}
+		effect_open_magic_window = yes
+		
+	}
+}
+look_for_spell_first_types_clear = {
+	scope = character
+	effect = {
+		remove_character_flag = type_creation
+		remove_character_flag = type_destruction
+		remove_character_flag = type_manipulation
+	}
+}
+look_for_spell_second_types_clear = {
+	scope = character
+	effect = {
+		remove_character_flag = type_energy
+		remove_character_flag = type_material
+		remove_character_flag = type_mind
+		remove_character_flag = type_undead
+	}
+}
+look_for_spell_last_types_clear = {
+	scope = character
+	effect = {
+		remove_character_flag = type_t_life
+		remove_character_flag = type_t_none
+	}
+}
+
+look_for_spell_type_manipulation = { scope = character effect = { add_character_flag = type_manipulation } }
+look_for_spell_type_creation = { scope = character effect = { add_character_flag = type_creation } }
+look_for_spell_type_destruction = { scope = character effect = { add_character_flag = type_destruction } }
+
+look_for_spell_type_mind = { scope = character effect = { add_character_flag = type_mind } }
+look_for_spell_type_material = { scope = character effect = { add_character_flag = type_material } }
+look_for_spell_type_undead = { scope = character effect = { add_character_flag = type_undead } }
+look_for_spell_type_energy = { scope = character effect = { add_character_flag = type_energy } }
+
+look_for_spell_type_t_life = { scope = character effect = { add_character_flag = type_t_life } }
+look_for_spell_type_t_none = { scope = character effect = { add_character_flag = type_t_none } }
+
+look_for_spell_execute = {
+	scope = character
+	effect = {
+		custom_tooltip = { 
+			text = add_used_mind_effect_loc
+			if = {      limit = { has_trait = intellect_good_1 } add_character_modifier = { modifier = used_mind months = experimenting_coldown_i_1 } }
+			else_if = { limit = { has_trait = intellect_good_2 } add_character_modifier = { modifier = used_mind months = experimenting_coldown_i_2 } }
+			else_if = { limit = { has_trait = intellect_good_3 } add_character_modifier = { modifier = used_mind months = experimenting_coldown_i_3 } }
+			else_if = {limit = { has_trait = intellect_bad_1 } add_character_modifier = { modifier = used_mind months = experimenting_coldown_b_i_1 } }
+			else_if = {limit = { has_trait = intellect_bad_2 } add_character_modifier = { modifier = used_mind months = experimenting_coldown_b_i_2 } }
+			else_if = {limit = { has_trait = intellect_bad_3 } add_character_modifier = { modifier = used_mind months = experimenting_coldown_b_i_3} }
+			else = {  add_character_modifier = { modifier = used_mind months = experimenting_coldown } }
+		}
+		custom_tooltip = {
+			text = "super_low_AL_inspired"
+			random_list = {
+				99 = { }
+				1 = { # 
+					modifier = {
+						has_character_modifier = AL_inspired
+						add = -1 
+					}
+					send_interface_toast = {
+						title = get_inspired_toast
+						add_character_modifier = AL_inspired
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			text = "look_for_spell_desc"
+			unlock_random_spell = yes	
+		}
+		add_concepts_lifestyle_xp = experimenting_reward
+		remove_short_term_gold = experimenting_cost
+	}
+	is_valid = {
+		gold >= experimenting_cost
+		NOT = { has_character_modifier = used_mind }
+	}
+}

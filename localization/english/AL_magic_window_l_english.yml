@@ -1,0 +1,136 @@
+﻿l_english:
+ MAGICKA_CURRENT:0 "[Mana|E]: [Character.MakeScope.Var('mana').GetValue|V0]/[Character.MakeScope.ScriptValue('mana_max')|V0]"
+ MAGICKA_GAIN:0 "Generated:"
+ MAGICKA_LOSS:0 "Upkeep:"
+ MAGICKA_CHANGE:0 "Change:"
+ MAGICKA_TOTAL:0 "Total"
+
+ SUS_CURRENT:0 "[Suspicion|E]: [Character.MakeScope.Var('suspicion').GetValue|V0]/100"
+ SUS_GAIN:0 "Monthly Increase:"
+ SUS_LOSS:0 "Monthly Decrease:"
+ SUS_CHANGE:0 "Monthly Change:"
+ SUS_TOTAL:0 "Total"
+
+ magic_window_text:0 "Spell Casting"
+ magic_spell_create_window_text:0 "Experimenting"
+
+ caster_loc:0 "Caster"
+ target_loc:0 "Target"
+ effects_loc:0 "Effects:"
+ execute_loc:0 "Cast"
+ execute_exp_loc:0 "Begin Experiment"
+ spell_casting_help:0 "#help;bold To found new spells you must experiment with concepts!"
+ spell_create_title:0 "#HELP;bold Select Concepts in with you will search and look for spells"
+ spell_create_title_remember:0 "#EMP;bold Remember that spells require some mastery of concepts to be found!"
+ coldown_title:0 "#help;high;bold With your current intelegence your coldown is [GetPlayer.Custom('coldown_look_for_spell_loc')]"
+ coldown_look_for_spell_loc_1:0 "#P;bold 10 months"
+ coldown_look_for_spell_loc_2:0 "#P;bold 8 months"
+ coldown_look_for_spell_loc_3:0 "#P;bold 6 months"
+ coldown_look_for_spell_loc_4:0 "#N;bold 1.15 years"
+ coldown_look_for_spell_loc_5:0 "#N;bold 1.30 years"
+ coldown_look_for_spell_loc_6:0 "#N;bold 1.5 year"
+ coldown_look_for_spell_loc_0:0 "1 year"
+
+ first_mage_nick:0 "First Mage"
+ first_mage_nick_desc:0 "Father of all mages, The Devil, Servant Of Satan, The Scholar, The Mage. First mage goes by many names, But one is universal. Everyone fears him"
+
+ supreme_inquisitor_nick:0 "Supreme Inquisitior"
+ supreme_inquisitor_nick_desc:0 "First Inquisitior, The Strongest Inquisitior, The Founder, The Hunter. Supreme Inquisitior goes by many names, But one is universal. Everyone fears him"
+
+ look_for_spell_desc: "Get random spell that you meet the requirements"
+
+ create_gold_name: "[Spell|E]: Manipulate Material into Gold"
+ create_gold_better_name: "[Spell|E]: Create Gold"
+
+ minor_optimize_body_name: "[Spell|E]: Minor Optimize Body"
+ optimize_body_name: "[Spell|E]: Optimize Body"
+ major_optimize_body_name: "[Spell|E]: Major Optimize Body"
+
+ mass_haste_name: "[Spell|E]: Mass Haste"
+ haste_name: "[Spell|E]: Haste"
+
+ mass_slowness_name: "[Spell|E]: Mass Slowness"
+ slowness_name: "[Spell|E]: Slowness"
+
+ beneficial_weather_name: "[Spell|E]: Beneficial Weather"
+ detrimental_weather_name: "[Spell|E]: Detrimental Weather"
+
+ novice_fire_combat_name: "[Ability|E]: Fire Combat: Novice"
+ apprentice_fire_combat_name: "[Ability|E]: Fire Combat: Apprentice"
+ adept_fire_combat_name: "[Ability|E]: Fire Combat: Adept"
+ expert_fire_combat_name: "[Ability|E]: Fire Combat: Expert"
+ master_fire_combat_name: "[Ability|E]: Fire Combat: Master"
+
+ novice_telekinesis_combat_name: "[Ability|E]: Telekinesis Combat: Novice"
+ apprentice_telekinesis_combat_name: "[Ability|E]: Telekinesis Combat: Apprentice"
+ adept_telekinesis_combat_name: "[Ability|E]: Telekinesis Combat: Adept"
+ expert_telekinesis_combat_name: "[Ability|E]: Telekinesis Combat: Expert"
+ master_telekinesis_combat_name: "[Ability|E]: Telekinesis Combat: Master"
+
+
+ improve_land_name: "[Spell|E]: Improve Land"
+ worsened_land_name: "[Spell|E]: Worsened Land"
+
+ fix_change_genetic_body_name: "[Spell|E]: Change Body Genetics: Fix"
+ l1_change_genetic_body_name: "[Spell|E]: Change Body Genetics: Level 1"
+ l2_change_genetic_body_name: "[Spell|E]: Change Body Genetics: Level 2"
+ l3_change_genetic_body_name: "[Spell|E]: Change Body Genetics: Level 3"
+
+ fix_change_genetic_mind_name: "[Spell|E]: Change Mind Genetics: Fix"
+ l1_change_genetic_mind_name: "[Spell|E]: Change Mind Genetics: Level 1"
+ l2_change_genetic_mind_name: "[Spell|E]: Change Mind Genetics: Level 2"
+ l3_change_genetic_mind_name: "[Spell|E]: Change Mind Genetics: Level 3"
+
+ clear_land_fertility_name: "[Spell|E]: Land Fertility: Clear"
+ improve_land_fertility_minor_name: "[Spell|E]: Improve Land Fertility: Minor"
+ improve_land_fertility_name: "[Spell|E]: Improve Land Fertility"
+ improve_land_fertility_major_name: "[Spell|E]: Improve Land Fertility: Major"
+
+ worsened_land_fertility_minor_name: "[Spell|E]: Worsened Land Fertility: Minor"
+ worsened_land_fertility_name: "[Spell|E]: Worsened Land Fertility"
+ worsened_land_fertility_major_name: "[Spell|E]: Worsened Land Fertility: Major"
+
+ clear_land_geography_name: "[Spell|E]: Land Geography: Clear"
+ improve_land_geography_minor_name: "[Spell|E]: Improve Land Geography: Minor"
+ improve_land_geography_name: "[Spell|E]: Improve Land Geography"
+ improve_land_geography_major_name: "[Spell|E]: Improve Land Geography: Major"
+
+ worsened_land_geography_minor_name: "[Spell|E]: Worsened Land Geography: Minor"
+ worsened_land_geography_name: "[Spell|E]: Worsened Land Geography"
+ worsened_land_geography_major_name: "[Spell|E]: Worsened Land Geography: Major"
+
+
+ summon_undead_minor_name: "[Spell|E]: Summon Undead Levies"
+ summon_undead_name: "[Spell|E]: Summon Undead Soldiers"
+ summon_undead_major_name: "[Spell|E]: Summon Undead Knights"
+
+ summon_wolves_name: "[Spell|E]: Summon Wolves"
+ summon_bears_name: "[Spell|E]: Summon Bears"
+ summon_entire_forest_name: "[Spell|E]: Summon Entire Forest"
+
+ calm_spell_name: "[Spell|E]: Calm"
+ anger_spell_name: "[Spell|E]: Anges"
+ befriend_spell_name: "[Spell|E]: Befriend"
+ suggestion_name: "[Spell|E]: Suggestion"
+ puppet_name: "[Spell|E]: Puppet"
+ crete_homunculus_minor_name: "[Spell|E]: Create basic homunculus"
+ crete_homunculus_name: "[Spell|E]: Create near-human homunculus"
+ crete_homunculus_major_name: "[Spell|E]: Create perfect homunculus"
+ magical_vampirism_name: "[Spell|E]: Magical Vampirism"
+ kill_spell_name: "[Spell|E]: Kill"
+ wound_spell_name: "[Spell|E]: Hurt"
+
+ perfect_body_name: "[Supreme_Spells|E]: Perfect Body"
+ magical_immortality_name: "[Supreme_Spells|E]: Magical Immortality"
+
+ increase_fertility_minor_name: "[Spell|E]: Increase Fertility Minor"
+ increase_fertility_name: "[Spell|E]: Increase Fertility"
+ increase_fertility_major_name: "[Spell|E]: Increase Fertility Major"
+
+ decrease_fertility_minor_name: "[Spell|E]: Decrase Fertility"
+ decrease_fertility_name: "[Spell|E]: Decrase Fertility"
+ decrease_fertility_major_name: "[Spell|E]: Decrase Fertility Major"
+
+ flood_spell_name: "[Spell|E]: Flood"
+ drought_spell_name: "[Spell|E]: Drought" 
+ earthquake_spell_name: "[Spell|E]: Earthquake"

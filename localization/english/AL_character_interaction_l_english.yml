@@ -1,0 +1,31 @@
+﻿l_english:
+ spell_casting: "Spell Casting"
+ spell_casting_desc: "Spell Casting"
+ spell_create: "Experimenting"
+ spell_create_desc: "Experimenting"
+
+ teach_magic: "Teach Magic"
+ teach_magic_desc: "Teach Magic"
+
+ spell_caster_effect: "Open Casting Gui"
+ experimenting_effect: "Open Experimenting Gui"
+
+ fire_combat_casting: "[Ability]: Fire Combat"
+ fire_combat_casting_desc: "[Ability]: Fire Combat"
+
+ AL_combat_none: "None"
+ AL_fire_combat_1: "Fire Combat: Novice"
+ AL_fire_combat_2: "Fire Combat: Appentice"
+ AL_fire_combat_3: "Fire Combat: Adept"
+ AL_fire_combat_4: "Fire Combat: Expert"
+ AL_fire_combat_5: "Fire Combat: Master"
+
+
+ telekinesis_combat_casting: "[Ability]: Telekinesis Combat"
+ telekinesis_combat_casting_desc: "[Ability]: Telekinesis Combat"
+
+ AL_telekinesis_combat_1: "Telekinesis Combat: Novice"
+ AL_telekinesis_combat_2: "Telekinesis Combat: Appentice"
+ AL_telekinesis_combat_3: "Telekinesis Combat: Adept"
+ AL_telekinesis_combat_4: "Telekinesis Combat: Expert"
+ AL_telekinesis_combat_5: "Telekinesis Combat: Master"

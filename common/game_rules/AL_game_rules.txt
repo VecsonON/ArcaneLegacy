@@ -1,0 +1,47 @@
+﻿training_mana_values = {
+	default = training_mana_values_normal
+	
+	categories = {
+		difficulty
+	}
+
+	training_mana_values_minor = {}
+	training_mana_values_normal = {}
+	training_mana_values_high = {}
+	training_mana_values_supreme = {}
+}
+
+experimenting_cost_reward = {
+	default = experimenting_cost_reward_low_low
+	
+	categories = {
+		difficulty
+	}
+
+	experimenting_cost_reward_low_low = {}
+	experimenting_cost_reward_low_high = {}
+	experimenting_cost_reward_high_low = {}
+	experimenting_cost_reward_high_high = {}
+}
+experimenting_coldown = {
+	default = experimenting_coldown_normal
+	
+	categories = {
+		difficulty
+	}
+
+	experimenting_coldown_small = {}
+	experimenting_coldown_normal = {}
+	experimenting_coldown_high = {}
+	experimenting_coldown_ultra_high = {}
+}
+witch_hunt_setting = { # From reques from Luna, Thanks!
+	default = witch_hunt_chance_enable
+	
+	categories = {
+		difficulty
+	}
+
+	witch_hunt_chance_enable = {} 
+	witch_hunt_chance_disable = {}
+}

@@ -1,0 +1,1182 @@
+﻿unlock_random_spell = {
+	random_list = {
+		50 = { # Gold Manipulate
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_material
+						has_character_flag = type_t_none
+						has_perk = manipulation_3_perk
+						has_perk = material_3_perk
+						NOT = { is_target_in_variable_list  = { name = manipulation_material_none_spells_list target =  flag:create_gold } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_material_none_spells_list target = flag:create_gold }
+		}
+		50 = { # Gold Creaction
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_creation
+						has_character_flag = type_material
+						has_character_flag = type_t_none							
+						has_perk = manipulation_creation_perk
+						has_perk = material_4_perk
+						NOT = { is_target_in_variable_list  = { name = creation_material_none_spells_list target =  flag:create_gold_better } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = creation_material_none_spells_list target = flag:create_gold_better }
+		}
+		50 = { # Mass Haste
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_energy
+						has_character_flag = type_t_none							
+						has_perk = manipulation_1_perk
+						has_perk = energy_2_perk
+						NOT = { is_target_in_variable_list  = { name = manipulation_energy_none_spells_list target =  flag:mass_haste } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_energy_none_spells_list target = flag:mass_haste }
+		}
+		50 = { # Haste
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_energy
+						has_character_flag = type_t_none							
+						has_perk = manipulation_2_perk
+						has_perk = energy_2_perk
+						NOT = { is_target_in_variable_list  = { name = manipulation_energy_none_spells_list target =  flag:haste } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_energy_none_spells_list target = flag:haste }
+		}
+		50 = { # Mass Slowness
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_energy
+						has_character_flag = type_t_none							
+						has_perk = manipulation_1_perk
+						has_perk = energy_3_perk
+						NOT = { is_target_in_variable_list  = { name = manipulation_energy_none_spells_list target =  flag:mass_slowness } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_energy_none_spells_list target = flag:mass_slowness }
+		}
+		50 = { # Slowness
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_energy
+						has_character_flag = type_t_none							
+						has_perk = manipulation_2_perk
+						has_perk = energy_3_perk
+						NOT = { is_target_in_variable_list  = { name = manipulation_energy_none_spells_list target =  flag:slowness } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_energy_none_spells_list target = flag:slowness }
+		}
+		50 = { # beneficial weather
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_energy
+						has_character_flag = type_t_none							
+						has_perk = manipulation_perfection_perk
+						has_perk = energy_3_perk
+						NOT = { is_target_in_variable_list  = { name = manipulation_energy_none_spells_list target =  flag:beneficial_weather } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_energy_none_spells_list target = flag:beneficial_weather }
+		}
+		50 = { # detrimental weather
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_energy
+						has_character_flag = type_t_none							
+						has_perk = manipulation_perfection_perk
+						has_perk = energy_3_perk
+						NOT = { is_target_in_variable_list  = { name = manipulation_energy_none_spells_list target =  flag:detrimental_weather } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_energy_none_spells_list target = flag:detrimental_weather }
+		}
+		50 = { # novice Fire
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_energy
+						has_character_flag = type_t_none							
+						has_perk = manipulation_1_perk
+						has_perk = energy_2_perk
+						NOT = { is_target_in_variable_list  = { name = manipulation_energy_none_spells_list target =  flag:novice_fire_combat } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_energy_none_spells_list target = flag:novice_fire_combat }
+		}
+		50 = { # apprentice Fire
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_energy
+						has_character_flag = type_t_none							
+						has_perk = manipulation_2_perk
+						has_perk = energy_3_perk
+						is_target_in_variable_list  = { name = manipulation_energy_none_spells_list target =  flag:novice_fire_combat }
+						NOT = { is_target_in_variable_list  = { name = manipulation_energy_none_spells_list target =  flag:apprentice_fire_combat } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_energy_none_spells_list target = flag:apprentice_fire_combat }
+		}
+		50 = { # adept Fire
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_energy
+						has_character_flag = type_t_none							
+						has_perk = manipulation_3_perk
+						has_perk = energy_4_perk
+						is_target_in_variable_list  = { name = manipulation_energy_none_spells_list target =  flag:apprentice_fire_combat }
+						NOT = { is_target_in_variable_list  = { name = manipulation_energy_none_spells_list target =  flag:adept_fire_combat } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_energy_none_spells_list target = flag:adept_fire_combat }
+		}
+		50 = { # expert Fire
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_energy
+						has_character_flag = type_t_none							
+						has_perk = manipulation_4_perk
+						has_perk = energy_perfection_perk
+						is_target_in_variable_list  = { name = manipulation_energy_none_spells_list target =  flag:adept_fire_combat }
+						NOT = { is_target_in_variable_list  = { name = manipulation_energy_none_spells_list target =  flag:expert_fire_combat } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_energy_none_spells_list target = flag:expert_fire_combat }
+		}
+		50 = { # master Fire
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_energy
+						has_character_flag = type_t_none							
+						has_perk = manipulation_perfection_perk
+						has_perk = energy_perfection_perk
+						is_target_in_variable_list  = { name = manipulation_energy_none_spells_list target =  flag:expert_fire_combat }
+						NOT = { is_target_in_variable_list  = { name = manipulation_energy_none_spells_list target =  flag:master_fire_combat } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_energy_none_spells_list target = flag:master_fire_combat }
+		}
+		50 = { # novice telekinesis
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_energy
+						has_character_flag = type_t_none							
+						has_perk = manipulation_1_perk
+						has_perk = energy_1_perk
+						NOT = { is_target_in_variable_list  = { name = manipulation_energy_none_spells_list target =  flag:novice_telekinesis_combat } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_energy_none_spells_list target = flag:novice_telekinesis_combat }
+		}
+		50 = { # apprentice telekinesis
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_energy
+						has_character_flag = type_t_none							
+						has_perk = manipulation_2_perk
+						has_perk = energy_1_perk
+						is_target_in_variable_list  = { name = manipulation_energy_none_spells_list target =  flag:novice_telekinesis_combat }
+						NOT = { is_target_in_variable_list  = { name = manipulation_energy_none_spells_list target =  flag:apprentice_telekinesis_combat } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_energy_none_spells_list target = flag:apprentice_telekinesis_combat }
+		}
+		50 = { # adept telekinesis
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_energy
+						has_character_flag = type_t_none							
+						has_perk = manipulation_3_perk
+						has_perk = energy_2_perk
+						is_target_in_variable_list  = { name = manipulation_energy_none_spells_list target =  flag:apprentice_telekinesis_combat }
+						NOT = { is_target_in_variable_list  = { name = manipulation_energy_none_spells_list target =  flag:adept_telekinesis_combat } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_energy_none_spells_list target = flag:adept_telekinesis_combat }
+		}
+		50 = { # expert telekinesis
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_energy
+						has_character_flag = type_t_none							
+						has_perk = manipulation_4_perk
+						has_perk = energy_3_perk
+						is_target_in_variable_list  = { name = manipulation_energy_none_spells_list target =  flag:adept_telekinesis_combat }
+						NOT = { is_target_in_variable_list  = { name = manipulation_energy_none_spells_list target =  flag:expert_telekinesis_combat } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_energy_none_spells_list target = flag:expert_telekinesis_combat }
+		}
+		50 = { # master telekinesis
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_energy
+						has_character_flag = type_t_none							
+						has_perk = manipulation_perfection_perk
+						has_perk = energy_4_perk
+						is_target_in_variable_list  = { name = manipulation_energy_none_spells_list target =  flag:expert_telekinesis_combat }
+						NOT = { is_target_in_variable_list  = { name = manipulation_energy_none_spells_list target =  flag:master_telekinesis_combat } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_energy_none_spells_list target = flag:master_telekinesis_combat }
+		}
+		50 = { # Genetic Body Fix
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_material
+						has_character_flag = type_t_life							
+						has_perk = manipulation_4_perk
+						has_perk = material_4_perk
+						has_perk = life_3_perk
+						NOT = { is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:fix_change_genetic_body } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:fix_change_genetic_body }
+		}
+		50 = { # Genetic Body level 1
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_material
+						has_character_flag = type_t_life							
+						has_perk = manipulation_perfection_perk
+						has_perk = material_perfection_perk
+						has_perk = life_4_perk
+						is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:fix_change_genetic_body }
+						NOT = { is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:l1_change_genetic_body } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:l1_change_genetic_body }
+		}
+		50 = { # Genetic Body level 2
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_material
+						has_character_flag = type_t_life							
+						has_perk = manipulation_perfection_perk
+						has_perk = material_perfection_perk
+						has_perk = life_perfection_perk
+						is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:l1_change_genetic_body }
+						NOT = { is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:l2_change_genetic_body } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:l2_change_genetic_body }
+		}
+		50 = { # Genetic Body level 3
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_material
+						has_character_flag = type_t_life							
+						has_perk = manipulation_perfection_perk
+						has_perk = material_perfection_perk
+						has_perk = life_perfection_perk
+						is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:l2_change_genetic_body }
+						NOT = { is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:l3_change_genetic_body } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:l3_change_genetic_body }
+		}
+		50 = { # Genetic Mind Fix
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_mind
+						has_character_flag = type_t_life							
+						has_perk = manipulation_4_perk
+						has_perk = mind_2_perk
+						has_perk = life_2_perk
+						NOT = { is_target_in_variable_list  = { name = manipulation_mind_life_spells_list target =  flag:fix_change_genetic_mind } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_mind_life_spells_list target = flag:fix_change_genetic_mind }
+		}
+		50 = { # Genetic Mind level 1
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_mind
+						has_character_flag = type_t_life							
+						has_perk = manipulation_perfection_perk
+						has_perk = mind_3_perk
+						has_perk = life_3_perk
+						is_target_in_variable_list  = { name = manipulation_mind_life_spells_list target =  flag:fix_change_genetic_mind }
+						NOT = { is_target_in_variable_list  = { name = manipulation_mind_life_spells_list target =  flag:l1_change_genetic_mind } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_mind_life_spells_list target = flag:l1_change_genetic_mind }
+		}
+		50 = { # Genetic Mind level 2
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_mind
+						has_character_flag = type_t_life							
+						has_perk = manipulation_perfection_perk
+						has_perk = mind_perfection_perk
+						has_perk = life_4_perk
+						is_target_in_variable_list  = { name = manipulation_mind_life_spells_list target =  flag:l1_change_genetic_mind }
+						NOT = { is_target_in_variable_list  = { name = manipulation_mind_life_spells_list target =  flag:l2_change_genetic_mind } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_mind_life_spells_list target = flag:l2_change_genetic_mind }
+		}
+		50 = { # Genetic Mind level 3
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_mind
+						has_character_flag = type_t_life							
+						has_perk = manipulation_perfection_perk
+						has_perk = mind_perfection_perk
+						has_perk = life_perfection_perk
+						is_target_in_variable_list  = { name = manipulation_mind_life_spells_list target =  flag:l2_change_genetic_mind }
+						NOT = { is_target_in_variable_list  = { name = manipulation_mind_life_spells_list target =  flag:l3_change_genetic_mind } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_mind_life_spells_list target = flag:l3_change_genetic_mind }
+		}
+		50 = { # LAND FERTILITY CLEAR
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_material
+						has_character_flag = type_t_life							
+						has_perk = manipulation_2_perk
+						has_perk = material_1_perk
+						has_perk = life_1_perk
+						NOT = { is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:clear_land_fertility } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:clear_land_fertility }
+		}
+		50 = { # LAND FERTILITY BETTER 1
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_material
+						has_character_flag = type_t_life							
+						has_perk = manipulation_2_perk
+						has_perk = material_2_perk
+						has_perk = life_2_perk
+						is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:clear_land_fertility }
+						NOT = { is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:improve_land_fertility_minor } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:improve_land_fertility_minor }
+		}
+		50 = { # LAND FERTILITY BETTER 2
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_material
+						has_character_flag = type_t_life							
+						has_perk = manipulation_3_perk
+						has_perk = material_3_perk
+						has_perk = life_3_perk
+						is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:improve_land_fertility_minor }
+						NOT = { is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:improve_land_fertility } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:improve_land_fertility }
+		}
+		50 = { # LAND FERTILITY BETTER 3
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_material
+						has_character_flag = type_t_life							
+						has_perk = manipulation_3_perk
+						has_perk = material_4_perk
+						has_perk = life_4_perk
+						is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:improve_land_fertility }
+						NOT = { is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:improve_land_fertility_major } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:improve_land_fertility_major }
+		}
+		50 = { # LAND FERTILITY WORSE 1
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_material
+						has_character_flag = type_t_life							
+						has_perk = manipulation_2_perk
+						has_perk = material_2_perk
+						has_perk = life_2_perk
+						is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:clear_land_fertility }
+						NOT = { is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:worsened_land_fertility_minor } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:worsened_land_fertility_minor }
+		}
+		50 = { # LAND FERTILITY WORSE 2
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_material
+						has_character_flag = type_t_life							
+						has_perk = manipulation_3_perk
+						has_perk = material_3_perk
+						has_perk = life_3_perk
+						is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:worsened_land_fertility_minor }
+						NOT = { is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:worsened_land_fertility } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:worsened_land_fertility }
+		}
+		50 = { # LAND FERTILITY WORSE 3
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_material
+						has_character_flag = type_t_life							
+						has_perk = manipulation_3_perk
+						has_perk = material_4_perk
+						has_perk = life_4_perk
+						is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:worsened_land_fertility }
+						NOT = { is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:worsened_land_fertility_major } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:worsened_land_fertility_major }
+		}
+		50 = { # LAND geography CLEAR
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_material
+						has_character_flag = type_t_none							
+						has_perk = manipulation_2_perk
+						has_perk = material_2_perk
+						NOT = { is_target_in_variable_list  = { name = manipulation_material_none_spells_list target =  flag:clear_land_geography } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_material_none_spells_list target = flag:clear_land_geography }
+		}
+		50 = { # LAND geography BETTER 1
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_material
+						has_character_flag = type_t_none							
+						has_perk = manipulation_3_perk
+						has_perk = material_3_perk
+						is_target_in_variable_list  = { name = manipulation_material_none_spells_list target =  flag:clear_land_geography }
+						NOT = { is_target_in_variable_list  = { name = manipulation_material_none_spells_list target =  flag:improve_land_geography_minor } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_material_none_spells_list target = flag:improve_land_geography_minor }
+		}
+		50 = { # LAND geography BETTER 2
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_material
+						has_character_flag = type_t_none							
+						has_perk = manipulation_4_perk
+						has_perk = material_4_perk
+						is_target_in_variable_list  = { name = manipulation_material_none_spells_list target =  flag:improve_land_geography_minor }
+						NOT = { is_target_in_variable_list  = { name = manipulation_material_none_spells_list target =  flag:improve_land_geography } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_material_none_spells_list target = flag:improve_land_geography }
+		}
+		50 = { # LAND geography BETTER 3
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_material
+						has_character_flag = type_t_none							
+						has_perk = manipulation_perfection_perk
+						has_perk = material_perfection_perk
+						is_target_in_variable_list  = { name = manipulation_material_none_spells_list target =  flag:improve_land_geography }
+						NOT = { is_target_in_variable_list  = { name = manipulation_material_none_spells_list target =  flag:improve_land_geography_major } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_material_none_spells_list target = flag:improve_land_geography_major }
+		}
+		50 = { # LAND geography WORSE 1
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_material
+						has_character_flag = type_t_none							
+						has_perk = manipulation_3_perk
+						has_perk = material_3_perk
+						is_target_in_variable_list  = { name = manipulation_material_none_spells_list target =  flag:clear_land_geography }
+						NOT = { is_target_in_variable_list  = { name = manipulation_material_none_spells_list target =  flag:worsened_land_geography_minor } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_material_none_spells_list target = flag:worsened_land_geography_minor }
+		}
+		50 = { # LAND geography WORSE 2
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_material
+						has_character_flag = type_t_none							
+						has_perk = manipulation_4_perk
+						has_perk = material_4_perk
+						is_target_in_variable_list  = { name = manipulation_material_none_spells_list target =  flag:worsened_land_geography_minor }
+						NOT = { is_target_in_variable_list  = { name = manipulation_material_none_spells_list target =  flag:worsened_land_geography } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_material_none_spells_list target = flag:worsened_land_geography }
+		}
+		50 = { # LAND geography WORSE 3
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_material
+						has_character_flag = type_t_none							
+						has_perk = manipulation_perfection_perk
+						has_perk = material_perfection_perk
+						is_target_in_variable_list  = { name = manipulation_material_none_spells_list target =  flag:worsened_land_geography }
+						NOT = { is_target_in_variable_list  = { name = manipulation_material_none_spells_list target =  flag:worsened_land_geography_major } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_material_none_spells_list target = flag:worsened_land_geography_major }
+		}
+		50 = { # Summon Undead minor
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_undead
+						has_character_flag = type_t_none							
+						has_perk = manipulation_2_perk
+						has_perk = undead_1_perk
+						NOT = { is_target_in_variable_list  = { name = manipulation_undead_none_spells_list target =  flag:summon_undead_minor } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_undead_none_spells_list target = flag:summon_undead_minor }
+		}
+		50 = { # Summon Undead
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_undead
+						has_character_flag = type_t_none							
+						has_perk = manipulation_2_perk
+						has_perk = undead_2_perk
+						is_target_in_variable_list  = { name = manipulation_undead_none_spells_list target =  flag:summon_undead_minor }
+						NOT = { is_target_in_variable_list  = { name = manipulation_undead_none_spells_list target =  flag:summon_undead } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_undead_none_spells_list target = flag:summon_undead }
+		}
+		50 = { # Summon Undead Major
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_undead
+						has_character_flag = type_t_none							
+						has_perk = manipulation_2_perk
+						has_perk = undead_3_perk
+						is_target_in_variable_list  = { name = manipulation_undead_none_spells_list target =  flag:summon_undead }
+						NOT = { is_target_in_variable_list  = { name = manipulation_undead_none_spells_list target =  flag:summon_undead_major } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_undead_none_spells_list target = flag:summon_undead_major }
+		}
+		50 = { # Summon Wolves
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_material
+						has_character_flag = type_t_life							
+						has_perk = manipulation_2_perk
+						has_perk = material_3_perk
+						has_perk = life_2_perk
+						NOT = { is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:summon_wolves } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:summon_wolves }
+		}
+		50 = { # Summon Bears
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_material
+						has_character_flag = type_t_life							
+						has_perk = manipulation_2_perk
+						has_perk = material_3_perk
+						has_perk = life_3_perk
+						NOT = { is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:summon_bears } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:summon_bears }
+		}
+		50 = { # Summon Forest
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_material
+						has_character_flag = type_t_life							
+						has_perk = manipulation_2_perk
+						has_perk = material_4_perk
+						has_perk = life_4_perk
+						is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:summon_wolves }
+						is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:summon_bears }
+						NOT = { is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:summon_entire_forest } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:summon_entire_forest }
+		}
+		50 = { # Calm
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_mind						
+						has_perk = manipulation_4_perk
+						has_perk = mind_2_perk
+						NOT = { is_target_in_variable_list  = { name = manipulation_mind_none_spells_list target =  flag:calm_spell } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_mind_none_spells_list target = flag:calm_spell }
+			add_to_variable_list = { name = manipulation_mind_life_spells_list target = flag:calm_spell }
+		}
+		50 = { # Anger
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_mind						
+						has_perk = manipulation_4_perk
+						has_perk = mind_2_perk
+						NOT = { is_target_in_variable_list  = { name = manipulation_mind_none_spells_list target =  flag:anger_spell } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_mind_none_spells_list target = flag:anger_spell }
+			add_to_variable_list = { name = manipulation_mind_life_spells_list target = flag:anger_spell }
+		}
+		50 = { # befriend
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_mind						
+						has_perk = manipulation_4_perk
+						has_perk = mind_3_perk
+						NOT = { is_target_in_variable_list  = { name = manipulation_mind_none_spells_list target =  flag:befriend_spell } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_mind_none_spells_list target = flag:befriend_spell }
+			add_to_variable_list = { name = manipulation_mind_life_spells_list target = flag:befriend_spell }
+		}
+		50 = { # Suggestion
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_mind						
+						has_perk = manipulation_4_perk
+						has_perk = mind_3_perk
+						NOT = { is_target_in_variable_list  = { name = manipulation_mind_none_spells_list target =  flag:suggestion } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_mind_none_spells_list target = flag:suggestion }
+			add_to_variable_list = { name = manipulation_mind_life_spells_list target = flag:suggestion }
+		}
+		50 = { # Puppet
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_mind						
+						has_perk = manipulation_4_perk
+						has_perk = mind_perfection_perk
+						NOT = { is_target_in_variable_list  = { name = manipulation_mind_none_spells_list target =  flag:puppet } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_mind_none_spells_list target = flag:puppet }
+			add_to_variable_list = { name = manipulation_mind_life_spells_list target = flag:puppet }
+		}
+		50 = { # Basic Homunculus
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_creation
+						has_character_flag = type_mind
+						has_character_flag = type_t_life						
+						has_perk = manipulation_creation_perk
+						has_perk = mind_2_perk
+						has_perk = life_perfection_perk
+						NOT = { is_target_in_variable_list  = { name = creation_mind_life_spells_list target =  flag:crete_homunculus_minor } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = creation_mind_life_spells_list target = flag:crete_homunculus_minor }
+		}
+		50 = { # Near-human Homunculus
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_creation
+						has_character_flag = type_mind
+						has_character_flag = type_t_life						
+						has_perk = manipulation_creation_perk
+						has_perk = mind_3_perk
+						has_perk = life_perfection_perk
+						is_target_in_variable_list  = { name = creation_mind_life_spells_list target =  flag:crete_homunculus_minor }
+						NOT = { is_target_in_variable_list  = { name = creation_mind_life_spells_list target =  flag:crete_homunculus } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = creation_mind_life_spells_list target = flag:crete_homunculus }
+		}
+		50 = { # perfect Homunculus
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_creation
+						has_character_flag = type_mind
+						has_character_flag = type_t_life						
+						has_perk = manipulation_creation_perk
+						has_perk = mind_perfection_perk
+						has_perk = life_perfection_perk
+						is_target_in_variable_list  = { name = creation_mind_life_spells_list target =  flag:crete_homunculus }
+						NOT = { is_target_in_variable_list  = { name = creation_mind_life_spells_list target =  flag:crete_homunculus_major } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = creation_mind_life_spells_list target = flag:crete_homunculus_major }
+		}
+		50 = { # magical_vampirism
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_material
+						has_character_flag = type_t_life						
+						has_perk = manipulation_perfection_perk
+						has_perk = material_4_perk
+						has_perk = life_perfection_perk
+						NOT = { is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:magical_vampirism } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:magical_vampirism }
+		}
+		# 50 = { # Kill [DELETED, NOT FITTING FOR ME] 
+		# 	modifier = {
+		# 		NOT = {
+		# 			AND = {
+		# 				has_character_flag = type_manipulation
+		# 				has_character_flag = type_material
+		# 				has_character_flag = type_t_life						
+		# 				has_perk = manipulation_2_perk
+		# 				has_perk = material_2_perk
+		# 				has_perk = life_2_perk
+		# 				is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:wound_spell }
+		# 				NOT = { is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:kill_spell } }
+		# 			}
+		# 		}
+		# 		add = -50 
+		# 	}
+		# 	add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:kill_spell }
+		# } 
+		50 = { # wound_spell
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_material
+						has_character_flag = type_t_life						
+						has_perk = manipulation_2_perk
+						has_perk = material_2_perk
+						has_perk = life_2_perk
+						NOT = { is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:wound_spell } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:wound_spell }
+		}
+		50 = { # Optimize Body Minor
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_material
+						has_character_flag = type_t_life							
+						has_perk = manipulation_4_perk
+						has_perk = life_3_perk
+						NOT = { is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:minor_optimize_body } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:minor_optimize_body }
+		}
+		50 = { # Optimize Body
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_material
+						has_character_flag = type_t_life							
+						has_perk = manipulation_4_perk
+						has_perk = life_4_perk
+						is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:minor_optimize_body }
+						NOT = { is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:optimize_body } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:optimize_body }
+		}
+		50 = { # Optimize Body Major
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_material
+						has_character_flag = type_t_life							
+						has_perk = manipulation_perfection_perk
+						has_perk = life_perfection_perk
+						is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:optimize_body }
+						NOT = { is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:major_optimize_body } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:major_optimize_body }
+		}
+		50 = { # increase_fertility_minor
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_material
+						has_character_flag = type_t_life							
+						has_perk = manipulation_3_perk
+						has_perk = material_4_perk
+						has_perk = life_3_perk
+						NOT = { is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:increase_fertility_minor } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:increase_fertility_minor }
+		}
+		50 = { # increase_fertility
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_material
+						has_character_flag = type_t_life							
+						has_perk = manipulation_4_perk
+						has_perk = material_4_perk
+						has_perk = life_4_perk
+						is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:increase_fertility_minor }
+						NOT = { is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:increase_fertility } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:increase_fertility }
+		}
+		50 = { # increase_fertility_major
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_material
+						has_character_flag = type_t_life							
+						has_perk = manipulation_creation_perk
+						has_perk = material_perfection_perk
+						has_perk = life_perfection_perk
+						is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:increase_fertility }
+						NOT = { is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:increase_fertility_major } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:increase_fertility_major }
+		}
+		50 = { # decrease_fertility_minor
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_material
+						has_character_flag = type_t_life							
+						has_perk = manipulation_3_perk
+						has_perk = material_4_perk
+						has_perk = life_3_perk
+						NOT = { is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:decrease_fertility_minor } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:decrease_fertility_minor }
+		}
+		50 = { # decrease_fertility
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_material
+						has_character_flag = type_t_life							
+						has_perk = manipulation_4_perk
+						has_perk = material_4_perk
+						has_perk = life_4_perk
+						is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:decrease_fertility_minor }
+						NOT = { is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:decrease_fertility } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:decrease_fertility }
+		}
+		50 = { # decrease_fertility_major
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_material
+						has_character_flag = type_t_life							
+						has_perk = manipulation_creation_perk
+						has_perk = material_perfection_perk
+						has_perk = life_perfection_perk
+						is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:decrease_fertility }
+						NOT = { is_target_in_variable_list  = { name = manipulation_material_life_spells_list target =  flag:decrease_fertility_major } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:decrease_fertility_major }
+		}
+		50 = { # flood_spell
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_material
+						has_character_flag = type_t_life	
+						has_perk = manipulation_2_perk
+						has_perk = material_2_perk
+						NOT = { is_target_in_variable_list  = { name = manipulation_material_none_spells_list target =  flag:flood_spell } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_material_none_spells_list target = flag:flood_spell }
+		}
+		50 = { # drought_spell
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_material
+						has_character_flag = type_t_life			
+						has_perk = manipulation_3_perk
+						has_perk = material_3_perk
+						is_target_in_variable_list  = { name = manipulation_material_none_spells_list target =  flag:flood_spell }
+						NOT = { is_target_in_variable_list  = { name = manipulation_material_none_spells_list target =  flag:drought_spell } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_material_life_spells_list target = flag:drought_spell }
+		}
+		50 = { # earthquake_spell
+			modifier = {
+				NOT = {
+					AND = {
+						has_character_flag = type_manipulation
+						has_character_flag = type_material
+						has_character_flag = type_t_life			
+						has_perk = manipulation_4_perk
+						has_perk = material_4_perk
+						is_target_in_variable_list  = { name = manipulation_material_none_spells_list target =  flag:drought_spell }
+						NOT = { is_target_in_variable_list  = { name = manipulation_material_none_spells_list target =  flag:earthquake_spell } }
+					}
+				}
+				add = -50 
+			}
+			add_to_variable_list = { name = manipulation_material_none_spells_list target = flag:earthquake_spell }
+		}
+		25 = {
+
+		}
+	}
+}

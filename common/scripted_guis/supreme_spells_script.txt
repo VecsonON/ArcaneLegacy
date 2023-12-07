@@ -1,0 +1,89 @@
+﻿perfect_body_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = perfect_body_cost }
+		NOT = { is_province_spell = yes }
+		has_perk = manipulation_perfection_perk
+		has_perk = material_perfection_perk
+		has_perk = life_perfection_perk
+		has_perk = mind_perfection_perk
+		NOT = { has_character_modifier = AL_perfect_body_casting }
+		NOT = {
+			has_trait_xp = {
+				trait = biological_perfection
+				value = 100
+			}
+		}
+		NOT = { has_character_modifier = AL_magical_immortality_casting }
+		NOT = { has_trait = magic_immortality }
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+		scope:target = root 
+	} 
+	effect = {
+		add_character_modifier = {
+			modifier = AL_perfect_body_casting
+			months = 25
+		}
+		trigger_event = {
+			id = AL_supreme_spells.0101 
+			years = 2
+			delayed = yes
+		}
+		custom_tooltip = { text = "body_perfection_warrning" }
+		mana_cost_sub = { VALUE = perfect_body_cost }
+		increase_suspicion = { VALUE = 100 }
+		custom_tooltip = { text = "casting_done" }
+		show_as_tooltip = {
+			if = {
+				limit = { has_trait = biological_perfection }
+				add_trait_xp = {
+					trait = biological_perfection
+					value = 25
+				}
+			}
+			else = {
+				add_trait = biological_perfection
+			}
+		}
+	}
+}
+magical_immortality_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = magical_immortality_cost }
+		NOT = { is_province_spell = yes }
+		has_perk = manipulation_perfection_perk
+		has_perk = material_perfection_perk
+		has_perk = life_perfection_perk
+		has_perk = mind_perfection_perk
+		NOT = { has_character_modifier = AL_magical_immortality_casting }
+		NOT = { has_trait = magic_immortality }
+		NOT = { has_trait = biological_perfection }
+		NOT = { has_character_modifier = AL_perfect_body_casting }
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+		scope:target = root 
+	} 
+	effect = {
+		
+		add_character_modifier = {
+			modifier = AL_magical_immortality_casting
+			months = 25
+		}
+		trigger_event = {
+			id = AL_supreme_spells.0201 
+			years = 2
+			delayed = yes
+		}
+		mana_cost_sub = { VALUE = magical_immortality_cost }
+		increase_suspicion = { VALUE = 100 }
+		custom_tooltip = { text = "casting_done" }
+		show_as_tooltip = {
+			add_trait = magic_immortality
+		}
+		
+	}
+}

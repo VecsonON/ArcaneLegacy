@@ -1,0 +1,127 @@
+﻿namespace = AL_witch_hunter_training_events
+AL_witch_hunter_training_events.0001 = {
+	title = AL_witch_hunter_training_events.0001.title
+	desc = AL_witch_hunter_training_events.0001.desc
+	theme = secret
+	left_portrait = root
+	option = { # SPEND BOTH
+		name = AL_witch_hunter_training_events.0001.a
+		remove_short_term_gold = 50
+		add_stress = 50
+		add_trait_xp = {
+			trait = witch_hunter
+			track = arc_body_technique
+			value = { 4 5 }
+		}
+	}
+	option = { # SPEND GOLD
+		name = AL_witch_hunter_training_events.0001.b
+		remove_short_term_gold = 50
+		add_trait_xp = {
+			trait = witch_hunter
+			track = arc_body_technique
+			value = { 2 4 }
+		}
+	}
+	option = { # SPEND STRESS
+		name = AL_witch_hunter_training_events.0001.c
+		add_stress = 50
+		add_trait_xp = {
+			trait = witch_hunter
+			track = arc_body_technique
+			value = { 2 4 }
+		}
+	}
+	option = { # SPEND NOTHING
+		name = AL_witch_hunter_training_events.0001.d
+		add_trait_xp = {
+			trait = witch_hunter
+			track = arc_body_technique
+			value = { 1 4 }
+		}
+	}
+}
+AL_witch_hunter_training_events.0002 = {
+	title = AL_witch_hunter_training_events.0002.title
+	desc = AL_witch_hunter_training_events.0002.desc
+	theme = secret
+	left_portrait = root
+	option = { # SPEND BOTH
+		name = AL_witch_hunter_training_events.0002.a
+		remove_short_term_gold = 50
+		add_stress = 50
+		add_trait_xp = {
+			trait = witch_hunter
+			track = arc_fight_technique
+			value = { 4 5 }
+		}
+	}
+	option = { # SPEND GOLD
+		name = AL_witch_hunter_training_events.0002.b
+		remove_short_term_gold = 50
+		add_trait_xp = {
+			trait = witch_hunter
+			track = arc_fight_technique
+			value = { 2 4 }
+		}
+	}
+	option = { # SPEND STRESS
+		name = AL_witch_hunter_training_events.0002.c
+		add_stress = 50
+		add_trait_xp = {
+			trait = witch_hunter
+			track = arc_fight_technique
+			value = { 2 4 }
+		}
+	}
+	option = { # SPEND NOTHING
+		name = AL_witch_hunter_training_events.0002.d
+		add_trait_xp = {
+			trait = witch_hunter
+			track = arc_fight_technique
+			value = { 1 4 }
+		}
+	}
+}
+AL_witch_hunter_training_events.0003 = {
+	title = AL_witch_hunter_training_events.0003.title
+	desc = AL_witch_hunter_training_events.0003.desc
+	theme = secret
+	left_portrait = root
+	option = { # SPEND BOTH
+		name = AL_witch_hunter_training_events.0003.a
+		remove_short_term_gold = 50
+		add_stress = 50
+		add_trait_xp = {
+			trait = witch_hunter
+			track = arc_perception_technique
+			value = { 4 5 }
+		}
+	}
+	option = { # SPEND GOLD
+		name = AL_witch_hunter_training_events.0003.b
+		remove_short_term_gold = 50
+		add_trait_xp = {
+			trait = witch_hunter
+			track = arc_perception_technique
+			value = { 2 4 }
+		}
+	}
+	option = { # SPEND STRESS
+		name = AL_witch_hunter_training_events.0003.c
+		add_stress = 50
+		add_trait_xp = {
+			trait = witch_hunter
+			track = arc_perception_technique
+			value = { 2 4 }
+		}
+	}
+	option = { # SPEND NOTHING
+		name = AL_witch_hunter_training_events.0003.d
+		add_trait_xp = {
+			trait = witch_hunter
+			track = arc_perception_technique
+			value = { 1 4 }
+		}
+	}
+}

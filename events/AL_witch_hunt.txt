@@ -1,0 +1,191 @@
+﻿namespace = AL_witch_hunt
+AL_witch_hunt.1001 = {
+	title = AL_witch_hunt.1001.title
+	desc = AL_witch_hunt.1001.desc
+	theme = secret
+	left_portrait = root
+	immediate = {
+		create_character = {
+			template = low_level_witchhunter
+			location = root.capital_province
+			gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+			faith = root.faith
+			culture = root.culture
+			save_scope_as = witchhunter
+		}
+	}
+	right_portrait = scope:witchhunter
+	option = { # IF RANK ABOVE EXPECTED
+		name = AL_witch_hunt.1001.a
+		trigger = {
+			highest_held_title_tier>= tier_kingdom
+		}
+		show_as_unavailable = {
+			highest_held_title_tier< tier_kingdom
+		}
+		scope:witchhunter = {
+			scope:witchhunter = {
+				death = {
+					death_reason = death_disappearance
+				}
+			}
+			add_prestige = -250
+		}
+	}
+	option = { 
+		name = AL_witch_hunt.1001.a
+		configure_start_single_combat_effect = {
+			SC_INITIATOR = scope:witchhunter
+			SC_ATTACKER = scope:witchhunter
+			SC_DEFENDER = root
+			FATALITY = always
+			FIXED = no
+			LOCALE = throne_room
+			OUTPUT_EVENT = AL_witch_hunt.1101
+			INVALIDATION_EVENT = AL_witch_hunt.1101
+		}
+	}
+}
+AL_witch_hunt.1002 = {
+	title = AL_witch_hunt.1002.title
+	desc = AL_witch_hunt.1002.desc
+	theme = secret
+	left_portrait = root
+	immediate = {
+		create_character = {
+			template = medium_level_witchhunter
+			location = root.capital_province
+			gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+			faith = root.faith
+			culture = root.culture
+			save_scope_as = witchhunter
+		}
+	}
+	right_portrait = scope:witchhunter
+	option = { # IF RANK ABOVE EXPECTED
+		name = AL_witch_hunt.1002.a
+		trigger = {
+			highest_held_title_tier>= tier_empire
+		}
+		show_as_unavailable = {
+			highest_held_title_tier< tier_empire
+		}
+		scope:witchhunter = {
+			scope:witchhunter = {
+				death = {
+					death_reason = death_disappearance
+				}
+			}
+			add_prestige = -250
+		}
+	}
+	option = { 
+		name = AL_witch_hunt.1002.a
+		configure_start_single_combat_effect = {
+			SC_INITIATOR = scope:witchhunter
+			SC_ATTACKER = scope:witchhunter
+			SC_DEFENDER = root
+			FATALITY = always
+			FIXED = no
+			LOCALE = throne_room
+			OUTPUT_EVENT = AL_witch_hunt.1102 
+			INVALIDATION_EVENT = AL_witch_hunt.1102
+		}
+	}
+}
+AL_witch_hunt.1003 = {
+	title = AL_witch_hunt.1003.title
+	desc = AL_witch_hunt.1003.desc
+	theme = secret
+	left_portrait = root
+	immediate = {
+		create_character = {
+			template = high_level_witchhunter
+			location = root.capital_province
+			gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+			faith = root.faith
+			culture = root.culture
+			save_scope_as = witchhunter
+		}
+	}
+	right_portrait = scope:witchhunter
+	option = { 
+		name = AL_witch_hunt.1003.a
+		configure_start_single_combat_effect = {
+			SC_INITIATOR = scope:witchhunter
+			SC_ATTACKER = scope:witchhunter
+			SC_DEFENDER = root
+			FATALITY = always
+			FIXED = no
+			LOCALE = throne_room
+			OUTPUT_EVENT = AL_witch_hunt.1103 
+			INVALIDATION_EVENT = AL_witch_hunt.1103
+		}
+	}
+}
+AL_witch_hunt.1101 = { # WIN
+	title = AL_witch_hunt.1101.title
+	desc = AL_witch_hunt.1101.desc
+	theme = secret
+	left_portrait = root
+	right_portrait = scope:witchhunter
+	option = { # Agree
+		name = AL_witch_hunt.1101.a
+		add_prestige = 500
+		if = {
+			limit = {
+				trait_is_shunned_or_criminal_in_faith_trigger = { FAITH = faith TRAIT = witch GENDER_CHARACTER = root }
+			}
+			add_piety = -500
+		}
+		add_trait_xp = {
+			trait = exposed_mage
+			track = exposed_mage_legacy
+			value = 2
+		}
+	}
+}
+AL_witch_hunt.1102 = { # WIN
+	title = AL_witch_hunt.1102.title
+	desc = AL_witch_hunt.1102.desc
+	theme = secret
+	left_portrait = root
+	right_portrait = scope:witchhunter
+	option = { # Agree
+		name = AL_witch_hunt.1102.a
+		add_prestige = 1000
+		if = {
+			limit = {
+				trait_is_shunned_or_criminal_in_faith_trigger = { FAITH = faith TRAIT = witch GENDER_CHARACTER = root }
+			}
+			add_piety = -1000
+		}
+		add_trait_xp = {
+			trait = exposed_mage
+			track = exposed_mage_legacy
+			value = 10
+		}
+	}
+}
+AL_witch_hunt.1103 = { # WIN
+	title = AL_witch_hunt.1103.title
+	desc = AL_witch_hunt.1103.desc
+	theme = secret
+	left_portrait = root
+	right_portrait = scope:witchhunter
+	option = { # Agree
+		name = AL_witch_hunt.1103.a
+		add_prestige = 1500
+		if = {
+			limit = {
+				trait_is_shunned_or_criminal_in_faith_trigger = { FAITH = faith TRAIT = witch GENDER_CHARACTER = root }
+			}
+			add_piety = -1500
+		}
+		add_trait_xp = {
+			trait = exposed_mage
+			track = exposed_mage_legacy
+			value = 20
+		}
+	}
+}

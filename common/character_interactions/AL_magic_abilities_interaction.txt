@@ -1,0 +1,106 @@
+﻿fire_combat_casting = {
+	category = interaction_category_friendly  
+	desc = fire_combat_casting_desc
+	is_shown = {
+		scope:actor = scope:recipient
+		scope:actor = { is_target_in_variable_list =  { name = manipulation_energy_none_spells_list target =  flag:novice_fire_combat } }
+	}
+	send_option = {
+		starts_enabled = { always = yes }
+		flag = AL_option_none
+		localization = AL_combat_none
+	}
+	send_option = {
+		flag = AL_fire_combat_1
+		is_shown = { scope:actor = { is_target_in_variable_list =  { name = manipulation_energy_none_spells_list target =  flag:novice_fire_combat } } }
+	}
+	send_option = {
+		flag = AL_fire_combat_2
+		is_shown = { scope:actor = { is_target_in_variable_list =  { name = manipulation_energy_none_spells_list target =  flag:apprentice_fire_combat } } }
+	}
+	send_option = {
+		flag = AL_fire_combat_3
+		is_shown = { scope:actor = { is_target_in_variable_list =  { name = manipulation_energy_none_spells_list target =  flag:adept_fire_combat } } }
+	}
+	send_option = {
+		flag = AL_fire_combat_4
+		is_shown = { scope:actor = { is_target_in_variable_list =  { name = manipulation_energy_none_spells_list target =  flag:expert_fire_combat } } }
+	}
+	send_option = {
+		flag = AL_fire_combat_5
+		is_shown = { scope:actor = { is_target_in_variable_list =  { name = manipulation_energy_none_spells_list target =  flag:master_fire_combat } } }
+	}
+	on_accept = {
+		scope:actor = {
+			if = { limit = { has_character_modifier = novice_fire_combat_spell_modifier } remove_character_modifier = novice_fire_combat_spell_modifier }
+			if = { limit = { has_character_modifier = apprentice_fire_combat_spell_modifier } remove_character_modifier = apprentice_fire_combat_spell_modifier }
+			if = { limit = { has_character_modifier = adept_fire_combat_spell_modifier } remove_character_modifier = adept_fire_combat_spell_modifier }
+			if = { limit = { has_character_modifier = expert_fire_combat_spell_modifier } remove_character_modifier = expert_fire_combat_spell_modifier }
+			if = { limit = { has_character_modifier = master_fire_combat_spell_modifier } remove_character_modifier = master_fire_combat_spell_modifier }
+			if = { limit = { scope:AL_fire_combat_1 = yes } add_character_modifier = { modifier = novice_fire_combat_spell_modifier } } 
+			if = { limit = { scope:AL_fire_combat_2 = yes } add_character_modifier = { modifier = apprentice_fire_combat_spell_modifier } } 
+			if = { limit = { scope:AL_fire_combat_3 = yes } add_character_modifier = { modifier = adept_fire_combat_spell_modifier } } 
+			if = { limit = { scope:AL_fire_combat_4 = yes } add_character_modifier = { modifier = expert_fire_combat_spell_modifier } } 
+			if = { limit = { scope:AL_fire_combat_5 = yes } add_character_modifier = { modifier = master_fire_combat_spell_modifier } } 
+		}
+	}
+	ai_targets = { ai_recipients = self }
+	ai_frequency = 12
+	ai_will_do = {
+		base = 20
+	}
+	auto_accept = yes
+}
+telekinesis_combat_casting = {
+	category = interaction_category_friendly  
+	desc = telekinesis_combat_casting_desc
+	is_shown = {
+		scope:actor = scope:recipient
+		scope:actor = { is_target_in_variable_list =  { name = manipulation_energy_none_spells_list target =  flag:novice_telekinesis_combat } }
+	}
+	send_option = {
+		starts_enabled = { always = yes }
+		flag = AL_option_none
+		localization = AL_combat_none
+	}
+	send_option = {
+		flag = AL_telekinesis_combat_1
+		is_shown = { scope:actor = { is_target_in_variable_list =  { name = manipulation_energy_none_spells_list target =  flag:novice_telekinesis_combat } } }
+	}
+	send_option = {
+		flag = AL_telekinesis_combat_2
+		is_shown = { scope:actor = { is_target_in_variable_list =  { name = manipulation_energy_none_spells_list target =  flag:apprentice_telekinesis_combat } } }
+	}
+	send_option = {
+		flag = AL_telekinesis_combat_3
+		is_shown = { scope:actor = { is_target_in_variable_list =  { name = manipulation_energy_none_spells_list target =  flag:adept_telekinesis_combat } } }
+	}
+	send_option = {
+		flag = AL_telekinesis_combat_4
+		is_shown = { scope:actor = { is_target_in_variable_list =  { name = manipulation_energy_none_spells_list target =  flag:expert_telekinesis_combat } } }
+	}
+	send_option = {
+		flag = AL_telekinesis_combat_5
+		is_shown = { scope:actor = { is_target_in_variable_list =  { name = manipulation_energy_none_spells_list target =  flag:master_telekinesis_combat } } }
+	}
+	on_accept = {
+		scope:actor = {
+			if = { limit = { has_character_modifier = novice_telekinesis_combat_spell_modifier } remove_character_modifier = novice_telekinesis_combat_spell_modifier }
+			if = { limit = { has_character_modifier = apprentice_telekinesis_combat_spell_modifier } remove_character_modifier = apprentice_telekinesis_combat_spell_modifier }
+			if = { limit = { has_character_modifier = adept_telekinesis_combat_spell_modifier } remove_character_modifier = adept_telekinesis_combat_spell_modifier }
+			if = { limit = { has_character_modifier = expert_telekinesis_combat_spell_modifier } remove_character_modifier = expert_telekinesis_combat_spell_modifier }
+			if = { limit = { has_character_modifier = master_telekinesis_combat_spell_modifier } remove_character_modifier = master_telekinesis_combat_spell_modifier }
+			if = { limit = { scope:AL_telekinesis_combat_1 = yes } add_character_modifier = { modifier = novice_telekinesis_combat_spell_modifier } } 
+			if = { limit = { scope:AL_telekinesis_combat_2 = yes } add_character_modifier = { modifier = apprentice_telekinesis_combat_spell_modifier } } 
+			if = { limit = { scope:AL_telekinesis_combat_3 = yes } add_character_modifier = { modifier = adept_telekinesis_combat_spell_modifier } } 
+			if = { limit = { scope:AL_telekinesis_combat_4 = yes } add_character_modifier = { modifier = expert_telekinesis_combat_spell_modifier } } 
+			if = { limit = { scope:AL_telekinesis_combat_5 = yes } add_character_modifier = { modifier = master_telekinesis_combat_spell_modifier } } 
+		}
+	}
+	ai_targets = { ai_recipients = self }
+	ai_frequency = 12
+	ai_will_do = {
+		base = 20
+	}
+	auto_accept = yes
+}

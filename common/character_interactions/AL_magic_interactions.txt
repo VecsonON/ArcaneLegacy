@@ -1,0 +1,94 @@
+﻿spell_casting = {
+	category = interaction_category_friendly  
+	common_interaction = yes
+
+	desc = spell_casting_desc
+
+	is_shown = {
+		scope:actor = {
+			has_character_flag = mage
+		}
+	}
+	icon = "gfx/magic/MagicIcon.dds"
+	on_accept = {
+		scope:actor = {
+			custom_description = {
+				text = spell_caster_effect
+				set_variable = {
+					name = spell_target
+					value = scope:recipient
+				}
+				effect_open_magic_window = yes
+			}
+		}
+	}
+
+	auto_accept = yes
+
+	ai_will_do = {
+		base = 0
+	}
+}
+spell_create = {
+	category = interaction_category_friendly  
+	common_interaction = yes
+
+	desc = spell_create_desc
+
+	is_shown = {
+		scope:actor = scope:recipient
+		scope:actor = {
+			has_character_flag = mage
+		}
+	}
+	icon = "gfx/magic/MagicIcon.dds"
+	on_accept = {
+		scope:actor = {
+			custom_description = {
+				text = experimenting_effect
+				set_variable = {
+					name = spell_target
+					value = scope:recipient
+				}
+				effect_open_spell_create_window = yes
+			}
+		}
+	}
+
+	auto_accept = yes
+
+	ai_will_do = {
+		base = 0
+	}
+}
+teach_magic = {
+	category = interaction_category_friendly
+	common_interaction = yes
+
+	desc = teach_magic_desc
+
+	is_shown = {
+		scope:actor != scope:recipient
+		scope:actor = {
+			has_character_flag = mage
+		}
+		scope:recipient = {
+			NOT = { has_character_flag = mage }
+			is_child_of = scope:actor
+		}
+	}
+	icon = "gfx/magic/MagicIcon.dds"
+	on_accept = {
+		scope:recipient = {
+			become_mage = yes
+		}
+		scope:actor = {
+			add_stress = 100
+		}
+	}
+
+
+	ai_will_do = {
+		base = 0
+	}
+}

@@ -1,0 +1,97 @@
+﻿l_english:
+ GAINS_CONCEPTS_LIFESTYLE_XP:1 "Gains $VALUE|V0$ [concepts_lifestyle|E] Experience"
+ GAINED_CONCEPTS_LIFESTYLE_XP:1 "Gained $VALUE|V0$ [concepts_lifestyle|E] Experience"
+ I_GAIN_CONCEPTS_LIFESTYLE_XP:1 "You gain $VALUE|V0$ [concepts_lifestyle|E] Experience"
+ I_GAINED_CONCEPTS_LIFESTYLE_XP:1 "You gained $VALUE|V0$ [concepts_lifestyle|E] Experience"
+ TARGET_GAINS_CONCEPTS_LIFESTYLE_XP:1 "[CHARACTER.GetShortUIName] gains $VALUE|V0$ [concepts_lifestyle|E] Experience"
+ TARGET_GAINED_CONCEPTS_LIFESTYLE_XP:1 "[CHARACTER.GetShortUIName] gained $VALUE|V0$ [concepts_lifestyle|E] Experience"
+
+ GAINS_A_CONCEPTS_LIFESTYLE_PERKPOINT:1 "Gains $VALUE|V0$ [concepts_lifestyle|E] [perk|E] Unlock"
+ GAINED_A_CONCEPTS_LIFESTYLE_PERKPOINT:1 "Gained $VALUE|V0$ [concepts_lifestyle|E] [perk|E] Unlock"
+ I_GAIN_A_CONCEPTS_LIFESTYLE_PERKPOINT:1 "You gain $VALUE|V0$ [concepts_lifestyle|E] [perk|E] Unlock"
+ I_GAINED_A_CONCEPTS_LIFESTYLE_PERKPOINT:1 "You gained $VALUE|V0$ [concepts_lifestyle|E] [perk|E] Unlock"
+ TARGET_GAINS_A_CONCEPTS_LIFESTYLE_PERKPOINT:1 "[CHARACTER.GetShortUIName] gains $VALUE|V0$ [concepts_lifestyle|E] [perk|E] Unlock"
+ TARGET_GAINED_A_CONCEPTS_LIFESTYLE_PERKPOINT:1 "[CHARACTER.GetShortUIName] gained $VALUE|V0$ [concepts_lifestyle|E] [perk|E] Unlock"
+
+ GLOBAL_HAS_ENOUGH_MANA: "There is enough mana to cast this spell ($VALUE$)"
+ NOT_GLOBAL_HAS_ENOUGH_MANA: "There is NOT enough mana to cast this spell ($VALUE$)"
+ FIRST_HAS_ENOUGH_MANA: "You have enough mana to cast this spell ($VALUE$)"
+ NOT_FIRST_HAS_ENOUGH_MANA: "You do NOT have enough mana to cast this spell ($VALUE$)"
+ THIRD_HAS_ENOUGH_MANA: "[CHARACTER.GetName] has enough mana to cast this spell ($VALUE$)"
+ NOT_THIRD_HAS_ENOUGH_MANA: "[CHARACTER.GetName] does NOT have enough mana to cast this spell ($VALUE$)"
+
+ GLOBAL_IS_PROVINCE_SPELL: "This Spell is Province Spell"
+ NOT_GLOBAL_IS_PROVINCE_SPELL: "This Spell is NOT Province Spell"
+ FIRST_IS_PROVINCE_SPELL: "This Spell is NOT Province Spell"
+ NOT_FIRST_IS_PROVINCE_SPELL: "This Spell IS Province Spell"
+ THIRD_IS_PROVINCE_SPELL: "[CHARACTER.GetName] tries to Cast Province Spell"
+ NOT_THIRD_IS_PROVINCE_SPELL: "[CHARACTER.GetName] tries NOT to Cast Province Spell"
+
+ has_already_all_good_trait_AR: "You already have all phyical genetic trait of this level"
+ has_negative_genetic_phyical_trait: "You have a negative phyical genetic trait"
+ has_negative_genetic_intelect_trait:  "You have a negative intellect genetic trait"
+
+
+
+ manipulation_1_perk_effect_loc: "\nYou begin to understand manipulation as concept. Your current precision in control is counted in meters, #N;bold and isn't too useful in anything but combat"
+ manipulation_2_perk_effect_loc: "\nYour quest to understand manipulation as concept is going great. Your current precision in control is counted more or less in a meter, #N and its usefulness in other than combat, starts to appear"
+ manipulation_3_perk_effect_loc: "\nYour quest to understand manipulation as concept is showing great future. Your current precision in control is counted in few centimeters, #P and is finaly useful in other than combat"
+ manipulation_4_perk_effect_loc: "\nYour quest to understand manipulation as concept is near end. Your current precision in control is counted in less that centimeters, #P;bold and is very useful at anything"
+ manipulation_perfection_perk_effect_loc: "\nYour quest to understand manipulation as concept is complete. Your current precision in control is counted in few minimeters, #P;bold and it's usefulness is near endless"
+
+ material_1_perk_effect_loc: "\nYour journey towards understanding world around you is small but growing. #N With you current understanding you don't know anything useful for spell#! , but it it's only a begining"
+ material_2_perk_effect_loc: "\nYour quest to understand world around you is going great. #P With you current understanding you know basics of metals"
+ material_3_perk_effect_loc: "\nYour quest to understand world around you is showing great future. #P With you current understanding you know basics of gold, #P;bold and deepen knowledge about metals"
+ material_4_perk_effect_loc: "\nYour quest to understand world around you is near end. #P With you current understanding you know basics of material side of life,#P;bold and deepen knowledge about gold"
+ material_perfection_perk_effect_loc: "\nYour quest to understand world around you is complete. #P;bold With your current understanding you know everything about bodies, metals, gold and everything between"
+
+ life_1_perk_effect_loc: "\nYour understanding of life is small but growing. #N With you current understanding you don't know anything useful for spell,#! but it it's only a begining"
+ life_2_perk_effect_loc: "\nYour journey towards understanding life is going great. #P With you current understanding you know basics of non-human life"
+ life_3_perk_effect_loc: "\nYour journey towards understanding life is showing great future. #P With you current understanding you know basics of human life,#P;bold and deepen knowledge about non-human life"
+ life_4_perk_effect_loc: "\nYour journey towards understanding life is near end. #P;bold With you current understanding you know almost everything about non-human life and deepen knowledge about human life"
+ life_perfection_perk_effect_loc: "\nYour journey towards understanding life is complete. #P;bold With you current understanding you know almost everything about life itself, Only thing you don't realy understand is mind"
+ life_unlock_mind_perk_effect_loc: "\n#P While you understand almost everything about life, your understanding of mind still eludes you"
+ life_unlock_undead_perk_effect_loc: "\n#P While learing and understanding life, you found weird posibility of unlife"
+
+ energy_1_perk_effect_loc: "\nYou begin to understand energy as concept. With your current understanding the most energy you can hadle is #P only enough to generate small wind blow "
+ energy_2_perk_effect_loc: "\nYour quest to understand energy as concept is going great. With your current understanding the most energy you can hadle is #P only enough to light a small flame, and generate medium wind blow"
+ energy_3_perk_effect_loc: "\nYour quest to understand energy is showing great future. With your current understanding the most energy you can hadle is #P only enough to light a medium flame, generate large wind blow, and infuse speed and slowness into material"
+ energy_4_perk_effect_loc: "\nYour quest to understand energy you is near end. With your current understanding the most energy you can hadle is #P only enough to light a large flame, generate enormous wind blows, and infuse speed and slowness into material"
+ energy_perfection_perk_effect_loc: "\nYour quest to understand energy you is complete. With your current understanding you are #P;bold master of wind and flames, energy is so clear to you that anything with it is easy"
+
+ mind_1_perk_effect_loc: "\nUnderstanding Mind is hard, but not imposible. #N With your current understanding you cannot do anything useful"
+ mind_2_perk_effect_loc: "\nYor Understanding mind is slow, but is going good. #P With your current understanding you can bearly infulance mind of human"
+ mind_3_perk_effect_loc: "\nYour Undearstanding mind is near complete. #P;bold With your current understanding you can infulance mind of human"
+ mind_perfection_perk_effect_loc: "\nYour Undearstanding mind is complete. #P;bold With your current understanding you can create new mind, and change existing at will"
+
+ undead_1_perk_effect_loc: "\nUnderstanding Un-life is hard and weird, but not imposible. #N;bold With your current understanding you cannot do anything useful"
+ undead_2_perk_effect_loc: "\nYor Understanding Un-life is slow, but is going good. #N With your current understanding you can bearly create and manipulate undead"
+ undead_3_perk_effect_loc: "\nYour Undearstanding mind is near complete. #P With your current understanding you can create undead easly"
+ undead_perfection_perk_effect_loc: "\nYour Undearstanding mind is complete. #P;bold With your current understanding you easy create thinking undead"
+
+ unlock_requirement_effect_loc: "\nto unlock this tree, you must first aquire specific perk"
+
+ supreme_spell_start_perk_effect_loc: "#X To get this perk you must have '[GetModifier('AL_inspired').GetNameWithTooltip]'#!\n#X To get this perk you cannot have '[GetModifier('used_mind').GetNameWithTooltip]'#!\n\nStarts slow search for supreme spell. After taking this perk you will get event to choose witch supreme spell you will search for.#R;italic Rember not always search will resoult in supreme spell, And the same option may resoult in diffrent supreme spell!"
+ supreme_spell_1_perk_effect_loc: "#X To get this perk you cannot have '[GetModifier('used_mind').GetNameWithTooltip]'#!\n#X To get this perk you must have atleast 250 gold@gold_icon!#!\n\nYour resarch is #EMP slowly#! going on..."
+ supreme_spell_2_perk_effect_loc: "#X To get this perk you cannot have '[GetModifier('used_mind').GetNameWithTooltip]'#!\n#X To get this perk you must have atleast 250 gold@gold_icon!#!\n\nYour resarch is #EMP slowly#! going on..."
+ supreme_spell_end_perk_effect_loc: "#X To get this perk you cannot have '[GetModifier('used_mind').GetNameWithTooltip]'#!\n#X To get this perk you must have atleast 500 gold@gold_icon!#!\n\nYou will get event in witch you will be informed about witch supreme spell you will get or if you will even #EMP get#! anything "
+
+ add_mana_regen_loc: "[Mana|E] Regeneration: [mana_regen_i]#P +$VALUE$" 
+ add_mana_max_loc: "Maximum [Mana|E]: [mana_i]#P +$VALUE$"
+
+ get_inspired_toast: "Inspired!"
+ 
+ super_low_AL_inspired: "You have a ridiculously small chance to get [GetModifier('AL_inspired').GetNameWithTooltip]" 
+ low_AL_inspired: "You have small chance to get [GetModifier('AL_inspired').GetNameWithTooltip]"
+
+ add_used_mind_effect_loc: "Get [GetModifier('used_mind').GetNameWithTooltip] for time proportionally to your intellect trait"
+
+ casting_done: "After casting spell is done will happen:"
+
+ vampire_warning_spell: "Using this spell too many times will make [GetTrait('magical_vampire').GetName(GetNullCharacter)|R]"
+ body_perfection_warrning: "To become truly immortal by this spell, you must recast this spell 5 time"
+
+ increase_suspicion_loc: "Your suspicion will increase by #r $VALUE$"
+
+ mana_change_loc: "Change mana suplies by #;italic $VALUE$"
+ mana_cost_sub_loc: "Lose [mana_i]#N $VALUE$ #!Mana"

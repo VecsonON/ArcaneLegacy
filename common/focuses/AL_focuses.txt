@@ -1,0 +1,29 @@
+﻿concepts_focus = {
+	lifestyle = concepts_lifestyle
+	icon=concepts_focus
+	# is_valid = {
+	# 	NOT = {
+	# 		has_trait = archmage
+	# 	}
+	# 	OR = {
+	# 		has_trait = witch
+	# 		has_trait = source
+	# 		has_trait = true_witch
+	# 		any_secret = { secret_type = secret_witch }
+	# 	}
+	# 	OR = {
+	# 		any_character_artifact = { has_variable = magic1 }
+	# 		any_character_artifact = { has_variable = magic_ring }
+	# 		has_trait = source
+	# 		has_perk = magical_experiments_p1_perk
+	# 	}
+	#  }
+	
+	modifier = {
+		learning = 3
+		intrigue = 1
+		#monthly_magic_lifestyle_xp_gain_mult = -0.1
+	}
+
+	focus_id = 21
+}

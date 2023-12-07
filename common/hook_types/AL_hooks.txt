@@ -1,0 +1,8 @@
+﻿suggestion = {
+	expiration_days = -1
+	strong = no
+}
+puppet_hook = {
+	strong = yes
+	perpetual = yes
+}

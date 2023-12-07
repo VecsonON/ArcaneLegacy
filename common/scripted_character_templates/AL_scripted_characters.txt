@@ -1,0 +1,130 @@
+﻿low_level_mage = {
+	age = { 18 60 }
+	random_traits_list = {
+		count = 2
+		cynical = {}
+		chaste = {}
+		patient = {}
+		arrogant = {}
+		content = {}
+		humble = {}
+	}
+	random_traits_list = {
+		count = 1
+		education_learning_2 = {}
+		education_learning_3 = {}
+		education_learning_4 = {}
+	}
+	prowess = { 0 10 }
+}
+low_level_witchhunter = {
+	age = { 18 60 }
+	random_traits_list = {
+		count = 3
+		zealous = {}
+		chaste = {}
+		patient = {}
+		brave = {}
+		content = {}
+		humble = {}
+	}
+	trait = witch_hunter
+	prowess = { 0 10 }
+	after_creation = {
+		add_trait = witch_hunter
+		add_trait_xp = {
+			trait = witch_hunter
+			track = hunter_legacy
+			value = { 0 25 }
+		}
+		add_trait_xp = {
+			trait = witch_hunter
+			track = arc_body_technique
+			value = { 0 25 }
+		}
+		add_trait_xp = {
+			trait = witch_hunter
+			track = arc_fight_technique
+			value = { 0 25 }
+		}
+		add_trait_xp = {
+			trait = witch_hunter
+			track = arc_perception_technique
+			value = { 0 25 }
+		}
+	}
+}
+medium_level_witchhunter = {
+	age = { 18 60 }
+	random_traits_list = {
+		count = 3
+		zealous = {}
+		chaste = {}
+		patient = {}
+		brave = {}
+		content = {}
+		humble = {}
+	}
+	trait = witch_hunter
+	prowess = { 5 15 }
+	after_creation = {
+		add_trait = witch_hunter
+		add_trait_xp = {
+			trait = witch_hunter
+			track = hunter_legacy
+			value = { 25 50 }
+		}
+		add_trait_xp = {
+			trait = witch_hunter
+			track = arc_body_technique
+			value = { 25 50 }
+		}
+		add_trait_xp = {
+			trait = witch_hunter
+			track = arc_fight_technique
+			value = { 25 50 }
+		}
+		add_trait_xp = {
+			trait = witch_hunter
+			track = arc_perception_technique
+			value = { 25 50 }
+		}
+	}
+}
+high_level_witchhunter = {
+	age = { 18 60 }
+	random_traits_list = {
+		count = 3
+		zealous = {}
+		chaste = {}
+		patient = {}
+		brave = {}
+		content = {}
+		humble = {}
+	}
+	trait = witch_hunter
+	prowess = { 10 20 }
+	after_creation = {
+		add_trait = witch_hunter
+		add_trait_xp = {
+			trait = witch_hunter
+			track = hunter_legacy
+			value = { 50 100 }
+		}
+		add_trait_xp = {
+			trait = witch_hunter
+			track = arc_body_technique
+			value = { 50 100 }
+		}
+		add_trait_xp = {
+			trait = witch_hunter
+			track = arc_fight_technique
+			value = { 50 100 }
+		}
+		add_trait_xp = {
+			trait = witch_hunter
+			track = arc_perception_technique
+			value = { 50 100 }
+		}
+	}
+}

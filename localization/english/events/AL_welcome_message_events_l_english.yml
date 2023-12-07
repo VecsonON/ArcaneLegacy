@@ -1,0 +1,47 @@
+﻿l_english:
+ AL_welcome_message.0001.title: "Thanks for playing!"
+ AL_welcome_message.0001.desc: "Hi, I'm developer of Arcane Legacy, VecsonON! I'm very thankful for playing my mod and please adress all problems and sugestions on steam workshop so i can improve mod even further! Here are some useful info for playing!"
+
+ AL_welcome_message.0001.a: "New Mechanics"
+ AL_welcome_message.0001.b: "lore ;WORK IN PROGRESS;"
+ AL_welcome_message.0001.c: "Let's play!"
+
+ AL_welcome_message.0002.title: "New Mechanics"
+ AL_welcome_message.0002.desc: "So, i added 3 new thing you should check \n First are mages mechanics for example how to get spells, cast them, how to not get absolutly oblitereted by ininquisition, You see nothing major... \n Next are witch-hunters mechanics, for example, how to get better at your job, find and burn mages etc. \n And last are 2 central cities/camps of these two sides in this never-ending war"
+
+ AL_welcome_message.0002.a: "Mage Mechanics"
+ AL_welcome_message.0002.b: "Hunter Mechanics"
+ AL_welcome_message.0002.c: "Magi/kin-Cardia"
+ AL_welcome_message.0002.d: "Let's go to previous event!"
+
+ AL_welcome_message.0021.title: "Mage Mechanics"
+ AL_welcome_message.0021.desc: "So, you choose to learn first about mages... I see, So let's start from how to become a mage, there is only one way and it is my clicking decision 'Become a Mage', Easy right? No so. You see becoming a mage is first expensive task, second if you choose to go and publicly announce your decision. The Inquisition will surely notice this, And try *convince* you to abandon you foulish task and maybe join them?"
+
+ AL_welcome_message.0021.a: "Concealment"
+ AL_welcome_message.0021.b: "Mana, Spells etc."
+ AL_welcome_message.0021.c: "Let's go to previous event!"
+
+
+ AL_welcome_message.0022.title: "Concealment"
+ AL_welcome_message.0022.desc: "If, you didn't announce your decision about becoming a mage, you will have to be careful about spells, becaouse Inquisition never sleeps and will look for any proof that you are in-fact mage, Every spell has concealment level, some of spell are imperceptible for Inquisition, other are instant-discover by inquisition. if you don't feel up to getting exposed you will have to have in mind that you cannot' just spam spells."
+
+ AL_welcome_message.0022.a: "Let's go to previous event!"
+
+ AL_welcome_message.0023.title: "Mana, Spells etc."
+ AL_welcome_message.0023.desc: "Mages have acces to spells, To discover them you must experiment with known concepts of your's, Cooldown for these experiments is settled by your intellegence. Mage have acces also to abilities(Spells with enable/disable function)"
+
+ AL_welcome_message.0023.a: "Let's go to previous event!"
+
+
+ AL_welcome_message.0031.title: "Hunters Mechanics"
+ AL_welcome_message.0031.desc: "Hunter will have ability to: hunt mages, become more powerful with theirs special techniques #r -WORK IN PROGRESS-"
+
+ AL_welcome_message.0031.a: "Hunting for mages"
+ AL_welcome_message.0031.b: "Techniques"
+ AL_welcome_message.0031.c: "Let's go to previous event!"
+
+
+ AL_welcome_message.0011.title: "Magi/kin-Cardia"
+ AL_welcome_message.0011.desc: "In magi/kin-Cardi You'll be able to learn new spell/techniques, Go up in political powers, going to leasons, work and etc.  #r -WORK IN PROGRESS-"
+
+ AL_welcome_message.0011.a: "Let's go to previous event!"

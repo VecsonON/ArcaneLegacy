@@ -1,0 +1,18 @@
+﻿on_death = {
+	on_actions = {
+		magical_vampire_death
+	}
+}
+magical_vampire_death ={
+	effect = {
+		scope:killer ?= { 
+			if = {
+				limit = { has_trait = magical_vampire }
+				add_character_modifier = { 
+					modifier = magical_vampire_hunger
+					years = 1
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,72 @@
+﻿l_english:
+ trait_witch_hunter:0 "Witch Hunter"
+ trait_witch_hunter_desc:0 "Inquisitor, or self-proclaimed Witch Hunter, who devoted their life to fighting with witches and unnatural forces."
+ trait_track_hunter_legacy:0 "Witch Hunting Legacy"
+ trait_track_hunter_legacy_desc:0 "Witch Hunting Legacy shows how much everyone fears and respects this character"
+
+ trait_track_arc_body_technique:0 "[ArcTechnique|E] Body Hardening"
+ trait_track_arc_body_technique_desc:0 "[ArcTechnique|E] Body Hardening, is used to harden body and mind of user with specific training and ways to rewrite you body"
+
+ trait_track_arc_fight_technique:0 "[ArcTechnique|E] Fight Style"
+ trait_track_arc_fight_technique_desc:0 "[ArcTechnique|E] Fight Style, is set of positions, atacks, and way to quicly deal with enemy"
+
+ trait_track_arc_perception_technique:0 "[ArcTechnique|E] Perception Art"
+ trait_track_arc_perception_technique_desc:0 "[ArcTechnique|E] Perception Art, is unique way to sharpen user's perception"
+
+ trait_exposed_mage:0 "Exposed Mage"
+ trait_exposed_mage_desc:0 "Mage, who didn't pay much attention to hiding from ininquisition, while that means that [ROOT.Char.GetSheHe] will have minimum 3 witch-hunter on the tail, It's also means that others knew not to screw with [ROOT.Char.GetHerHim]"
+ trait_track_exposed_mage_legacy:0 "Mage Legacy"
+ trait_track_exposed_mage_legacy_desc:0 "Mage Legacy shows how much everyone fears and respects this character"
+ TRAIT_FLAG_DESC_decrease_low_level_witch_hunt: "#P Decrease chance of witch-hunter #weak (Only low-level)#!"
+ TRAIT_FLAG_DESC_low_level_witch_hunt_not_posible: "#P;bold low-level witch-hunter are too afraid to attack you#!"
+ TRAIT_FLAG_DESC_decrease_medium_level_witch_hunt: "#P Decrease chance of witch-hunter #weak (Only medium-level)#!"
+ TRAIT_FLAG_DESC_medium_level_witch_hunt_not_posible: "#P;bold medium-level witch-hunter are too afraid to attack you#!"
+ TRAIT_FLAG_DESC_decrease_high_level_witch_hunt: "#P Decrease chance of witch-hunter #weak (Only high-level)#!"
+
+ trait_mana_affinity: "Mana Affinity"
+
+ trait_mana_affinity_good_1:0 "Gifted Mana Affinity"
+ trait_mana_affinity_good_1_desc:0 "This character is gifted with potent mana affinity"
+ TRAIT_FLAG_DESC_increased_mana_max_by_50: "Maximum [Mana|E]: [mana_i]#P +50#!"
+ TRAIT_FLAG_DESC_increased_mana_regen_by_2: "[Mana|E] Regeneration: [mana_regen_i]#P +2#!"
+ trait_mana_affinity_good_2:0 "Exceptional Mana Affinity"
+ trait_mana_affinity_good_2_desc:0 "This character is gifted with exceptional potent mana affinity"
+ TRAIT_FLAG_DESC_increased_mana_max_by_100: "Maximum [Mana|E]: [mana_i]#P +100#!"
+ TRAIT_FLAG_DESC_increased_mana_regen_by_4: "[Mana|E] Regeneration: [mana_regen_i]#P +4#!"
+ trait_mana_affinity_good_3:0 "Masterful Mana Affinity"
+ trait_mana_affinity_good_3_desc:0 "This character is gifted with masterful potent mana affinity"
+ TRAIT_FLAG_DESC_increased_mana_max_by_200: "Maximum [Mana|E]: [mana_i]#P +200#!"
+ TRAIT_FLAG_DESC_increased_mana_regen_by_8: "[Mana|E] Regeneration: [mana_regen_i]#P +8#!"
+ trait_mana_affinity_good_4:0 "Extremely Potent Mana Affinity"
+ trait_mana_affinity_good_4_desc:0 "This character is gifted with extremely potent mana affinity"
+ TRAIT_FLAG_DESC_increased_mana_max_by_400: "Maximum [Mana|E]: [mana_i]#P +400#!"
+ TRAIT_FLAG_DESC_increased_mana_regen_by_16: "[Mana|E] Regeneration: [mana_regen_i]#P +16#!"
+ trait_mana_affinity_good_5:0 "Godly Mana Affinity"
+ trait_mana_affinity_good_5_desc:0 "This character is gifted with godly potent mana affinity"
+ TRAIT_FLAG_DESC_increased_mana_max_by_800: "Maximum [Mana|E]: [mana_i]#P +800#!"
+ TRAIT_FLAG_DESC_increased_mana_regen_by_32: "[Mana|E] Regeneration: [mana_regen_i]#P +32#!"
+
+
+ trait_magic_immortality:0 "Magic Immortality"
+ trait_magic_immortality_desc:0 "This character became immortal thourgh complex magic spell\n#R If at any moment mana reaches 0, #R;bold character will die#!"
+
+ trait_homunculus_demi_human:0 "Homunculus: Demi-Human"
+ trait_homunculus_demi_human_desc:0 "Vey basic homunculus with very basic mind and isn't very useful in anything but brute force"
+ trait_homunculus_near_human:0 "Homunculus: Near-Human"
+ trait_homunculus_near_human_desc:0 "Homunculus with mind, but still very diffrent to normal human, have self-consciousness witch mean that they can revolt"
+ trait_homunculus_human:0 "Homunculus: Human"
+ trait_homunculus_human_desc:0 "This Homunculus is very hard to differentiate from normal human, they are that close to human as posible while don't being human"
+
+ trait_magical_vampire:0 "#R Magical Vampire"
+ trait_magical_vampire_desc:0 "This character used too much of magical vampirism spell and became magical vampire"
+ TRAIT_FLAG_DESC_mv_require_blood:"From now this character #R must#! kill one person a year#weak (No stacking)#!, otherwise this character #R will die#! #weak (Every time you kill a person you will get modifer for a year, and every year will be check for modifier, IF you don't have a modifier you will die)#!"
+
+ trait_biological_perfection:0 "#P Biological Perfection"
+ trait_biological_perfection_desc:0 "this character achived or is on road to achiving perfect body unable to die of old age. Everything without any negatives!"
+ trait_track_biological_perfection:0 "Biological Perfection"
+ trait_track_biological_perfection_desc:0 "Biological Perfection"
+ TRAIT_FLAG_DESC_mana_unkeep_50: "[Mana|E] Regeneration: [mana_regen_i]#N -50#!"
+ TRAIT_FLAG_magic_immortality_warning:" If [Mana|E] will #R ever reach 0 this character will die#!"
+# reeeeeeeeeeeeeet - My cat 22/11/2023 
+
+# Yes I will not delete this...

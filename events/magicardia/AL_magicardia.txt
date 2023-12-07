@@ -1,0 +1,74 @@
+﻿namespace = AL_magicardia
+
+AL_magicardia.0001 = {
+	title = AL_magicardia.0001.title
+	desc = AL_magicardia.0001.desc
+	theme =  secret
+	
+	left_portrait = root
+	option = { # Search
+		name = AL_magicardia.0001.a
+		add_character_flag = magicardia_searching
+		add_character_modifier = no_focus
+		trigger_event = {
+			id = AL_magicardia.0002
+			days = { 30 666 }
+		}
+		remove_short_term_gold = 100
+	}
+	option = { # Nevermind
+		name = AL_magicardia.0001.b
+	}
+}
+AL_magicardia.0002 = { # Mage Found!
+	title = AL_magicardia.0002.title
+	desc = AL_magicardia.0002.desc
+	theme =  secret
+	
+	left_portrait = root
+	immediate = {
+		create_character = {
+			template = low_level_mage
+			location = root.capital_province
+			gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+			faith = root.faith
+			culture = root.culture
+			save_scope_as = mage
+		}
+		remove_character_flag = magicardia_searching
+	}
+	right_portrait = scope:mage
+	option = { # Ask for location
+		trigger = {
+			have_enough_mana = {
+				cost = 1
+			}
+		}
+		name = AL_magicardia.0002.a
+		mana_change = { VALUE = { value = -1 } }
+		hidden_effect =  {
+			add_character_flag = magicardia_known
+			scope:mage = {
+				death = {
+					death_reason = death_disappearance
+				}
+			}
+		}
+		
+	}
+	option = { # Nevermind
+		name = AL_magicardia.0002.b
+	}
+}
+AL_magicardia.1000 = {
+	hidden = yes
+	immediate = {
+		set_variable = {
+			name = magicardia_open
+			value = 1
+		}
+		root.current_travel_plan = {
+			delay_travel_plan = { years = 9999 }
+		}
+	}
+}

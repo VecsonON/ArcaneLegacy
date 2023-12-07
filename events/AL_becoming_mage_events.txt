@@ -1,0 +1,427 @@
+﻿namespace = AL_becoming_mage
+namespace = AL_exposed_mage
+
+AL_becoming_mage.0001 = {
+	title = AL_becoming_mage.0001.title
+	desc = AL_becoming_mage.0001.desc
+	
+	left_portrait = root
+	theme = secret
+	option = { # OPENLY
+		name = AL_becoming_mage.0001.a
+		add_prestige = 2500
+		hidden_effect = {
+			
+			trigger_event = {
+				id = AL_becoming_mage.0032
+				days = { 260 380 }
+			}
+
+			trigger_event = {
+				id = AL_becoming_mage.0011
+				days = { 30 100 }
+			}
+			random_list = {
+				80 = {
+					trigger_event = {
+						id = AL_becoming_mage.0012
+						days = { 100 200 }
+					}
+				}
+				20 = { }
+			}
+			random_list = {
+				50 = {
+					trigger_event = {
+						id = AL_becoming_mage.0012
+						days = { 200 300 }
+					}
+				}
+				50 = { }
+			}
+			
+			random_list = {
+				75 = {
+					trigger_event = {
+						id = AL_becoming_mage.0021
+						days = { 30 100 }
+					}
+				}
+				25 = { }
+			}
+			random_list = {
+				60 = {
+					trigger_event = {
+						id = AL_becoming_mage.0023
+						days = { 50 200 }
+					}
+				}
+				40 = { }
+			}
+			random_list = {
+				75 = {
+					trigger_event = {
+						id = AL_becoming_mage.0024
+						days = { 150 300 }
+					}
+				}
+				25 = { }
+			}
+			random_list = {
+				80 = {
+					trigger_event = {
+						id = AL_becoming_mage.0025
+						days = { 250 360 }
+					}
+				}
+				20 = { }
+			}
+		}
+		add_character_flag = becoming_mage
+		add_trait = exposed_mage
+	}
+	option = { # SECRETLY
+		name = AL_becoming_mage.0001.b
+		hidden_effect = {
+			trigger_event = {
+				id = AL_becoming_mage.0032
+				days = { 360 480 }
+			}
+			random_list = {
+				75 = {
+					trigger_event = {
+						id = AL_becoming_mage.0021
+						days = { 30 100 }
+					}
+				}
+				25 = { }
+			}
+			random_list = {
+				70 = {
+					trigger_event = {
+						id = AL_becoming_mage.0022
+						days = { 30 100 }
+					}
+				}
+				30 = { }
+			}
+			random_list = {
+				60 = {
+					trigger_event = {
+						id = AL_becoming_mage.0023
+						days = { 50 200 }
+					}
+				}
+				40 = { }
+			}
+			random_list = {
+				75 = {
+					trigger_event = {
+						id = AL_becoming_mage.0024
+						days = { 150 300 }
+					}
+				}
+				25 = { }
+			}
+			random_list = {
+				80 = {
+					trigger_event = {
+						id = AL_becoming_mage.0025
+						days = { 250 360 }
+					}
+				}
+				20 = { }
+			}
+			add_character_flag = becoming_mage
+		}
+		add_character_modifier = no_focus
+	}
+	option = { # Nevermind
+		name = AL_becoming_mage.0001.c
+		add_gold = 100
+		if = {
+			limit = {
+				trait_is_shunned_or_criminal_in_faith_trigger = { FAITH = faith TRAIT = witch GENDER_CHARACTER = root }
+			}
+			add_piety = 250
+		}
+	}
+}
+# OPENLY
+AL_becoming_mage.0011 = { # Witch-Hunter from Inquisition demands you to stop your unholy actions
+	title = AL_becoming_mage.0011.title
+	desc = AL_becoming_mage.0011.desc
+	theme = secret
+	left_portrait = root
+	immediate = {
+		create_character = {
+			template = low_level_witchhunter
+			location = root.capital_province
+			gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+			faith = root.faith
+			culture = root.culture
+			save_scope_as = witchhunter
+		}
+		scope:witchhunter = {
+			add_trait = witch_hunter
+		}
+	}
+	right_portrait = scope:witchhunter
+	trigger = {
+		has_character_flag = becoming_mage
+	}
+	option = { # Agree
+		name = AL_becoming_mage.0011.a
+		add_prestige = -5000
+		if = {
+			limit = {
+				trait_is_shunned_or_criminal_in_faith_trigger = { FAITH = faith TRAIT = witch GENDER_CHARACTER = root }
+			}
+			add_piety = 1000
+		}
+		remove_character_flag = becoming_mage
+		scope:witchhunter = {
+			death = {
+				death_reason = death_disappearance
+			}
+		}
+		remove_trait = exposed_mage
+
+	}
+	option = { # Disagree
+		name = AL_becoming_mage.0011.b
+		configure_start_single_combat_effect = {
+			SC_INITIATOR = scope:witchhunter
+			SC_ATTACKER = scope:witchhunter
+			SC_DEFENDER = root
+			FATALITY = always
+			FIXED = no
+			LOCALE = throne_room
+			OUTPUT_EVENT = AL_becoming_mage.0111 
+			INVALIDATION_EVENT = AL_becoming_mage.0111
+		}
+	}
+}
+AL_becoming_mage.0111 = { # WIN
+	title = AL_becoming_mage.0111.title
+	desc = AL_becoming_mage.0111.desc
+	theme = secret
+	left_portrait = root
+	right_portrait = scope:witchhunter
+	trigger = {
+		has_character_flag = becoming_mage
+	}
+	option = { # Agree
+		name = AL_becoming_mage.0111.a
+		add_prestige = 500
+		if = {
+			limit = {
+				trait_is_shunned_or_criminal_in_faith_trigger = { FAITH = faith TRAIT = witch GENDER_CHARACTER = root }
+			}
+			add_piety = -500
+		}
+		add_trait_xp = {
+			trait = exposed_mage
+			track = exposed_mage_legacy
+			value = 5
+		}
+	}
+}
+AL_becoming_mage.0012 = { # Witch-Hunter from Inquisition Visits
+	title = AL_becoming_mage.0012.title
+	desc = AL_becoming_mage.0012.desc
+	theme = secret
+	left_portrait = root
+	immediate = {
+		create_character = {
+			template = low_level_witchhunter
+			location = root.capital_province
+			gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+			faith = root.faith
+			culture = root.culture
+			save_scope_as = witchhunter
+		}
+		scope:witchhunter = {
+			add_trait = witch_hunter
+		}
+	}
+	right_portrait = scope:witchhunter
+	trigger = {
+		has_character_flag = becoming_mage
+	}
+	option = { 
+		name = AL_becoming_mage.0012.a
+		configure_start_single_combat_effect = {
+			SC_INITIATOR = scope:witchhunter
+			SC_ATTACKER = scope:witchhunter
+			SC_DEFENDER = root
+			FATALITY = always
+			FIXED = no
+			LOCALE = throne_room
+			OUTPUT_EVENT = AL_becoming_mage.0111 
+			INVALIDATION_EVENT = AL_becoming_mage.0111
+		}
+	}
+}
+# SECRELTY
+AL_becoming_mage.0021 = { # ROADBLOCK
+	title = AL_becoming_mage.0021.title
+	desc = AL_becoming_mage.0021.desc
+	theme = secret
+	left_portrait = root
+	trigger = {
+		has_character_flag = becoming_mage
+	}
+	option = { 
+		name = AL_becoming_mage.0021.a
+		add_stress = 50
+		add_concepts_lifestyle_xp = 200
+		trigger_event = AL_becoming_mage.0031
+	}
+	option = { 
+		name = AL_becoming_mage.0021.b
+		remove_short_term_gold = 50
+		add_concepts_lifestyle_xp = 200
+		trigger_event = AL_becoming_mage.0031
+	}
+	option = { 
+		name = AL_becoming_mage.0021.c
+		add_stress = 25
+	}
+	option = { 
+		name = AL_becoming_mage.0021.d
+		add_concepts_lifestyle_xp = -200
+	}
+}
+AL_becoming_mage.0022 = { # HUGE BREAKTHOURG
+	title = AL_becoming_mage.0022.title
+	desc = AL_becoming_mage.0022.desc
+	theme = secret
+	left_portrait = root
+	trigger = {
+		has_character_flag = becoming_mage
+	}
+	option = { 
+		name = AL_becoming_mage.0022.a
+		remove_short_term_gold = 50
+		add_stress = 25
+		add_concepts_lifestyle_xp = 500
+		trigger_event = AL_becoming_mage.0031
+	}
+	option = { 
+		name = AL_becoming_mage.0022.b
+		add_concepts_lifestyle_xp = 250
+		trigger_event = AL_becoming_mage.0031
+	}
+}
+AL_becoming_mage.0023 = { # Experiment
+	title = AL_becoming_mage.0021.title
+	desc = AL_becoming_mage.0021.desc
+	theme = secret
+	left_portrait = root
+	trigger = {
+		has_character_flag = becoming_mage
+	}
+	option = { 
+		name = AL_becoming_mage.0023.a
+		remove_short_term_gold = 150
+		add_stress = 15
+		add_concepts_lifestyle_xp = 750
+		trigger_event = AL_becoming_mage.0031
+	}
+	option = { 
+		name = AL_becoming_mage.0023.b
+		remove_short_term_gold = 100
+		add_stress = 15
+		add_concepts_lifestyle_xp = 500
+		trigger_event = AL_becoming_mage.0031
+	}
+	option = { 
+		name = AL_becoming_mage.0023.c
+		remove_short_term_gold = 50
+		add_stress = 15
+		add_concepts_lifestyle_xp = 250
+		trigger_event = AL_becoming_mage.0031
+	}
+	option = { 
+		name = AL_becoming_mage.0023.d
+	}
+}
+AL_becoming_mage.0024 = { # Fire
+	title = AL_becoming_mage.0024.title
+	desc = AL_becoming_mage.0024.desc
+	theme = secret
+	left_portrait = root
+	trigger = {
+		has_character_flag = becoming_mage
+	}
+	option = { 
+		name = AL_becoming_mage.0024.a
+		add_stress = 150
+	}
+	option = { 
+		name = AL_becoming_mage.0024.b
+		add_concepts_lifestyle_xp = -250
+	}
+}
+AL_becoming_mage.0025 = { # BOOK
+	title = AL_becoming_mage.0025.title
+	desc = AL_becoming_mage.0025.desc
+	theme = secret
+	left_portrait = root
+	trigger = {
+		has_character_flag = becoming_mage
+	}
+	option = { 
+		name = AL_becoming_mage.0025.a
+		remove_short_term_gold = 50
+		add_concepts_lifestyle_xp = 200
+		trigger_event = AL_becoming_mage.0031
+	}
+	option = { 
+		name = AL_becoming_mage.0025.a
+		add_stress = 25
+	}
+}
+AL_becoming_mage.0031 = { # END
+	title = AL_becoming_mage.0031.title
+	desc = AL_becoming_mage.0031.desc
+	theme = secret
+	left_portrait = root
+	trigger = {
+		has_character_flag = becoming_mage
+		concepts_lifestyle_perk_points > 0
+	}
+	option = { 
+		name = AL_becoming_mage.0031.a
+		remove_character_flag = becoming_mage
+		remove_character_modifier = no_focus
+		become_mage = yes
+	}
+}
+AL_becoming_mage.0032 = { # END
+	title = AL_becoming_mage.0032.title
+	desc = AL_becoming_mage.0032.desc
+	theme = secret
+	left_portrait = root
+	trigger = {
+		has_character_flag = becoming_mage
+	}
+	option = { 
+		name = AL_becoming_mage.0032.a
+		remove_character_flag = becoming_mage
+		remove_character_modifier = no_focus
+		become_mage = yes
+	}
+}
+AL_exposed_mage.0001 = {
+	title = AL_exposed_mage.0001.title
+	desc = AL_exposed_mage.0001.desc
+	theme = secret
+	
+	left_portrait = root
+	option = { 
+		name = AL_exposed_mage.0001.a
+		add_trait = exposed_mage
+	}
+}

@@ -1,0 +1,1838 @@
+﻿### EXAMPLE
+### spell_name_execute = {
+### 	scope = character
+### 	is_valid = {
+### 		have_enough_mana = { cost = spell_cost }
+###			is_province_spell = yes ? NOT = { is_province_spell = yes }
+### 	}
+### 	effect = {
+### 		# Effects on caster
+### 		scope:target = {
+### 			# Effects on target
+### 		}
+### 		change_variable ={ # Subtract mana 
+### 			name = mana
+### 			add = {
+### 				value = spell_cost
+### 				multiply = -1
+### 			} 
+### 		}
+### 	}
+###}
+###
+
+create_gold_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = create_gold_cost }
+		NOT = { is_province_spell = yes }
+		has_perk = manipulation_3_perk
+		has_perk = material_3_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	}
+	effect = {
+		remove_short_term_gold = 20
+		scope:target = {
+			add_gold = 40
+		}
+		mana_cost_sub = { VALUE = create_gold_cost }
+		increase_suspicion = { VALUE = 5 }
+	}
+}
+create_gold_better_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = create_gold_better_cost }
+		NOT = { is_province_spell = yes }
+		has_perk = manipulation_creation_perk
+		has_perk = material_4_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	}
+	effect = {
+		scope:target = {
+			add_gold = 80
+		}
+		mana_cost_sub = { VALUE = create_gold_better_cost }
+		increase_suspicion = { VALUE = 5 }
+	}
+}
+
+minor_optimize_body_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = minor_optimize_body_cost }
+
+		NOT = { is_province_spell = yes }
+		has_perk = manipulation_4_perk
+		has_perk = life_3_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	}
+	effect = {
+		scope:target = {
+			add_character_modifier = {
+				modifier = minor_optimize_body_spell_modifier
+				years = 5
+			}
+		}
+		mana_cost_sub = { VALUE = minor_optimize_body_cost }
+		increase_suspicion = { VALUE = 20 }
+	}
+}
+optimize_body_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = optimize_body_cost }
+		NOT = { is_province_spell = yes }
+		has_perk = manipulation_4_perk
+		has_perk = life_4_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	}
+	effect = {
+		scope:target = {
+			add_character_modifier = {
+				modifier = optimize_body_spell_modifier
+				years = 5
+			}
+		}
+		mana_cost_sub = { VALUE = optimize_body_cost }
+		increase_suspicion = { VALUE = 20 }
+	}
+}
+major_optimize_body_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = major_optimize_body_cost }
+		NOT = { is_province_spell = yes }
+		has_perk = manipulation_perfection_perk
+		has_perk = life_perfection_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	}
+	effect = {
+		scope:target = {
+			add_character_modifier = {
+				modifier = major_optimize_body_spell_modifier
+				years = 5
+			}
+		}
+		mana_cost_sub = { VALUE = major_optimize_body_cost }
+		increase_suspicion = { VALUE = 20 }
+	}
+}
+# VER 2
+mass_haste_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = mass_haste_cost }
+		NOT = { is_province_spell = yes }
+		has_perk = manipulation_1_perk
+		has_perk = energy_2_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	}
+	effect = {
+		scope:target = {
+			add_character_modifier = {
+				modifier = mass_haste_spell_modifier
+				years = 2
+			}
+		}
+		mana_cost_sub = { VALUE = mass_haste_cost }
+		increase_suspicion = { VALUE = 20 }
+	}
+}
+mass_slowness_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = mass_slowness_cost }
+		NOT = { is_province_spell = yes }
+		has_perk = manipulation_1_perk
+		has_perk = energy_3_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	}
+	effect = {
+		scope:target = {
+			add_character_modifier = {
+				modifier = mass_slowness_spell_modifier
+				years = 2
+			}
+		}
+		mana_cost_sub = { VALUE = mass_slowness_cost }
+		increase_suspicion = { VALUE = 20 }
+	}
+}
+beneficial_weather_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = beneficial_weather_cost }
+		NOT = { is_province_spell = yes }
+		has_perk = manipulation_perfection_perk
+		has_perk = energy_3_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	}
+	effect = {
+		scope:target = {
+			add_character_modifier = {
+				modifier = beneficial_weather_spell_modifier
+				years = 2
+			}
+		}
+		mana_cost_sub = { VALUE = beneficial_weather_cost }
+		increase_suspicion = { VALUE = 20 }
+	}
+}
+detrimental_weather_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = detrimental_weather_cost }
+		NOT = { is_province_spell = yes }
+		has_perk = manipulation_perfection_perk
+		has_perk = energy_3_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	}
+	effect = {
+		scope:target = {
+			add_character_modifier = {
+				modifier = detrimental_weather_spell_modifier
+				years = 2
+			}
+		}
+		mana_cost_sub = { VALUE = detrimental_weather_cost }
+		increase_suspicion = { VALUE = 20 }
+	}
+}
+slowness_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = slowness_cost }
+		NOT = { has_character_modifier = slowness_spell_modifier }
+		NOT = { is_province_spell = yes }
+		has_perk = manipulation_2_perk
+		has_perk = energy_3_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	}
+	effect = {
+		scope:target = {
+			add_character_modifier = {
+				modifier = slowness_spell_modifier
+				years = 2
+			}
+		}
+		mana_cost_sub = { VALUE = slowness_cost }
+		increase_suspicion = { VALUE = 20 }
+	}
+}
+haste_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = haste_cost }
+		NOT = { has_character_modifier = haste_spell_modifier }
+		NOT = { is_province_spell = yes }
+		has_perk = manipulation_2_perk
+		has_perk = energy_2_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	}
+	effect = {
+		scope:target = {
+			add_character_modifier = {
+				modifier = haste_spell_modifier
+				years = 2
+			}
+		}
+		mana_cost_sub = { VALUE = haste_cost }
+		increase_suspicion = { VALUE = 20 }
+	}
+}
+
+novice_fire_combat_execute = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+}
+apprentice_fire_combat_execute = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+}
+adept_fire_combat_execute = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+}
+expert_fire_combat_execute = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+}
+master_fire_combat_execute = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+}
+novice_telekinesis_combat_execute = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+}
+apprentice_telekinesis_combat_execute = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+}
+adept_telekinesis_combat_execute = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+}
+expert_telekinesis_combat_execute = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+}
+master_telekinesis_combat_execute = {
+	scope = character
+	is_shown = {
+		always = no
+	}
+}
+
+fix_change_genetic_body_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = fix_change_genetic_body_cost }
+		NOT = { is_province_spell = yes }
+		custom_tooltip = {
+			text = has_negative_genetic_phyical_trait
+			scope:target = {
+				OR = {
+					has_trait = beauty_good_1
+					has_trait = beauty_bad_2
+					has_trait = beauty_bad_3
+					has_trait = physique_bad_1
+					has_trait = physique_bad_2
+					has_trait = physique_bad_3
+				}
+			}
+		}
+		has_perk = manipulation_4_perk
+		has_perk = material_4_perk
+		has_perk = life_3_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	}
+	effect = {
+		scope:target = {
+			remove_trait = beauty_bad_1
+			remove_trait = physique_bad_1 
+			if = { limit = { has_trait = beauty_bad_2 } remove_trait = beauty_bad_2 }			else_if = { limit = { has_trait = beauty_bad_3 } remove_trait = beauty_bad_3 }
+			if = { limit = { has_trait = physique_bad_2 } remove_trait = physique_bad_2 }			else_if = { limit = { has_trait = physique_bad_3 } remove_trait = physique_bad_3 }
+		}
+		mana_cost_sub = { VALUE = fix_change_genetic_body_cost }
+		increase_suspicion = { VALUE = 25 }
+	}
+}
+l1_change_genetic_body_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = l1_change_genetic_body_cost }
+		custom_tooltip = {
+			text = has_negative_genetic_phyical_trait
+			scope:target = {
+				NOT = {
+					OR = {
+						has_trait = beauty_bad_1
+						has_trait = beauty_bad_2
+						has_trait = beauty_bad_3
+						has_trait = physique_bad_1
+						has_trait = physique_bad_2
+						has_trait = physique_bad_3
+					}
+				}
+			}
+		}
+		NOT = {
+			custom_tooltip = {
+				text = has_already_all_good_trait_AR
+				scope:target = {
+					AND = {
+						has_trait = beauty_good_1
+						has_trait = physique_good_1
+					}
+							}
+			}
+		}
+		NOT = { is_province_spell = yes }
+		has_perk = manipulation_perfection_perk
+		has_perk = material_perfection_perk
+		has_perk = life_4_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	}
+	effect = {
+		scope:target = {
+			random_list = {
+				50 = {
+					modifier = {
+						has_trait = beauty_good_1
+						add = -50
+					}
+					set_trait_rank = {
+						trait = beauty_good
+						rank = 1
+					}
+				}
+				50 = {
+					modifier = {
+						has_trait = physique_good_1
+						add = -50
+					}
+					set_trait_rank = {
+						trait = physique_good
+						rank = 1
+					}
+				}
+			}
+		}
+		mana_cost_sub = { VALUE = l1_change_genetic_body_cost }
+		increase_suspicion = { VALUE = 25 }
+	}
+}
+l2_change_genetic_body_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = l2_change_genetic_body_cost }
+		custom_tooltip = {
+			text = has_negative_genetic_phyical_trait
+			scope:target = {
+				NOT = {
+					OR = {
+						has_trait = beauty_bad_1
+						has_trait = beauty_bad_2
+						has_trait = beauty_bad_3
+						has_trait = physique_bad_1
+						has_trait = physique_bad_2
+						has_trait = physique_bad_3
+					}
+				}
+			}
+		}
+		NOT = {
+			custom_tooltip = {
+				text = has_already_all_good_trait_AR
+				scope:target = {
+					AND = {
+						has_trait = beauty_good_2
+						has_trait = physique_good_2
+					}
+							}
+			}
+		}
+		NOT = { is_province_spell = yes }
+		has_perk = manipulation_perfection_perk
+		has_perk = material_perfection_perk
+		has_perk = life_perfection_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	}
+	effect = {
+		scope:target = {
+			random_list = {
+				50 = {
+					modifier = {
+						has_trait = beauty_good_2
+						add = -50
+					}
+					set_trait_rank = {
+						trait = beauty_good
+						rank = 2
+					}
+				}
+				50 = {
+					modifier = {
+						has_trait = physique_good_2
+						add = -50
+					}
+					set_trait_rank = {
+						trait = physique_good
+						rank = 2
+					}
+				}
+			}
+		}
+		mana_cost_sub = { VALUE = l2_change_genetic_body_cost }
+		increase_suspicion = { VALUE = 25 }
+	}
+}
+l3_change_genetic_body_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = l3_change_genetic_body_cost }
+		custom_tooltip = {
+			text = has_negative_genetic_phyical_trait
+			scope:target = {
+				NOT = {
+					OR = {
+						has_trait = beauty_bad_1
+						has_trait = beauty_bad_2
+						has_trait = beauty_bad_3
+						has_trait = physique_bad_1
+						has_trait = physique_bad_2
+						has_trait = physique_bad_3
+					}
+				}
+			}
+		}
+		NOT = {
+			custom_tooltip = {
+				text = has_already_all_good_trait_AR
+				scope:target = {
+					AND = {
+						has_trait = beauty_good_3
+						has_trait = physique_good_3
+					}
+							}
+			}
+		}
+		NOT = { is_province_spell = yes }
+		has_perk = manipulation_perfection_perk
+		has_perk = material_perfection_perk
+		has_perk = life_perfection_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	}
+	effect = {
+		scope:target = {
+			random_list = {
+				50 = {
+					modifier = {
+						has_trait = beauty_good_3
+						add = -50
+					}
+					set_trait_rank = {
+						trait = beauty_good
+						rank = 3
+					}
+				}
+				50 = {
+					modifier = {
+						has_trait = physique_good_3
+						add = -50
+					}
+					set_trait_rank = {
+						trait = physique_good
+						rank = 3
+					}
+				}
+			}
+		}
+		mana_cost_sub = { VALUE = l3_change_genetic_body_cost }
+		increase_suspicion = { VALUE = 25 }
+	}
+}
+
+fix_change_genetic_mind_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = fix_change_genetic_mind_cost }
+		NOT = { is_province_spell = yes }
+		custom_tooltip = {
+			text = has_negative_genetic_intelect_trait
+			scope:target = {
+				OR = {
+					has_trait = intellect_bad_1
+					has_trait = intellect_bad_2
+					has_trait = intellect_bad_3
+				}
+			}
+		}
+		has_perk = manipulation_4_perk
+		has_perk = mind_2_perk
+		has_perk = life_2_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	}
+	effect = {
+		scope:target = {
+			remove_trait = intellect_bad_1
+			if = { limit = { has_trait = intellect_bad_2 } remove_trait = intellect_bad_2 }			else_if = { limit = { has_trait = intellect_bad_3 } remove_trait = intellect_bad_3 }
+		}
+		mana_cost_sub = { VALUE = fix_change_genetic_mind_cost }
+		increase_suspicion = { VALUE = 25 }
+	}
+}
+l1_change_genetic_mind_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = l1_change_genetic_mind_cost }
+		custom_tooltip = {
+			text = has_negative_genetic_intelect_trait
+			scope:target = {
+				NOT = {
+					OR = {
+						has_trait = intellect_bad_1
+						has_trait = intellect_bad_2
+						has_trait = intellect_bad_3
+					}
+				}
+			}
+		}
+		NOT = { has_trait = intellect_good_1 }
+		NOT = { is_province_spell = yes }
+		has_perk = manipulation_perfection_perk
+		has_perk = mind_3_perk
+		has_perk = life_3_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	}
+	effect = {
+		scope:target = {
+			set_trait_rank = {
+				trait = intellect_good
+				rank = 1
+			}
+		}
+		mana_cost_sub = { VALUE = l1_change_genetic_mind_cost }
+		increase_suspicion = { VALUE = 25 }
+	}
+}
+l2_change_genetic_mind_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = l2_change_genetic_mind_cost }
+		custom_tooltip = {
+			text = has_negative_genetic_intelect_trait
+			scope:target = {
+				NOT = {
+					OR = {
+						has_trait = intellect_bad_1
+						has_trait = intellect_bad_2
+						has_trait = intellect_bad_3
+					}
+				}
+			}
+		}
+		NOT = { has_trait = intellect_good_2 }
+		NOT = { is_province_spell = yes }
+		has_perk = manipulation_perfection_perk
+		has_perk = mind_perfection_perk
+		has_perk = life_4_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	}
+	effect = {
+		scope:target = {
+			set_trait_rank = {
+				trait = intellect_good
+				rank = 2
+			}
+		}
+		mana_cost_sub = { VALUE = l2_change_genetic_mind_cost }
+		increase_suspicion = { VALUE = 25 }
+	}
+}
+l3_change_genetic_mind_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = l3_change_genetic_mind_cost }
+		custom_tooltip = {
+			text = has_negative_genetic_intelect_trait
+			scope:target = {
+				NOT = {
+					OR = {
+						has_trait = intellect_bad_1
+						has_trait = intellect_bad_2
+						has_trait = intellect_bad_3
+					}
+				}
+			}
+		}
+		NOT = { has_trait = intellect_good_3 }
+		NOT = { is_province_spell = yes }
+		has_perk = manipulation_perfection_perk
+		has_perk = mind_perfection_perk
+		has_perk = life_perfection_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	}
+	effect = {
+		scope:target = {
+			set_trait_rank = {
+				trait = intellect_good
+				rank = 3
+			}
+		}
+		mana_cost_sub = { VALUE = l3_change_genetic_mind_cost }
+		increase_suspicion = { VALUE = 25 }
+	}
+}
+#VER 6
+clear_land_fertility_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = clear_land_fertility_cost }
+		is_province_spell = yes 
+		has_perk = manipulation_2_perk
+		has_perk = material_1_perk
+		has_perk = life_1_perk
+	}
+	is_shown = {
+		 is_province_spell = yes
+	} 
+	effect = {
+		scope:target = {
+			if = { limit = { has_county_modifier = improved_land_fertility_minor_modifier } remove_county_modifier = improved_land_fertility_minor_modifier }
+			if = { limit = { has_county_modifier = improved_land_fertility_modifier } remove_county_modifier = improved_land_fertility_modifier }
+			if = { limit = { has_county_modifier = improved_land_fertility_major_modifier } remove_county_modifier = improved_land_fertility_major_modifier }
+			if = { limit = { has_county_modifier = worsened_land_fertility_minor_modifier } remove_county_modifier = worsened_land_fertility_minor_modifier }
+			if = { limit = { has_county_modifier = worsened_land_fertility_modifier } remove_county_modifier = worsened_land_fertility_modifier }
+			if = { limit = { has_county_modifier = worsened_land_fertility_major_modifier } remove_county_modifier = worsened_land_fertility_major_modifier }
+		}
+		mana_cost_sub = { VALUE = clear_land_fertility_cost }
+		increase_suspicion = { VALUE = 5 }
+	}
+}
+improve_land_fertility_minor_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = improve_land_fertility_minor_cost }
+		is_province_spell = yes 
+		has_perk = manipulation_2_perk
+		has_perk = material_2_perk
+		has_perk = life_2_perk
+	}
+	is_shown = {
+		 is_province_spell = yes
+	} 
+	effect = {
+		scope:target = {
+			if = { limit = { has_county_modifier = improved_land_fertility_minor_modifier } remove_county_modifier = improved_land_fertility_minor_modifier }
+			if = { limit = { has_county_modifier = improved_land_fertility_modifier } remove_county_modifier = improved_land_fertility_modifier }
+			if = { limit = { has_county_modifier = improved_land_fertility_major_modifier } remove_county_modifier = improved_land_fertility_major_modifier }
+			if = { limit = { has_county_modifier = worsened_land_fertility_minor_modifier } remove_county_modifier = worsened_land_fertility_minor_modifier }
+			if = { limit = { has_county_modifier = worsened_land_fertility_modifier } remove_county_modifier = worsened_land_fertility_modifier }
+			if = { limit = { has_county_modifier = worsened_land_fertility_major_modifier } remove_county_modifier = worsened_land_fertility_major_modifier }
+			add_county_modifier = improved_land_fertility_minor_modifier
+		}
+		mana_cost_sub = { VALUE = improve_land_fertility_minor_cost }
+		increase_suspicion = { VALUE = 20 }
+	}
+}
+improve_land_fertility_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = improve_land_fertility_cost }
+		is_province_spell = yes 
+		has_perk = manipulation_3_perk
+		has_perk = material_3_perk
+		has_perk = life_3_perk
+	}
+	is_shown = {
+		 is_province_spell = yes
+	} 
+	effect = {
+		scope:target = {
+			if = { limit = { has_county_modifier = improved_land_fertility_minor_modifier } remove_county_modifier = improved_land_fertility_minor_modifier }
+			if = { limit = { has_county_modifier = improved_land_fertility_modifier } remove_county_modifier = improved_land_fertility_modifier }
+			if = { limit = { has_county_modifier = improved_land_fertility_major_modifier } remove_county_modifier = improved_land_fertility_major_modifier }
+			if = { limit = { has_county_modifier = worsened_land_fertility_minor_modifier } remove_county_modifier = worsened_land_fertility_minor_modifier }
+			if = { limit = { has_county_modifier = worsened_land_fertility_modifier } remove_county_modifier = worsened_land_fertility_modifier }
+			if = { limit = { has_county_modifier = worsened_land_fertility_major_modifier } remove_county_modifier = worsened_land_fertility_major_modifier }
+			add_county_modifier = improved_land_fertility_modifier
+		}
+		mana_cost_sub = { VALUE = improve_land_fertility_cost }
+		increase_suspicion = { VALUE = 20 }
+	}
+}
+improve_land_fertility_major_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = improve_land_fertility_major_cost }
+		is_province_spell = yes 
+		has_perk = manipulation_3_perk
+		has_perk = material_4_perk
+		has_perk = life_4_perk
+	}
+	is_shown = {
+		 is_province_spell = yes
+	} 
+	effect = {
+		scope:target = {
+			if = { limit = { has_county_modifier = improved_land_fertility_minor_modifier } remove_county_modifier = improved_land_fertility_minor_modifier }
+			if = { limit = { has_county_modifier = improved_land_fertility_modifier } remove_county_modifier = improved_land_fertility_modifier }
+			if = { limit = { has_county_modifier = improved_land_fertility_major_modifier } remove_county_modifier = improved_land_fertility_major_modifier }
+			if = { limit = { has_county_modifier = worsened_land_fertility_minor_modifier } remove_county_modifier = worsened_land_fertility_minor_modifier }
+			if = { limit = { has_county_modifier = worsened_land_fertility_modifier } remove_county_modifier = worsened_land_fertility_modifier }
+			if = { limit = { has_county_modifier = worsened_land_fertility_major_modifier } remove_county_modifier = worsened_land_fertility_major_modifier }
+			add_county_modifier = improved_land_fertility_major_modifier
+		}
+		mana_cost_sub = { VALUE = improve_land_fertility_major_cost }
+		increase_suspicion = { VALUE = 20 }
+	}
+}
+worsened_land_fertility_minor_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = worsened_land_fertility_minor_cost }
+		is_province_spell = yes 
+		has_perk = manipulation_2_perk
+		has_perk = material_2_perk
+		has_perk = life_2_perk
+	}
+	is_shown = {
+		 is_province_spell = yes
+	} 
+	effect = {
+		scope:target = {
+			if = { limit = { has_county_modifier = improved_land_fertility_minor_modifier } remove_county_modifier = improved_land_fertility_minor_modifier }
+			if = { limit = { has_county_modifier = improved_land_fertility_modifier } remove_county_modifier = improved_land_fertility_modifier }
+			if = { limit = { has_county_modifier = improved_land_fertility_major_modifier } remove_county_modifier = improved_land_fertility_major_modifier }
+			if = { limit = { has_county_modifier = worsened_land_fertility_minor_modifier } remove_county_modifier = worsened_land_fertility_minor_modifier }
+			if = { limit = { has_county_modifier = worsened_land_fertility_modifier } remove_county_modifier = worsened_land_fertility_modifier }
+			if = { limit = { has_county_modifier = worsened_land_fertility_major_modifier } remove_county_modifier = worsened_land_fertility_major_modifier }
+			add_county_modifier = worsened_land_fertility_minor_modifier
+		}
+		mana_cost_sub = { VALUE = worsened_land_fertility_minor_cost }
+		increase_suspicion = { VALUE = 20 }
+	}
+}
+worsened_land_fertility_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = worsened_land_fertility_cost }
+		is_province_spell = yes 
+		has_perk = manipulation_3_perk
+		has_perk = material_3_perk
+		has_perk = life_3_perk
+	}
+	is_shown = {
+		 is_province_spell = yes
+	} 
+	effect = {
+		scope:target = {
+			if = { limit = { has_county_modifier = improved_land_fertility_minor_modifier } remove_county_modifier = improved_land_fertility_minor_modifier }
+			if = { limit = { has_county_modifier = improved_land_fertility_modifier } remove_county_modifier = improved_land_fertility_modifier }
+			if = { limit = { has_county_modifier = improved_land_fertility_major_modifier } remove_county_modifier = improved_land_fertility_major_modifier }
+			if = { limit = { has_county_modifier = worsened_land_fertility_minor_modifier } remove_county_modifier = worsened_land_fertility_minor_modifier }
+			if = { limit = { has_county_modifier = worsened_land_fertility_modifier } remove_county_modifier = worsened_land_fertility_modifier }
+			if = { limit = { has_county_modifier = worsened_land_fertility_major_modifier } remove_county_modifier = worsened_land_fertility_major_modifier }
+			add_county_modifier = worsened_land_fertility_modifier
+		}
+		mana_cost_sub = { VALUE = worsened_land_fertility_cost }
+		increase_suspicion = { VALUE = 20 }
+	}
+}
+worsened_land_fertility_major_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = worsened_land_fertility_major_cost }
+		is_province_spell = yes 
+		has_perk = manipulation_3_perk
+		has_perk = material_4_perk
+		has_perk = life_4_perk
+	}
+	is_shown = {
+		 is_province_spell = yes
+	} 
+	effect = {
+		scope:target = {
+			if = { limit = { has_county_modifier = improved_land_fertility_minor_modifier } remove_county_modifier = improved_land_fertility_minor_modifier }
+			if = { limit = { has_county_modifier = improved_land_fertility_modifier } remove_county_modifier = improved_land_fertility_modifier }
+			if = { limit = { has_county_modifier = improved_land_fertility_major_modifier } remove_county_modifier = improved_land_fertility_major_modifier }
+			if = { limit = { has_county_modifier = worsened_land_fertility_minor_modifier } remove_county_modifier = worsened_land_fertility_minor_modifier }
+			if = { limit = { has_county_modifier = worsened_land_fertility_modifier } remove_county_modifier = worsened_land_fertility_modifier }
+			if = { limit = { has_county_modifier = worsened_land_fertility_major_modifier } remove_county_modifier = worsened_land_fertility_major_modifier }
+			add_county_modifier = worsened_land_fertility_major_modifier
+		}
+		mana_cost_sub = { VALUE = worsened_land_fertility_major_cost }
+		increase_suspicion = { VALUE = 20 }
+	}
+}
+
+clear_land_geography_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = clear_land_geography_cost }
+		is_province_spell = yes 
+		has_perk = manipulation_2_perk
+		has_perk = material_2_perk
+	}
+	is_shown = {
+		 is_province_spell = yes
+	} 
+	effect = {
+		scope:target = {
+			if = { limit = { has_county_modifier = improved_land_geography_minor_modifier } remove_county_modifier = improved_land_geography_minor_modifier }
+			if = { limit = { has_county_modifier = improved_land_geography_modifier } remove_county_modifier = improved_land_geography_modifier }
+			if = { limit = { has_county_modifier = improved_land_geography_major_modifier } remove_county_modifier = improved_land_geography_major_modifier }
+			if = { limit = { has_county_modifier = worsened_land_geography_minor_modifier } remove_county_modifier = worsened_land_geography_minor_modifier }
+			if = { limit = { has_county_modifier = worsened_land_geography_modifier } remove_county_modifier = worsened_land_geography_modifier }
+			if = { limit = { has_county_modifier = worsened_land_geography_major_modifier } remove_county_modifier = worsened_land_geography_major_modifier }
+		}
+		mana_cost_sub = { VALUE = clear_land_geography_cost }
+		increase_suspicion = { VALUE = 5 }
+	}
+}
+improve_land_geography_minor_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = improve_land_geography_minor_cost }
+		is_province_spell = yes 
+		has_perk = manipulation_3_perk
+		has_perk = material_3_perk
+	}
+	is_shown = {
+		 is_province_spell = yes
+	} 
+	effect = {
+		scope:target = {
+			if = { limit = { has_county_modifier = improved_land_geography_minor_modifier } remove_county_modifier = improved_land_geography_minor_modifier }
+			if = { limit = { has_county_modifier = improved_land_geography_modifier } remove_county_modifier = improved_land_geography_modifier }
+			if = { limit = { has_county_modifier = improved_land_geography_major_modifier } remove_county_modifier = improved_land_geography_major_modifier }
+			if = { limit = { has_county_modifier = worsened_land_geography_minor_modifier } remove_county_modifier = worsened_land_geography_minor_modifier }
+			if = { limit = { has_county_modifier = worsened_land_geography_modifier } remove_county_modifier = worsened_land_geography_modifier }
+			if = { limit = { has_county_modifier = worsened_land_geography_major_modifier } remove_county_modifier = worsened_land_geography_major_modifier }
+			add_county_modifier = improved_land_geography_minor_modifier
+		}
+		mana_cost_sub = { VALUE = improve_land_geography_minor_cost }
+		increase_suspicion = { VALUE = 20 }
+	}
+}
+improve_land_geography_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = improve_land_geography_cost }
+		is_province_spell = yes 
+		has_perk = manipulation_4_perk
+		has_perk = material_4_perk
+	}
+	is_shown = {
+		 is_province_spell = yes
+	} 
+	effect = {
+		scope:target = {
+			if = { limit = { has_county_modifier = improved_land_geography_minor_modifier } remove_county_modifier = improved_land_geography_minor_modifier }
+			if = { limit = { has_county_modifier = improved_land_geography_modifier } remove_county_modifier = improved_land_geography_modifier }
+			if = { limit = { has_county_modifier = improved_land_geography_major_modifier } remove_county_modifier = improved_land_geography_major_modifier }
+			if = { limit = { has_county_modifier = worsened_land_geography_minor_modifier } remove_county_modifier = worsened_land_geography_minor_modifier }
+			if = { limit = { has_county_modifier = worsened_land_geography_modifier } remove_county_modifier = worsened_land_geography_modifier }
+			if = { limit = { has_county_modifier = worsened_land_geography_major_modifier } remove_county_modifier = worsened_land_geography_major_modifier }
+			add_county_modifier = improved_land_geography_modifier
+		}
+		mana_cost_sub = { VALUE = improve_land_geography_cost }
+		increase_suspicion = { VALUE = 20 }
+	}
+}
+improve_land_geography_major_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = improve_land_geography_major_cost }
+		is_province_spell = yes 
+		has_perk = manipulation_perfection_perk
+		has_perk = material_perfection_perk
+	}
+	is_shown = {
+		 is_province_spell = yes
+	} 
+	effect = {
+		scope:target = {
+			if = { limit = { has_county_modifier = improved_land_geography_minor_modifier } remove_county_modifier = improved_land_geography_minor_modifier }
+			if = { limit = { has_county_modifier = improved_land_geography_modifier } remove_county_modifier = improved_land_geography_modifier }
+			if = { limit = { has_county_modifier = improved_land_geography_major_modifier } remove_county_modifier = improved_land_geography_major_modifier }
+			if = { limit = { has_county_modifier = worsened_land_geography_minor_modifier } remove_county_modifier = worsened_land_geography_minor_modifier }
+			if = { limit = { has_county_modifier = worsened_land_geography_modifier } remove_county_modifier = worsened_land_geography_modifier }
+			if = { limit = { has_county_modifier = worsened_land_geography_major_modifier } remove_county_modifier = worsened_land_geography_major_modifier }
+			add_county_modifier = improved_land_geography_major_modifier
+		}
+		mana_cost_sub = { VALUE = improve_land_geography_major_cost }
+		increase_suspicion = { VALUE = 20 }
+	}
+}
+worsened_land_geography_minor_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = worsened_land_geography_minor_cost }
+		is_province_spell = yes 
+		has_perk = manipulation_3_perk
+		has_perk = material_3_perk
+	}
+	is_shown = {
+		 is_province_spell = yes
+	} 
+	effect = {
+		scope:target = {
+			if = { limit = { has_county_modifier = improved_land_geography_minor_modifier } remove_county_modifier = improved_land_geography_minor_modifier }
+			if = { limit = { has_county_modifier = improved_land_geography_modifier } remove_county_modifier = improved_land_geography_modifier }
+			if = { limit = { has_county_modifier = improved_land_geography_major_modifier } remove_county_modifier = improved_land_geography_major_modifier }
+			if = { limit = { has_county_modifier = worsened_land_geography_minor_modifier } remove_county_modifier = worsened_land_geography_minor_modifier }
+			if = { limit = { has_county_modifier = worsened_land_geography_modifier } remove_county_modifier = worsened_land_geography_modifier }
+			if = { limit = { has_county_modifier = worsened_land_geography_major_modifier } remove_county_modifier = worsened_land_geography_major_modifier }
+			add_county_modifier = worsened_land_geography_minor_modifier
+		}
+		mana_cost_sub = { VALUE = worsened_land_geography_minor_cost }
+		increase_suspicion = { VALUE = 20 }
+	}
+}
+worsened_land_geography_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = worsened_land_geography_cost }
+		is_province_spell = yes 
+		has_perk = manipulation_4_perk
+		has_perk = material_4_perk
+	}
+	is_shown = {
+		 is_province_spell = yes
+	} 
+	effect = {
+		scope:target = {
+			if = { limit = { has_county_modifier = improved_land_geography_minor_modifier } remove_county_modifier = improved_land_geography_minor_modifier }
+			if = { limit = { has_county_modifier = improved_land_geography_modifier } remove_county_modifier = improved_land_geography_modifier }
+			if = { limit = { has_county_modifier = improved_land_geography_major_modifier } remove_county_modifier = improved_land_geography_major_modifier }
+			if = { limit = { has_county_modifier = worsened_land_geography_minor_modifier } remove_county_modifier = worsened_land_geography_minor_modifier }
+			if = { limit = { has_county_modifier = worsened_land_geography_modifier } remove_county_modifier = worsened_land_geography_modifier }
+			if = { limit = { has_county_modifier = worsened_land_geography_major_modifier } remove_county_modifier = worsened_land_geography_major_modifier }
+			add_county_modifier = worsened_land_geography_modifier
+		}
+		mana_cost_sub = { VALUE = worsened_land_geography_cost }
+		increase_suspicion = { VALUE = 20 }
+	}
+}
+worsened_land_geography_major_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = worsened_land_geography_major_cost }
+		is_province_spell = yes 
+		has_perk = manipulation_perfection_perk
+		has_perk = material_perfection_perk
+	}
+	is_shown = {
+		 is_province_spell = yes
+	} 
+	effect = {
+		scope:target = {
+			if = { limit = { has_county_modifier = improved_land_geography_minor_modifier } remove_county_modifier = improved_land_geography_minor_modifier }
+			if = { limit = { has_county_modifier = improved_land_geography_modifier } remove_county_modifier = improved_land_geography_modifier }
+			if = { limit = { has_county_modifier = improved_land_geography_major_modifier } remove_county_modifier = improved_land_geography_major_modifier }
+			if = { limit = { has_county_modifier = worsened_land_geography_minor_modifier } remove_county_modifier = worsened_land_geography_minor_modifier }
+			if = { limit = { has_county_modifier = worsened_land_geography_modifier } remove_county_modifier = worsened_land_geography_modifier }
+			if = { limit = { has_county_modifier = worsened_land_geography_major_modifier } remove_county_modifier = worsened_land_geography_major_modifier }
+			add_county_modifier = worsened_land_geography_major_modifier
+		}
+		mana_cost_sub = { VALUE = worsened_land_geography_major_cost }
+		increase_suspicion = { VALUE = 20 }
+	}
+}
+
+summon_undead_minor_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = summon_undead_minor_cost }
+		NOT = { is_province_spell = yes }
+		has_perk = manipulation_2_perk
+		has_perk = undead_1_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	} 
+	effect = {
+		spawn_army = {
+			men_at_arms = {
+				type = undead_levies
+				stacks = 1
+			}
+			location = this.capital_province
+			inheritable = no
+			uses_supply = no
+			name = "undead_levies"
+		}
+		add_character_modifier = summon_undead_minor_modifier
+		mana_cost_sub = { VALUE = summon_undead_minor_cost }
+		increase_suspicion = { VALUE = 100 }
+	}
+}
+summon_undead_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = summon_undead_cost }
+		NOT = { is_province_spell = yes }
+		gold >= 50
+		has_perk = manipulation_2_perk
+		has_perk = undead_2_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	} 
+	effect = {
+		spawn_army = {
+			men_at_arms = {
+				type = undead_soldier
+				stacks = 1
+			}
+			location = this.capital_province
+			inheritable = no
+			uses_supply = no
+			name = "undead_soldier"
+		}
+		add_character_modifier = summon_undead_modifier
+		remove_short_term_gold = 50
+		mana_cost_sub = { VALUE = summon_undead_cost }
+		increase_suspicion = { VALUE = 100 }
+	}
+}
+summon_undead_major_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = summon_undead_major_cost }
+		NOT = { is_province_spell = yes }
+		gold >= 150
+		has_perk = manipulation_2_perk
+		has_perk = undead_3_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	} 
+	effect = {
+		spawn_army = {
+			men_at_arms = {
+				type = undead_knight
+				stacks = 1
+			}
+			location = this.capital_province
+			inheritable = no
+			uses_supply = no
+			name = "undead_knight"
+		}
+		add_character_modifier = summon_undead_major_modifier
+		remove_short_term_gold = 150
+		mana_cost_sub = { VALUE = summon_undead_major_cost }
+		increase_suspicion = { VALUE = 100 }
+	}
+}
+
+summon_wolves_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = summon_wolves_cost }
+		NOT = { is_province_spell = yes }
+		has_perk = manipulation_2_perk
+		has_perk = material_3_perk
+		has_perk = life_2_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	} 
+	effect = {
+		spawn_army = {
+			men_at_arms = {
+				type = wolves
+				stacks = 1
+			}
+			location = this.capital_province
+			inheritable = no
+			uses_supply = no
+			name = "wolves"
+		}
+		mana_cost_sub = { VALUE = summon_wolves_cost }
+		increase_suspicion = { VALUE = 30 }
+	}
+}
+summon_bears_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = summon_bears_cost }
+		NOT = { is_province_spell = yes }
+		has_perk = manipulation_2_perk
+		has_perk = material_3_perk
+		has_perk = life_3_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	} 
+	effect = {
+		spawn_army = {
+			men_at_arms = {
+				type = bears
+				stacks = 1
+			}
+			location = this.capital_province
+			inheritable = no
+			uses_supply = no
+			name = "bears"
+		}
+		mana_cost_sub = { VALUE = summon_bears_cost }
+		increase_suspicion = { VALUE = 30 }
+	}
+}
+summon_entire_forest_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = summon_entire_forest_cost }
+		NOT = { is_province_spell = yes }
+		has_perk = manipulation_2_perk
+		has_perk = material_4_perk
+		has_perk = life_4_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	} 
+	effect = {
+		spawn_army = {
+			men_at_arms = {
+				type = entire_forest
+				stacks = 1
+			}
+			location = this.capital_province
+			inheritable = no
+			uses_supply = no
+			name = "entire_forest"
+		}
+		mana_cost_sub = { VALUE = summon_entire_forest_cost }
+		increase_suspicion = { VALUE = 30 }
+	}
+}
+
+calm_spell_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = calm_spell_cost }
+		NOT = { is_province_spell = yes }
+		has_perk = manipulation_4_perk
+		has_perk = mind_2_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	} 
+	effect = {
+		scope:target = {
+			add_stress = -50
+		}
+		mana_cost_sub = { VALUE = calm_spell_cost }
+		increase_suspicion = { VALUE = 5 }
+	}
+}
+anger_spell_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = anger_spell_cost }
+		NOT = { is_province_spell = yes }
+		has_perk = manipulation_4_perk
+		has_perk = mind_2_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	} 
+	effect = {
+		scope:target = {
+			add_stress = 50
+		}
+		mana_cost_sub = { VALUE = anger_spell_cost }
+		increase_suspicion = { VALUE = 5 }
+	}
+}
+befriend_spell_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = befriend_spell_cost }
+		NOT = { is_province_spell = yes }
+		NOT = { scope:target = root }
+		has_perk = manipulation_4_perk
+		has_perk = mind_3_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	} 
+	effect = {
+		set_relation_friend = scope:target
+		mana_cost_sub = { VALUE = befriend_spell_cost }
+		increase_suspicion = { VALUE = 15 }
+	}
+}
+suggestion_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = suggestion_cost }
+		NOT = { is_province_spell = yes }
+		NOT = { scope:target = root }
+		has_perk = manipulation_4_perk
+		has_perk = mind_3_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	} 
+	effect = {
+		add_hook = {
+			type = suggestion
+			target = scope:target
+		}
+		mana_cost_sub = { VALUE = suggestion_cost }
+		increase_suspicion = { VALUE = 25 }
+	}
+}
+puppet_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = puppet_cost }
+		NOT = { is_province_spell = yes }
+		NOT = { scope:target = root }
+		has_perk = manipulation_4_perk
+		has_perk = mind_perfection_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	} 
+	effect = {
+		random_list = {
+			50 = {
+				add_hook = {
+					type = puppet_hook
+					target = scope:target
+				}
+				scope:target = {
+					add_character_modifier = puppeted_modifier
+					add_opinion = {
+						modifier = master_opinion
+						target = prev
+					}
+				}
+				increase_suspicion = { VALUE = 25 }
+			}
+			50 = {
+				increase_suspicion = { VALUE = 100 }
+			}
+		}
+		mana_cost_sub = { VALUE = puppet_cost }
+	}
+}
+crete_homunculus_minor_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = crete_homunculus_minor_cost }
+		NOT = { is_province_spell = yes }
+		has_perk = manipulation_creation_perk
+		has_perk = mind_2_perk
+		has_perk = life_perfection_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	} 
+	effect = {
+		create_character = {
+			name = "basic homunculus"
+			dynasty_house = root.house
+			employer = root
+			random_traits = no
+			trait = homunculus_demi_human
+			gender = male
+			age = 0
+			save_scope_as = homunculus
+		}
+		scope:homunculus = {
+			add_opinion = {
+				modifier = master_opinion
+				target = prev
+			}
+		}
+		trigger_event = AL_basic_events.0001
+		mana_cost_sub = { VALUE = crete_homunculus_minor_cost }
+		increase_suspicion = { VALUE = 15 }
+	}
+}
+crete_homunculus_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = crete_homunculus_cost }
+		NOT = { is_province_spell = yes }
+		has_perk = manipulation_creation_perk
+		has_perk = mind_3_perk
+		has_perk = life_perfection_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	} 
+	effect = {
+		create_character = {
+			name = "near-human homunculus"
+			dynasty_house = root.house
+			employer = root
+			random_traits = no
+			trait = homunculus_near_human
+			age = 0
+			save_scope_as = homunculus
+			gender = male
+		}
+		scope:homunculus = {
+			add_opinion = {
+				modifier = creator_opinion
+				target = prev
+			}
+		}
+		trigger_event = AL_basic_events.0001
+		mana_cost_sub = { VALUE = crete_homunculus_cost }
+		increase_suspicion = { VALUE = 10 }
+	}
+}
+crete_homunculus_major_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = crete_homunculus_major_cost }
+		NOT = { is_province_spell = yes }
+		has_perk = manipulation_creation_perk
+		has_perk = mind_perfection_perk
+		has_perk = life_perfection_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	} 
+	effect = {
+		create_character = {
+			name = "perfect homunculus"
+			dynasty_house = root.house
+			employer = root
+			random_traits = no
+			trait = homunculus_human
+			age = 0
+			save_scope_as = homunculus
+			gender = male
+		}
+		scope:homunculus = {
+			add_opinion = {
+				modifier = creator_opinion
+				target = prev
+			}
+		}
+		trigger_event = AL_basic_events.0001
+		mana_cost_sub = { VALUE = crete_homunculus_major_cost }
+		increase_suspicion = { VALUE = 5 }
+	}
+}
+magical_vampirism_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = magical_vampirism_cost }
+		NOT = { is_province_spell = yes }
+		has_perk = manipulation_perfection_perk
+		has_perk = material_4_perk
+		has_perk = life_perfection_perk
+		NOT = { has_trait = magical_vampire }
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	} 
+	effect = {
+		scope:target = {
+			add_character_modifier = magical_vampirism_victim
+		}
+		add_character_modifier = magical_vampirism_modifier
+		mana_cost_sub = { VALUE = magical_vampirism_cost }
+		if = {
+			limit = {
+				NOT = { has_variable = magical_vampirism_overcharge }
+			}
+			set_variable = { name = magical_vampirism_overcharge value = 1 }
+		}
+		else = {
+			change_variable = { name = magical_vampirism_overcharge add = 1 }
+			if = {
+				limit = { var:magical_vampirism_overcharge >= 30 }
+				remove_all_character_modifier_instances = magical_vampirism_modifier
+				trigger_event = AL_basic_events.0002
+				increase_suspicion = { VALUE = 100 }
+			}
+		}
+		custom_tooltip = { text = "vampire_warning_spell" }
+		increase_suspicion = { VALUE = 25 }
+		if = {
+			limit = { is_exposed = yes }
+			scope:target = {
+				add_opinion = {
+					modifier = lover_hurt_me_opinion
+					target = prev
+				}
+			}
+		}
+	}
+}
+kill_spell_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = magical_vampirism_cost }
+		NOT = { is_province_spell = yes }
+		has_perk = manipulation_2_perk
+		has_perk = material_2_perk
+		has_perk = life_2_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	} 
+	effect = {
+		random_list = {
+			25 = {
+				scope:target = {
+					death = {
+						death_reason = death_murder
+						killer = prev
+					}
+				}
+			}
+			25 = {
+				increase_wounds_effect = { REASON = fight }
+				scope:target = {
+					increase_wounds_effect = { REASON = fight }
+				}
+				scope:target = {
+					add_opinion = {
+						modifier = attempted_murder_me_crime
+						target = prev
+					}
+				}
+			}
+			25 = {
+				increase_wounds_effect = { REASON = fight }
+				scope:target = {
+					add_opinion = {
+						modifier = attempted_murder_me_crime
+						target = prev
+					}
+				}
+			}
+		}
+		mana_cost_sub = { VALUE = magical_vampirism_cost }
+		increase_suspicion = { VALUE = 100 }
+	}
+}
+wound_spell_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = wound_spell_cost }
+		NOT = { is_province_spell = yes }
+		has_perk = manipulation_2_perk
+		has_perk = material_2_perk
+		has_perk = life_2_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	} 
+	effect = {
+		random_list = {
+			50 = {
+				scope:target = {
+					increase_wounds_effect = { REASON = fight }
+					if = {
+						limit = { is_exposed = yes }
+						add_opinion = {
+							modifier = lover_hurt_me_opinion
+							target = prev
+						}
+					}
+				}
+			}
+			5 = {
+				scope:target = {
+					contract_disease_effect = { DISEASE = cancer TREATMENT_EVENT = yes }
+					if = {
+						limit = { is_exposed = yes }
+						add_opinion = {
+							modifier = lover_hurt_me_opinion
+							target = prev
+						}
+					}
+				}
+			}
+			5 = {
+				scope:target = {
+					contract_disease_effect = { DISEASE = pneumonic TREATMENT_EVENT = yes }
+					if = {
+						limit = { is_exposed = yes }
+						add_opinion = {
+							modifier = lover_hurt_me_opinion
+							target = prev
+						}
+					}
+				}
+			}
+			5 = {
+				scope:target = {
+					contract_disease_effect = { DISEASE = ill TREATMENT_EVENT = yes }
+					if = {
+						limit = { is_exposed = yes }
+						add_opinion = {
+							modifier = lover_hurt_me_opinion
+							target = prev
+						}
+					}
+				}
+			}
+			5 = {
+				scope:target = {
+					contract_disease_effect = { DISEASE = typhus TREATMENT_EVENT = yes }
+					if = {
+						limit = { is_exposed = yes }
+						add_opinion = {
+							modifier = lover_hurt_me_opinion
+							target = prev
+						}
+					}
+				}
+			}
+			5 = {
+				scope:target = {
+					contract_disease_effect = { DISEASE = consumption TREATMENT_EVENT = yes }
+					if = {
+						limit = { is_exposed = yes }
+						add_opinion = {
+							modifier = lover_hurt_me_opinion
+							target = prev
+						}
+					}
+				}
+			}
+			25 = {
+				increase_wounds_effect = { REASON = fight }
+			}
+			}
+		if = {
+			limit = { is_exposed = yes }
+			scope:target = {
+				add_opinion = {
+					modifier = lover_hurt_me_opinion
+					target = prev
+				}
+			}
+		}
+		mana_cost_sub = { VALUE = wound_spell_cost }
+		increase_suspicion = { VALUE = 50 }
+	}
+}
+
+increase_fertility_minor_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = increase_fertility_minor_cost }
+		NOT = { is_province_spell = yes }
+		has_perk = manipulation_3_perk
+		has_perk = material_4_perk
+		has_perk = life_3_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	} 
+	effect = {
+		scope:target = {
+			add_character_modifier = AL_magical_increase_fertility_minor
+		}
+		mana_cost_sub = { VALUE = increase_fertility_minor_cost }
+		increase_suspicion = { VALUE = 20 }
+	}
+}
+increase_fertility_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = increase_fertility_cost }
+		NOT = { is_province_spell = yes }
+		has_perk = manipulation_4_perk
+		has_perk = material_4_perk
+		has_perk = life_4_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	} 
+	effect = {
+		scope:target = {
+			add_character_modifier = AL_magical_increase_fertility
+		}
+		mana_cost_sub = { VALUE = increase_fertility_cost }
+		increase_suspicion = { VALUE = 20 }
+	}
+}
+increase_fertility_major_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = increase_fertility_major_cost }
+		NOT = { is_province_spell = yes }
+		has_perk = manipulation_creation_perk
+		has_perk = material_perfection_perk
+		has_perk = life_perfection_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	} 
+	effect = {
+		scope:target = {
+			add_character_modifier = AL_magical_increase_fertility_major
+		}
+		mana_cost_sub = { VALUE = increase_fertility_major_cost }
+		increase_suspicion = { VALUE = 20 }
+	}
+}
+
+decrease_fertility_minor_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = decrease_fertility_minor_cost }
+		NOT = { is_province_spell = yes }
+		has_perk = manipulation_3_perk
+		has_perk = material_4_perk
+		has_perk = life_3_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	} 
+	effect = {
+		scope:target = {
+			add_character_modifier = AL_magical_decrease_fertility_minor
+		}
+		mana_cost_sub = { VALUE = decrease_fertility_minor_cost }
+		change_variable ={
+			name = mana
+			add = {
+				value = decrease_fertility_minor_cost
+				multiply = -1
+			} 
+		}
+		increase_suspicion = { VALUE = 20 }
+	}
+}
+decrease_fertility_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = decrease_fertility_cost }
+		NOT = { is_province_spell = yes }
+		has_perk = manipulation_4_perk
+		has_perk = material_4_perk
+		has_perk = life_4_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	} 
+	effect = {
+		scope:target = {
+			add_character_modifier = AL_magical_decrease_fertility
+		}
+		mana_cost_sub = { VALUE = decrease_fertility_cost }
+		increase_suspicion = { VALUE = 20 }
+	}
+}
+decrease_fertility_major_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = decrease_fertility_major_cost }
+		NOT = { is_province_spell = yes }
+		has_perk = manipulation_creation_perk
+		has_perk = material_perfection_perk
+		has_perk = life_perfection_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	} 
+	effect = {
+		scope:target = {
+			add_character_modifier = AL_magical_decrease_fertility_major
+		}
+		mana_cost_sub = { VALUE = decrease_fertility_major_cost }
+		increase_suspicion = { VALUE = 20 }
+	}
+}
+
+flood_spell_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = flood_spell_cost }
+		NOT = { is_province_spell = yes }
+		has_perk = manipulation_2_perk
+		has_perk = material_2_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	} 
+	effect = {
+		scope:target = {
+			add_county_modifier = {
+				modifier = AL_flood
+				years = 5
+			}
+		}
+		mana_cost_sub = { VALUE = flood_spell_cost }
+		increase_suspicion = { VALUE = 75 }
+	}
+}
+drought_spell_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = drought_spell_cost }
+		NOT = { is_province_spell = yes }
+		has_perk = manipulation_3_perk
+		has_perk = material_3_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	} 
+	effect = {
+		scope:target = {
+			add_county_modifier = {
+				modifier = AL_drought
+				years = 5
+			}
+		}
+		mana_cost_sub = { VALUE = drought_spell_cost }
+		increase_suspicion = { VALUE = 85 }
+	}
+}
+earthquake_spell_execute = {
+	scope = character
+	is_valid = {
+		have_enough_mana = { cost = earthquake_spell_cost }
+		NOT = { is_province_spell = yes }
+		has_perk = manipulation_4_perk
+		has_perk = material_4_perk
+	}
+	is_shown = {
+		NOT = { is_province_spell = yes }
+	} 
+	effect = {
+		scope:target = {
+			add_county_modifier = {
+				modifier = AL_earthquake
+				years = 5
+			}
+		}
+		mana_cost_sub = { VALUE = earthquake_spell_cost }
+		increase_suspicion = { VALUE = 100 }
+	}
+}

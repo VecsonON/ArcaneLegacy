@@ -1,0 +1,197 @@
+﻿yearly_global_pulse = {
+	on_actions = {
+		yearly_mana_pulse
+		witch_hunter_pulse
+	}
+}
+
+yearly_mana_pulse = {
+	effect = {
+		every_living_character = {
+			limit = { has_character_flag = mage }
+			set_variable = {
+				name = mana_gen_months_left
+				value = 12
+			}
+			trigger_event = { on_action = monthly_mana_gen }
+		}
+	}
+}
+
+set_up_remaining_mana_gen_for_year = {
+	effect = {
+		set_variable = {
+			name = mana_gen_months_left
+			value = {
+				value = 13 # yearly_mana_pulse starts genning mana on jan 2nd
+							# so we need to gen for next january as well				
+				subtract = current_month
+			}
+		}
+		trigger_event = { on_action = monthly_mana_gen }
+	}
+}
+
+monthly_mana_gen = {
+	trigger = {
+		has_variable = mana_gen_months_left
+		var:mana_gen_months_left > 0
+	}
+
+	on_actions = {
+		delay = { days = 1 }
+		monthly_mana_gen
+	}
+
+	effect = {
+		if = {
+			limit = { current_day = 1 }
+			mana_change = { VALUE = mana_net }
+			if = { limit = { NOT = { has_trait = exposed_mage } } sus_change = { VALUE = suspicion_net } }
+			
+			change_variable = {
+				name = mana_gen_months_left
+				subtract = 1
+			}
+			if = {
+				limit = { NOT = { has_variable = suspicion } }
+				set_variable = {
+					name = suspicion
+					value = 0
+				}
+			}
+		}
+	}
+}
+on_game_start_after_lobby  = {
+	on_actions = {
+		AL_welcome_message
+	}
+}
+AL_welcome_message = {
+	effect = {
+		every_player = {
+			limit = { always = yes }
+			trigger_event = AL_welcome_message.0001
+		}
+	}
+}
+witch_hunter_pulse = { 
+	effect = {
+		if = {
+			limit = {
+				has_game_rule = witch_hunt_chance_enable
+			}
+			every_living_character = {
+				limit = { has_trait = exposed_mage }
+				if = {
+					limit = { NOT = { has_variable = witch_hunt_coldown } }
+					set_variable = {
+						name = witch_hunt_coldown
+						value = 5
+					}
+				}
+				else = {
+					change_variable  = {
+						name = witch_hunt_coldown 
+						subtract = 1
+					}
+					if = { # I DON'T KNOW IS IT WORKS!
+						limit = { var:witch_hunt_coldown = 0 }
+						set_variable = {
+							name = witch_hunt_coldown
+							value = 5
+						}
+						random_list = {
+							75 = {
+								modifier = {
+									has_trait_xp = {
+										trait = exposed_mage
+										value > 10
+									}
+									add = -25
+								}
+								modifier = {
+									has_trait_xp = {
+										trait = exposed_mage
+										value >= 35
+									}
+									add = -50
+								}
+								modifier = {
+									NOT = { trait_is_shunned_or_criminal_in_faith_trigger = { FAITH = faith TRAIT = witch GENDER_CHARACTER = root } }
+									factor = 0.5
+								}
+								trigger_event = { 
+									id = AL_witch_hunt.1001
+									days = { 1 350 }
+								}
+							}
+							50 = {
+								modifier = {
+									has_trait_xp = {
+										trait = exposed_mage
+										value < 10
+									}
+									add = -50
+								}
+	
+								modifier = {
+									has_trait_xp = {
+										trait = exposed_mage
+										value >= 60
+									}
+									add = -25
+								}
+								modifier = {
+									has_trait_xp = {
+										trait = exposed_mage
+										value >= 85
+									}
+									add = -25
+								}
+								modifier = {
+									NOT = { trait_is_shunned_or_criminal_in_faith_trigger = { FAITH = faith TRAIT = witch GENDER_CHARACTER = root } }
+									factor = 0.5
+								}
+								trigger_event = { 
+									id = AL_witch_hunt.1002
+									days = { 1 350 }
+								}
+							}
+							25 = {
+								modifier = {
+									has_trait_xp = {
+										trait = exposed_mage
+										value < 60
+									}
+									add = -25
+								}
+	
+								modifier = {
+									has_trait_xp = {
+										trait = exposed_mage
+										value > 100
+									}
+									add = -12
+								}
+								modifier = {
+									NOT = { trait_is_shunned_or_criminal_in_faith_trigger = { FAITH = faith TRAIT = witch GENDER_CHARACTER = root } }
+									factor = 0.5
+								}
+								trigger_event = { 
+									id = AL_witch_hunt.1003
+									days = { 1 350 }
+								}
+							}
+							100 = { # NO WITCH HUNT
+	
+							}
+						}
+					}
+				}
+			}
+		}
+
+	}
+}

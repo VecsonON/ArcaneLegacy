@@ -1,0 +1,39 @@
+﻿l_english:
+ AL_lifestyle_events.0001.title: "Experiment with rats"
+ AL_lifestyle_events.0001.desc: "Today I woke up with a thought. "How do rats react to..." And now I think it's the perfect time for a little experiment"
+ AL_lifestyle_events.0001.a: "Servants! bring me some rats!" 
+ AL_lifestyle_events.0001.b: "Servants! buy me some rats!"
+ AL_lifestyle_events.0001.c: "It's stupid idea..."
+
+ AL_lifestyle_events.0002.title: "Stupid Idea with great promise"
+ AL_lifestyle_events.0002.desc: "I've got a great idea worth a millennium! or so I would like... what I have is so idiotic that maybe it will work. God knows!"
+ AL_lifestyle_events.0002.a: "You only live once!" 
+ AL_lifestyle_events.0002.b: "NO! stupid me!"
+
+ AL_lifestyle_events.0003.title: "Great Challenge!"
+ AL_lifestyle_events.0003.desc: "Now that's for sure! great achievement of the millennium! and now seriously, what I have is promising and everything depends on my skills and knowledge "
+
+ AL_lifestyle_events.0003.a: "Come here, Great Challenge..." 
+ AL_lifestyle_events.0003.b: "...Or not"
+
+ AL_lifestyle_events.0004.title: "Testing new idea for a spell!"
+ AL_lifestyle_events.0004.desc: "I have an idea for a spell and I also have the required raw materials for testing, but what I don't have is a decision!"
+ AL_lifestyle_events.0004.a: "Let's start testing..." 
+ AL_lifestyle_events.0004.b: "...Or maybe not"
+
+ AL_lifestyle_events.0011.title: "Flash of inspiration"
+ AL_lifestyle_events.0011.desc: "A normal day like any other, where suddenly I get inspiration out of nowhere. This is where I came up with a brilliant idea that will only improve my understanding of the concept. But it costs money, can I afford it?."
+ AL_lifestyle_events.0011.a: "Ofcourse, i have enough!" 
+ AL_lifestyle_events.0011.b: "I have some, so i can do it partly"
+ AL_lifestyle_events.0011.c: "This will have to be enough for me"
+
+ AL_lifestyle_events.0012.title: "Unethical experiments"
+ AL_lifestyle_events.0012.desc: "So I got my hands on a thief that no one would cry about. And I have a great idea in mind that will expand my understanding of concepts. The problem is that this experiment will be very gruesome. I can do it without the gruesomeness, but it won't be as effective. What should I do..."
+ AL_lifestyle_events.0012.a: "One life, urh. I mean one absolutly horible death for power? Sign me up!" 
+ AL_lifestyle_events.0012.b: "I will do experiment without the gruesomeness"
+ AL_lifestyle_events.0012.c: "This is too much for me..."
+
+ AL_lifestyle_events.0021.title: "Great Idea!"
+ AL_lifestyle_events.0021.desc: "I have a great idea that will catapult me many years ahead in terms of understanding concepts! Even though now I feel that even if I don't do the experiment, I am still inspired to do great things! But this experiment is also interesting..."
+ AL_lifestyle_events.0021.a: "Let's start" 
+ AL_lifestyle_events.0021.b: "inspiration is enough"

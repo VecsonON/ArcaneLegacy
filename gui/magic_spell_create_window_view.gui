@@ -1,0 +1,220 @@
+window  = {
+	name = "spell_create_window"
+	size = {750 820}
+	layoutpolicy_horizontal = expanding
+	layoutpolicy_vertical = expanding
+	parentanchor = center
+	layer = windows_layer
+	using = Window_Background
+	using = Window_Size_CharacterList
+	using = Window_Decoration
+	visible = "[GetScriptedGui('is_spell_create_window_open').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+	state = {
+		name = _show
+		
+	}
+	state = {
+		name = _hide
+		on_start = "[GetVariableSystem.Clear('spell_type_first')]"
+		on_start = "[GetVariableSystem.Clear('spell_type_second')]"
+		on_start = "[GetVariableSystem.Clear('spell_type_last')]"
+	}
+	vbox = {
+		using = Window_Margins
+		spacing = 5
+		header_pattern  = {
+			layoutpolicy_horizontal = expanding
+
+			blockoverride "header_text" {
+				raw_text = "magic_spell_create_window_text"
+			}
+
+			blockoverride "button_close"
+			{
+				onclick = "[GetScriptedGui('close_spell_create_window').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+			}
+
+			icon_character_interaction = {}
+		}
+		text_single = {
+			text = "spell_create_title"
+			maximumsize = { 400 200 }
+		}
+		text_single = {
+			text = "spell_create_title_remember"
+			maximumsize = { 400 200 }
+		}
+		# TAB #
+		hbox = {
+			layoutpolicy_horizontal = expanding 
+			button_tab_light  = {
+				enabled = "[Not(GetVariableSystem.HasValue('spell_type_first', 'manipulation_'))]"
+				layoutpolicy_horizontal = expanding 
+				raw_text = "Manipulation"
+				onclick = "[GetVariableSystem.Set('spell_type_first','manipulation_')]"
+				onclick = "[GetScriptedGui('look_for_spell_first_types_clear').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				onclick = "[GetScriptedGui('look_for_spell_type_manipulation').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			}
+			button_tab_light  = {
+				enabled = "[Not(GetVariableSystem.HasValue('spell_type_first', 'creation_'))]"
+				layoutpolicy_horizontal = expanding 
+				raw_text = "Creation"
+				onclick = "[GetVariableSystem.Set('spell_type_first','creation_')]"
+				onclick = "[GetScriptedGui('look_for_spell_first_types_clear').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				onclick = "[GetScriptedGui('look_for_spell_type_creation').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			}
+			button_tab_light  = {
+				enabled = "[Not(GetVariableSystem.HasValue('spell_type_first', 'destruction_'))]"
+				layoutpolicy_horizontal = expanding 
+				raw_text = "Destruction"
+				onclick = "[GetVariableSystem.Set('spell_type_first','destruction_')]"
+				onclick = "[GetScriptedGui('look_for_spell_first_types_clear').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				onclick = "[GetScriptedGui('look_for_spell_type_destruction').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+
+			}
+		}
+		hbox = {
+			margin = { 0 -2}
+			layoutpolicy_horizontal = expanding 
+			button_tab_light  = {
+				enabled = "[Not(GetVariableSystem.HasValue('spell_type_second', 'mind_'))]"
+				layoutpolicy_horizontal = expanding 
+				raw_text = "Mind"
+				onclick = "[GetVariableSystem.Set('spell_type_second','mind_')]"
+				onclick = "[GetScriptedGui('look_for_spell_second_types_clear').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				onclick = "[GetScriptedGui('look_for_spell_type_mind').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			}
+			button_tab_light  = {
+				enabled = "[Not(GetVariableSystem.HasValue('spell_type_second', 'material_'))]"
+				layoutpolicy_horizontal = expanding  
+				raw_text = "Material"
+				onclick = "[GetVariableSystem.Set('spell_type_second','material_')]"
+				onclick = "[GetScriptedGui('look_for_spell_second_types_clear').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				onclick = "[GetScriptedGui('look_for_spell_type_material').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			}
+			# button_tab = {
+			# 	layoutpolicy_horizontal = expanding 
+			# 	raw_text = "Life"
+			# 	onclick = "[GetVariableSystem.Set('spell_type_second','life_')]"
+			# }
+			button_tab_light  = {
+				enabled = "[Not(GetVariableSystem.HasValue('spell_type_second', 'undead_'))]"
+				layoutpolicy_horizontal = expanding  
+				raw_text = "Undead"
+				onclick = "[GetVariableSystem.Set('spell_type_second','undead_')]"
+				onclick = "[GetScriptedGui('look_for_spell_second_types_clear').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				onclick = "[GetScriptedGui('look_for_spell_type_undead').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			}
+			button_tab_light  = {
+				enabled = "[Not(GetVariableSystem.HasValue('spell_type_second', 'energy_'))]"
+				layoutpolicy_horizontal = expanding  
+				raw_text = "Energy"
+				onclick = "[GetVariableSystem.Set('spell_type_second','energy_')]"
+				onclick = "[GetScriptedGui('look_for_spell_second_types_clear').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				onclick = "[GetScriptedGui('look_for_spell_type_energy').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			}
+		}
+		hbox = {
+			margin = { 0 1}
+			layoutpolicy_horizontal = expanding 
+			button_tab_light  = {
+				enabled = "[Not(GetVariableSystem.HasValue('spell_type_last', 'life'))]"
+				layoutpolicy_horizontal = expanding 
+				raw_text = "Life"
+				onclick = "[GetVariableSystem.Set('spell_type_last','life')]"
+				onclick = "[GetScriptedGui('look_for_spell_last_types_clear').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				onclick = "[GetScriptedGui('look_for_spell_type_t_life').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			}
+			button_tab_light  = {
+				enabled = "[Not(GetVariableSystem.HasValue('spell_type_last', 'none'))]"
+				layoutpolicy_horizontal = expanding  
+				raw_text = "None"
+				onclick = "[GetVariableSystem.Set('spell_type_last','none')]"
+				onclick = "[GetScriptedGui('look_for_spell_last_types_clear').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				onclick = "[GetScriptedGui('look_for_spell_type_t_none').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			}
+		}
+		spacer = {
+			size = { 0 10 }
+		}
+		# LIST #
+		hbox = {
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = expanding
+			scrollbox = {
+		
+				name = "list"
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
+
+				scrollbar_horizontal = {
+					using = Scrollbar_Horizontal
+				}
+				blockoverride "scrollbox_content"
+				{
+					dynamicgridbox = {
+						datamodel = "[GetPlayer.MakeScope.GetList(Concatenate(Concatenate(GetVariableSystem.Get('spell_type_first'),GetVariableSystem.Get('spell_type_second')),Concatenate(GetVariableSystem.Get('spell_type_last'),'_spells_list')))]"
+						layoutpolicy_horizontal = expanding
+						allow_outside = yes
+						layoutpolicy_vertical = expanding
+						maxhorizontalslots = 1
+						maxverticalslots = 100
+						item = {
+							widget = {
+								size = { 680 50 }
+
+								button_standard_clean = {
+									size = { 95% 92% }
+									# down = "[GetVariableSystem.HasValue('current_spell_selected',Scope.GetFlagName)]"
+									# onclick = "[GetScriptedGui('clear_list_options').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+
+									hbox = {
+										margin = { 10 0 }
+										spacer = { size = { 15 0 } }
+
+										text_single = {
+											text = "[Localize(Concatenate(Scope.GetFlagName,'_name'))]"
+											minimumsize = { 190 -1 }
+										}
+
+										expand = {}
+										
+										icon = {
+											texture = "gfx/magic/MagicIcon.dds"
+											size = { 20 30 }
+										}
+
+										spacer = { size = { 5 0 } }
+
+										text_single = {
+											raw_text = "[GetPlayer.MakeScope.ScriptValue(Concatenate(Scope.GetFlagName,'_cost'))]"
+											#raw_text = "10"
+											minimumsize = { 40 -1 }
+										}
+										
+
+										spacer = { size = { 15 0 } }
+									}
+								}
+							}
+						}
+						
+						
+						
+					}
+				}
+			}
+		}
+		text_single = {
+			text = "coldown_title"
+			maximumsize = { 400 -1 }
+		}
+		button_standard = {
+			datacontext = "[GetVariableSystem]"
+			enabled = "[GetScriptedGui('look_for_spell_execute').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+			tooltip = "[GetScriptedGui('look_for_spell_execute').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			onclick = "[GetScriptedGui('look_for_spell_execute').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			text = "[Localize('execute_exp_loc')]"
+		}
+	}
+}
