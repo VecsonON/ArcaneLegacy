@@ -1,0 +1,114 @@
+﻿AL_declare_godhood = {
+	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	desc = AL_declare_godhood_desc
+	major = yes
+	is_shown = {
+		has_character_flag = mage
+		OR = {
+			OR = {
+				has_trait = arrogant
+				has_trait = ambitious
+			}	
+			has_perk = life_perfection_perk
+			has_perk = energy_perfection_perk
+			has_perk = manipulation_destruction_perk
+			has_perk = manipulation_creation_perk
+			has_perk = material_perfection_perk
+			has_perk = mind_perfection_perk
+			has_perk = undead_perfection_perk
+		}
+
+	}
+	is_valid = {
+		prestige >= 10000
+		has_perk = life_perfection_perk
+		has_perk = energy_perfection_perk
+		has_perk = manipulation_destruction_perk
+		has_perk = manipulation_creation_perk
+		has_perk = material_perfection_perk
+		has_perk = mind_perfection_perk
+		has_perk = undead_perfection_perk
+	}
+
+
+	effect = {
+		trigger_event = AL_objectives_events.0001
+		show_as_tooltip = {
+			add_character_modifier = AL_godhood
+			root.dynasty = {
+				add_dynasty_modifier = AL_godhood
+			}
+		}
+	}
+}
+AL_legalize_magic = {
+	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	desc = AL_legalize_magic_desc
+	major = yes
+	is_shown = {
+		has_character_flag = mage
+		trait_is_shunned_or_criminal_in_faith_trigger = { FAITH = faith TRAIT = witch GENDER_CHARACTER = root }
+	}
+	is_valid = {
+		piety >= 10000
+		prestige >= 10000
+		has_trait_xp = {
+			trait = exposed_mage
+			value >= 100
+		}
+	}
+
+
+	effect = {
+		trigger_event = AL_objectives_events.0002
+		show_as_tooltip = {
+			root.faith = {
+				remove_doctrine = doctrine_witchcraft_crime
+				add_doctrine = doctrine_witchcraft_accepted
+			}
+			add_prestige = 10000
+			add_piety = 2000
+			add_character_modifier = AL_saint_mage
+			give_nickname = saint_mage
+		}
+	}
+}
+# AL_start_great_purge = { TODO
+# 	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+# 	desc = AL_legalize_magic_desc
+# 	major = yes
+# 	is_shown = {
+# 		has_trait = exposed_mage
+# 		OR = {
+# 			OR = {
+# 				has_trait = sadistic
+# 				has_trait = ambitious
+# 			}	
+# 			has_perk = life_perfection_perk
+# 			has_perk = energy_perfection_perk
+# 			has_perk = manipulation_destruction_perk
+# 			has_perk = manipulation_creation_perk
+# 			has_perk = material_perfection_perk
+# 			has_perk = mind_perfection_perk
+# 			has_perk = undead_perfection_perk
+# 		}
+# 	}
+
+# 	is_valid = {
+# 		prestige >= 10000
+# 		has_trait_xp = {
+# 			trait = exposed_mage
+# 			value >= 100
+# 		}
+# 	}
+
+# 	effect = {
+# 		trigger_event = AL_objectives_events.0002
+# 		show_as_tooltip = {
+# 			add_prestige = 10000
+# 			add_piety = -2000
+# 			add_character_modifier = AL_demon_mage
+# 			give_nickname = demon_mage
+# 		}
+# 	}
+# }

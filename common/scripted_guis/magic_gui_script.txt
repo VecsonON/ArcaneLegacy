@@ -121,13 +121,35 @@ look_for_spell_execute = {
 	effect = {
 		custom_tooltip = { 
 			text = add_used_mind_effect_loc
-			if = {      limit = { has_trait = intellect_good_1 } add_character_modifier = { modifier = used_mind months = experimenting_coldown_i_1 } }
-			else_if = { limit = { has_trait = intellect_good_2 } add_character_modifier = { modifier = used_mind months = experimenting_coldown_i_2 } }
-			else_if = { limit = { has_trait = intellect_good_3 } add_character_modifier = { modifier = used_mind months = experimenting_coldown_i_3 } }
-			else_if = {limit = { has_trait = intellect_bad_1 } add_character_modifier = { modifier = used_mind months = experimenting_coldown_b_i_1 } }
-			else_if = {limit = { has_trait = intellect_bad_2 } add_character_modifier = { modifier = used_mind months = experimenting_coldown_b_i_2 } }
-			else_if = {limit = { has_trait = intellect_bad_3 } add_character_modifier = { modifier = used_mind months = experimenting_coldown_b_i_3} }
-			else = {  add_character_modifier = { modifier = used_mind months = experimenting_coldown } }
+			if = { limit = { has_trait = intellect_good_1 } 
+				add_character_modifier = { modifier = used_mind months = experimenting_coldown_i_1 } 
+				trigger_event = { id = AL_discover_spells.0001  months = experimenting_coldown_i_1 }
+			}
+			else_if = { limit = { has_trait = intellect_good_2 } 
+				add_character_modifier = { modifier = used_mind months = experimenting_coldown_i_2 } 
+				trigger_event = { id = AL_discover_spells.0001  months = experimenting_coldown_i_2 }
+			}
+			else_if = { limit = { has_trait = intellect_good_3 } 
+				add_character_modifier = { modifier = used_mind months = experimenting_coldown_i_3 } 
+				trigger_event = { id = AL_discover_spells.0001  months = experimenting_coldown_i_3 }
+			}
+			else_if = {limit = { has_trait = intellect_bad_1 } 
+				add_character_modifier = { modifier = used_mind months = experimenting_coldown_b_i_1 } 
+				trigger_event = { id = AL_discover_spells.0001  months = experimenting_coldown_b_i_1 }
+			}
+			else_if = {limit = { has_trait = intellect_bad_2 } 
+				add_character_modifier = { modifier = used_mind months = experimenting_coldown_b_i_2 } 
+				trigger_event = { id = AL_discover_spells.0001  months = experimenting_coldown_b_i_2 }
+			}
+			else_if = {limit = { has_trait = intellect_bad_3 } 
+				add_character_modifier = { modifier = used_mind months = experimenting_coldown_b_i_3 } 
+				trigger_event = { id = AL_discover_spells.0001  months = experimenting_coldown_b_i_3 }
+			}
+			else = { 
+				add_character_modifier = { modifier = used_mind months = experimenting_coldown } 
+				trigger_event = { id = AL_discover_spells.0001  months = experimenting_coldown }
+			}
+			
 		}
 		custom_tooltip = {
 			text = "super_low_AL_inspired"
@@ -145,15 +167,47 @@ look_for_spell_execute = {
 				}
 			}
 		}
-		custom_tooltip = {
-			text = "look_for_spell_desc"
-			unlock_random_spell = yes	
+		
+		if = { limit = { scope:cost_type = flag:gold } remove_short_term_gold = experimenting_cost }
+		else = {
+			add_prestige = {
+				value = experimenting_cost
+				multiply = -8
+			}
 		}
-		add_concepts_lifestyle_xp = experimenting_reward
-		remove_short_term_gold = experimenting_cost
+		random = {
+			chance = 50
+			add_stress = 25
+		}
+		if = { limit = { scope:experiment_type = flag:spell } 
+			custom_tooltip = {
+				text = "spell_focus_experiment"
+			}
+			custom_tooltip = {
+				text = "look_for_spell_desc"
+				unlock_random_spell = yes	
+			}
+			add_concepts_lifestyle_xp = experimenting_reward
+		}
+		else ={
+			custom_tooltip = {
+				text = "xp_focus_experiment"
+			}
+			add_concepts_lifestyle_xp = {
+				value = experimenting_reward
+				multiply = 2
+			}
+
+		}
 	}
 	is_valid = {
-		gold >= experimenting_cost
+		trigger_if = { limit = { scope:cost_type = flag:gold } gold >= experimenting_cost }
+		trigger_else = { 
+				prestige >= {
+				value = experimenting_cost
+				multiply = 8
+			} 
+		}
 		NOT = { has_character_modifier = used_mind }
 	}
 }

@@ -4,3 +4,6 @@
 supreme_inquisitor_nick = {
 	
 }
+saint_mage = {
+	
+}

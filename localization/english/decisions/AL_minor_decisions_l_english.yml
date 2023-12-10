@@ -46,3 +46,13 @@
  witch_hunter_training_perception_name: "$trait_track_arc_perception_technique$"
  witch_hunter_training_perception_tooltip: "$trait_track_arc_perception_technique$"
  CHOOSE_WITCH_HUNTER_TRAINING: "Choose Arc Training"
+
+ AL_declare_godhood: "Declare Godhood"
+ AL_declare_godhood_desc: "After so much learing and perfecting art of magic you finaly are strong enough to declare world that finaly human has achived godhood and are equal to The Creator. #P All Hail [ROOT.Char.GetFullName]! All hail the new god!#!"
+ AL_declare_godhood_confirm: "Declare Godhood"
+ AL_declare_godhood_tooltip: "Declare Godhood"
+
+ AL_legalize_magic: "Legalize Mages"
+ AL_legalize_magic_desc: "After long time where mages where shuned and kill for being mages, It's time to stop it!#P So I [ROOT.Char.GetFullName] declare by my power that mages aren't servants of #R devil"
+ AL_legalize_magic_confirm: "Legalize"
+ AL_legalize_magic_tooltip: "Legalize"

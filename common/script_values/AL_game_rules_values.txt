@@ -112,10 +112,10 @@ experimenting_cost = {
 	}
 	else_if = {
 		limit = { has_game_rule = experimenting_cost_reward_high_low }
-		add = 30
+		add = 25
 	}
 	else = {
-		add = 30
+		add = 25
 	}
 }
 

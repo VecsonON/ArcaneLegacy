@@ -29,11 +29,48 @@ AL_witch_hunt.1001 = {
 					death_reason = death_disappearance
 				}
 			}
-			add_prestige = -250
+			add_prestige = -350
+		}
+	}
+	option = { # FLEE
+		name = AL_witch_hunt.1001.a
+		skill = martial
+		add_prestige = -200
+		duel = {
+			skill = martial
+			value = scope:witchhunter.martial
+			desc = AL_witch_hunt.1001.a.desc
+			13 = {
+				desc = AL_witch_hunt.1001.a.failure
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 0.5 
+				}
+			}
+			13 = {
+				desc = AL_witch_hunt.1001.a.success
+
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -0.5
+				}
+				configure_start_single_combat_effect = {
+					SC_INITIATOR = scope:witchhunter
+					SC_ATTACKER = scope:witchhunter
+					SC_DEFENDER = root
+					FATALITY = always
+					FIXED = no
+					LOCALE = throne_room
+					OUTPUT_EVENT = AL_witch_hunt.1101
+					INVALIDATION_EVENT = AL_witch_hunt.1101
+				}
+				add_prestige = -200
+			}
 		}
 	}
 	option = { 
 		name = AL_witch_hunt.1001.a
+		add_internal_flag = dangerous
 		configure_start_single_combat_effect = {
 			SC_INITIATOR = scope:witchhunter
 			SC_ATTACKER = scope:witchhunter
@@ -76,11 +113,48 @@ AL_witch_hunt.1002 = {
 					death_reason = death_disappearance
 				}
 			}
-			add_prestige = -250
+			add_prestige = -350
+		}
+	}
+	option = { # FLEE
+		skill = martial
+		name = AL_witch_hunt.1001.a
+		add_prestige = -200
+		duel = {
+			skill = martial
+			value = scope:witchhunter.martial
+			desc = AL_witch_hunt.1001.a.desc
+			13 = {
+				desc = AL_witch_hunt.1001.a.failure
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 0.5 
+				}
+			}
+			13 = {
+				desc = AL_witch_hunt.1001.a.success
+
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -0.5
+				}
+				configure_start_single_combat_effect = {
+					SC_INITIATOR = scope:witchhunter
+					SC_ATTACKER = scope:witchhunter
+					SC_DEFENDER = root
+					FATALITY = always
+					FIXED = no
+					LOCALE = throne_room
+					OUTPUT_EVENT = AL_witch_hunt.1102 
+					INVALIDATION_EVENT = AL_witch_hunt.1102
+				}
+				add_prestige = -200
+			}
 		}
 	}
 	option = { 
 		name = AL_witch_hunt.1002.a
+		add_internal_flag = dangerous
 		configure_start_single_combat_effect = {
 			SC_INITIATOR = scope:witchhunter
 			SC_ATTACKER = scope:witchhunter
@@ -109,8 +183,45 @@ AL_witch_hunt.1003 = {
 		}
 	}
 	right_portrait = scope:witchhunter
+	option = { # FLEE
+		name = AL_witch_hunt.1001.a
+		skill = martial
+		add_prestige = -200
+		duel = {
+			skill = martial
+			value = scope:witchhunter.martial
+			desc = AL_witch_hunt.1001.a.desc
+			13 = {
+				desc = AL_witch_hunt.1001.a.failure
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 0.5 
+				}
+			}
+			13 = {
+				desc = AL_witch_hunt.1001.a.success
+
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -0.5
+				}
+				configure_start_single_combat_effect = {
+					SC_INITIATOR = scope:witchhunter
+					SC_ATTACKER = scope:witchhunter
+					SC_DEFENDER = root
+					FATALITY = always
+					FIXED = no
+					LOCALE = throne_room
+					OUTPUT_EVENT = AL_witch_hunt.1103 
+					INVALIDATION_EVENT = AL_witch_hunt.1103
+				}
+				add_prestige = -200
+			}
+		}
+	}
 	option = { 
 		name = AL_witch_hunt.1003.a
+		add_internal_flag = dangerous
 		configure_start_single_combat_effect = {
 			SC_INITIATOR = scope:witchhunter
 			SC_ATTACKER = scope:witchhunter

@@ -67,3 +67,28 @@ AL_inspired = {
 	icon = learning_positive
 	monthly_lifestyle_xp_gain_mult = 0.5
 }
+AL_godhood = {
+	icon = prestige_positive
+	diplomacy_per_prestige_level = 1
+	martial_per_prestige_level = 1
+	stewardship_per_prestige_level = 1 
+	intrigue_per_prestige_level = 1
+	learning_per_prestige_level = 1 
+	prestige_level_impact_mult = 1
+	monthly_prestige_gain_mult = 0.5
+	monthly_prestige = 2.5
+	monthly_dynasty_prestige = 2.5
+	monthly_dynasty_prestige_mult = 0.5
+	dread_baseline_add = 50
+}
+AL_saint_mage = {
+	icon = piety_positive
+	diplomacy_per_piety_level = 1
+	martial_per_piety_level = 1
+	stewardship_per_piety_level = 1 
+	intrigue_per_piety_level = 1
+	learning_per_piety_level = 1 
+	piety_level_impact_mult = 1
+	monthly_piety_gain_mult = 1
+	monthly_piety = 5
+}

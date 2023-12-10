@@ -29,7 +29,7 @@ Mind = {
 	
 }
 Spell = {
-	
+	texture = "gfx/magic/maintab_magic.dds"
 }
 Undead = {
 	
@@ -55,8 +55,12 @@ Suspicion = {
 	
 }
 concepts_lifestyle = {
-	
+	parent = lifestyle
+	texture = "gfx/interface/icons/alerts/action_can_choose_lifestyle.dds"
+	frame = 2
+	framesize = { 144 144 }
 }
 Supreme_Spells = {
-	
+	parent = spell
+	texture = "gfx/magic/maintab_magic.dds"
 }

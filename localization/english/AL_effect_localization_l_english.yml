@@ -86,7 +86,7 @@
 
  add_used_mind_effect_loc: "Get [GetModifier('used_mind').GetNameWithTooltip] for time proportionally to your intellect trait"
 
- casting_done: "After casting spell is done will happen:"
+ casting_done: "#I After casting spell is done will happen:"
 
  vampire_warning_spell: "Using this spell too many times will make [GetTrait('magical_vampire').GetName(GetNullCharacter)|R]"
  body_perfection_warrning: "To become truly immortal by this spell, you must recast this spell 5 time"

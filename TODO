@@ -15,7 +15,7 @@
 + Supreme Spells
 + Bug fixes
 
- Becoming God like?
++ Becoming God like? [WORK]
 
 
 +- Create Witch Hunting
@@ -27,12 +27,14 @@
  Create 'Final Harmony' event line
 
 07/12 Problems found:
-    - Boring wating, Posible ways to fix [Add minigame to get concepts xp]
-    - Problem when you don't have cash, way to fix [Add posibility to pay in prestige in experimenting]
-    - Decisions {Train Mana, Search for magicardia} are showing as avaible even if you don't have enough cash to start, way to fix  [Change moment where cash in taken to when decision is taken]
-    - Add pop-up when modifier {used all mind power} expire
-    - Add posiblity to experiment only for lifestyle xp instead of spells [1.5x XP]
-    - Add stress to experiment (50%) to neft it
-    - Add posiblity to flee from witch-hunter [martial and intrigue duel with hunter]
-    - Perfecting any concept will give you random spell
-    - Add stress to supreme spells quest
+    / Boring wating, Posible ways to fix [Add minigame to get concepts xp]
+    + Problem when you don't have cash, way to fix [Add posibility to pay in prestige in experimenting]
+    + Decisions {Train Mana, Search for magicardia} are showing as avaible even if you don't have enough cash to start, way to fix  [Change moment where cash in taken to when decision is taken]
+    + Add pop-up when modifier {used all mind power} expire
+    + Add posiblity to experiment only for lifestyle xp instead of spells [2x XP]
+    + Add stress to experiment (50%) to neft it
+    + Add posiblity to flee from witch-hunter [martial and intrigue duel with hunter]
+    + Perfecting any concept will give you random spell
+    + Add stress to supreme spells quest
+
+ 

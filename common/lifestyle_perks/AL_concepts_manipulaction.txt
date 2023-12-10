@@ -56,7 +56,10 @@ manipulation_perfection_perk = {
 	icon = concept
 	parent = manipulation_4_perk
 
-	effect = { custom_description_no_bullet = { text = manipulation_perfection_perk_effect } }
+	effect = { custom_description_no_bullet = { text = manipulation_perfection_perk_effect } custom_tooltip = {
+		text = "look_for_spell_desc"
+		unlock_random_spell = yes	
+	} }
 	character_modifier = {
 		monthly_lifestyle_xp_gain_mult = 0.04
 	}

@@ -88,3 +88,6 @@
 
  AL_magical_immortality_casting: "Casting Supreme Spell: Magical Immortality"
  AL_magical_immortality_casting_desc:0 "This character is casting supreme spell.\n#NIf at any moment when character has this modifier mana reaches 0 casting will be canceled!#!\n[Mana|E] Regeneration: [mana_regen_i]#N -25#!"
+
+ AL_godhood: "Godhood"
+ AL_saint_mage: "Holy mage"

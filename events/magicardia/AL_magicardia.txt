@@ -14,10 +14,10 @@ AL_magicardia.0001 = {
 			id = AL_magicardia.0002
 			days = { 30 666 }
 		}
-		remove_short_term_gold = 100
 	}
 	option = { # Nevermind
 		name = AL_magicardia.0001.b
+		add_gold = 100
 	}
 }
 AL_magicardia.0002 = { # Mage Found!

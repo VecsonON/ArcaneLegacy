@@ -25,5 +25,5 @@
 		#monthly_magic_lifestyle_xp_gain_mult = -0.1
 	}
 
-	focus_id = 21
+	focus_id = 65
 }

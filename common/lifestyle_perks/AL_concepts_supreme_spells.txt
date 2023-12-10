@@ -21,6 +21,7 @@
 			text = supreme_spell_start_perk_effect
 		}
 		trigger_event = AL_supreme_spells.0001
+		add_stress = 35
 	}
 	can_be_auto_selected = { always = no }
 }
@@ -49,6 +50,7 @@ supreme_spell_1_perk = {
 		custom_description_no_bullet = { 
 			text = supreme_spell_1_perk_effect
 		}
+		add_stress = 35
 	}
 	can_be_auto_selected = { always = no }
 }
@@ -77,6 +79,7 @@ supreme_spell_2_perk = {
 		custom_description_no_bullet = { 
 			text = supreme_spell_2_perk_effect
 		}
+		add_stress = 35
 	}
 	can_be_auto_selected = { always = no }
 }
@@ -106,6 +109,7 @@ supreme_spell_end_perk = {
 			text = supreme_spell_end_perk_effect
 		}
 		trigger_event = AL_supreme_spells.1001
+		add_stress = 35
 	}
 	can_be_auto_selected = { always = no }
 }

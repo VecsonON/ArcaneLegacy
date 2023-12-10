@@ -1,0 +1,35 @@
+﻿namespace = AL_objectives_events
+AL_objectives_events.0001 = {
+	title = AL_objectives_events.0001.title
+	type = character_event
+	desc = AL_objectives_events.0001.desc
+	theme = realm
+	left_portrait = root
+	option = {
+		name = AL_objectives_events.0001.a
+		add_character_modifier = AL_godhood
+		root.dynasty = {
+			add_dynasty_modifier = AL_godhood
+		}
+	}
+	
+}
+AL_objectives_events.0002 = {
+	title = AL_objectives_events.0002.title
+	type = character_event
+	desc = AL_objectives_events.0002.desc
+	theme = realm
+	left_portrait = root
+	option = {
+		name = AL_objectives_events.0002.a
+		root.faith = {
+			remove_doctrine = doctrine_witchcraft_crime
+			add_doctrine = doctrine_witchcraft_accepted
+		}
+		add_prestige = 10000
+		add_piety = 2000
+		add_character_modifier = AL_saint_mage
+		give_nickname = saint_mage
+	}
+	
+}

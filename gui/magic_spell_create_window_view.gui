@@ -11,13 +11,15 @@ window  = {
 	visible = "[GetScriptedGui('is_spell_create_window_open').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 	state = {
 		name = _show
-		
+		on_start = "[GetVariableSystem.Set('cost_type','gold')]"
+		on_start = "[GetVariableSystem.Set('experiment_type','spell')]"
 	}
 	state = {
 		name = _hide
 		on_start = "[GetVariableSystem.Clear('spell_type_first')]"
 		on_start = "[GetVariableSystem.Clear('spell_type_second')]"
 		on_start = "[GetVariableSystem.Clear('spell_type_last')]"
+		
 	}
 	vbox = {
 		using = Window_Margins
@@ -209,12 +211,74 @@ window  = {
 			text = "coldown_title"
 			maximumsize = { 400 -1 }
 		}
-		button_standard = {
-			datacontext = "[GetVariableSystem]"
-			enabled = "[GetScriptedGui('look_for_spell_execute').IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
-			tooltip = "[GetScriptedGui('look_for_spell_execute').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-			onclick = "[GetScriptedGui('look_for_spell_execute').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-			text = "[Localize('execute_exp_loc')]"
+		hbox = {
+			text_single = {
+				text = ""
+			}
+			button_normal  = {
+				size = { 30 30 }
+				visible = "[Not(GetVariableSystem.HasValue('cost_type', 'gold'))]"
+				
+				icon = {
+					size = { 30 30 }
+					texture = "gfx/interface/icons/currencies/icon_prestige_03.dds"
+				}
+				oversound = "event:/SFX/UI/Generic/sfx_ui_generic_pointer_over"
+				clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_select"
+				onclick = "[GetVariableSystem.Set('cost_type','gold')]"
+				tooltip = "spending_prestige_spell_create"
+			}
+			button_normal  = {
+				size = { 30 30 }
+				visible = "[Not(GetVariableSystem.HasValue('cost_type', 'prestige'))]"
+				
+				icon = {
+					size = { 30 30 }
+					texture = "gfx/interface/icons/icon_gold.dds"
+					
+				}
+				oversound = "event:/SFX/UI/Generic/sfx_ui_generic_pointer_over"
+				clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_select"
+				onclick = "[GetVariableSystem.Set('cost_type','prestige')]"
+				tooltip = "spending_gold_spell_create"
+			}
+			spacer = { size = { 5 0 } }
+			button_standard = {
+				datacontext = "[GetVariableSystem]"
+				enabled = "[GetScriptedGui('look_for_spell_execute').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('cost_type', MakeScopeFlag(GetVariableSystem.Get('cost_type'))).AddScope('experiment_type', MakeScopeFlag(GetVariableSystem.Get('experiment_type'))).End)]"
+				tooltip = "[GetScriptedGui('look_for_spell_execute').BuildTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('cost_type', MakeScopeFlag(GetVariableSystem.Get('cost_type'))).AddScope('experiment_type', MakeScopeFlag(GetVariableSystem.Get('experiment_type'))).End)]"
+				onclick = "[GetScriptedGui('look_for_spell_execute').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('cost_type', MakeScopeFlag(GetVariableSystem.Get('cost_type'))).AddScope('experiment_type', MakeScopeFlag(GetVariableSystem.Get('experiment_type'))).End)]"
+				text = "[Localize('execute_exp_loc')]"
+			}
+			button_normal  = {
+				size = { 30 30 }
+				visible = "[Not(GetVariableSystem.HasValue('experiment_type', 'xp'))]"
+				
+				icon = {
+					size = { 30 30 }
+					texture = "gfx/magic/maintab_magic.dds"
+				}
+				oversound = "event:/SFX/UI/Generic/sfx_ui_generic_pointer_over"
+				clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_select"
+				onclick = "[GetVariableSystem.Set('experiment_type','xp')]"
+				tooltip = "getting_spells_spell_create"
+			}
+			button_normal  = {
+				size = { 30 30 }
+				visible = "[Not(GetVariableSystem.HasValue('experiment_type', 'spell'))]"
+				
+				icon = {
+					size = { 30 30 }
+					texture = "gfx/interface/icons/activities/activity_adult_education_header.dds"
+					
+				}
+				oversound = "event:/SFX/UI/Generic/sfx_ui_generic_pointer_over"
+				clicksound = "event:/SFX/UI/Generic/sfx_ui_generic_select"
+				onclick = "[GetVariableSystem.Set('experiment_type','spell')]"
+				tooltip = "getting_xp_spell_create"
+			}
+			
 		}
+		
 	}
 }

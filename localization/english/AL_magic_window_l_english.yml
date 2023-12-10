@@ -37,7 +37,18 @@
  supreme_inquisitor_nick:0 "Supreme Inquisitior"
  supreme_inquisitor_nick_desc:0 "First Inquisitior, The Strongest Inquisitior, The Founder, The Hunter. Supreme Inquisitior goes by many names, But one is universal. Everyone fears him"
 
- look_for_spell_desc: "Get random spell that you meet the requirements"
+ saint_mage: "Saint Mage"
+
+ look_for_spell_desc: "#I Get random spell that you meet the requirements #!"
+
+ spending_prestige_spell_create: "Spending: @prestige_icon!#P Prestige"
+ spending_gold_spell_create: "Spending: @gold_icon!#P Gold"
+
+ getting_spells_spell_create: "Experimenting Focus: #P Discover New [Spell|E]"
+ getting_xp_spell_create: "Experimenting Focus: [concepts_lifestyle|E] [experience|E]"
+
+ spell_focus_experiment: "#f Because you are focusing on discovering new spell:"
+ xp_focus_experiment: "#f Because you are focusing on [concepts_lifestyle|E] [experience|E]:"
 
  create_gold_name: "[Spell|E]: Manipulate Material into Gold"
  create_gold_better_name: "[Spell|E]: Create Gold"

@@ -1,12 +1,15 @@
 ﻿namespace = AL_discover_spells
-# AL_discover_spells.0001 = {
-# 	title = AL_discover_spells.0001.title
-# 	desc = AL_discover_spells.0001.desc
-# 	theme =  secret
-# 	option = {
-# 		name = AL_discover_spells.0001.a
-# 	}
-# }
+AL_discover_spells.0001 = {
+	hidden = yes
+	immediate = {
+		send_interface_toast = {
+			title = AL_discover_spells.0001.title
+			show_as_tooltip = {
+				remove_character_modifier = used_mind
+			}
+		}
+	}
+}
 # AL_discover_spells.0005 = {
 # 	title = AL_discover_spells.0005.title
 # 	desc = AL_discover_spells.0005.desc
